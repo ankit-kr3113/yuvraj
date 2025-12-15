@@ -130,7 +130,8 @@ const Footer = () => {
                   href={socialLinks.github.url}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="w-9 h-9 rounded-lg bg-[#2a2b5e] hover:bg-gray-700 flex items-center justify-center text-gray-400 hover:text-white transition-all duration-200"
+                  className="w-9 h-9 rounded-lg flex items-center justify-center text-muted-foreground hover:text-foreground transition-all duration-200"
+                  style={{ backgroundColor: `hsl(var(--primary) / 0.2)` }}
                 >
                   <Github className="w-4 h-4" />
                 </a>
@@ -138,13 +139,15 @@ const Footer = () => {
                   href={socialLinks.linkedin.url}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="w-9 h-9 rounded-lg bg-[#2a2b5e] hover:bg-blue-600 flex items-center justify-center text-gray-400 hover:text-white transition-all duration-200"
+                  className="w-9 h-9 rounded-lg flex items-center justify-center text-muted-foreground hover:text-foreground transition-all duration-200"
+                  style={{ backgroundColor: `hsl(var(--primary) / 0.2)` }}
                 >
                   <Linkedin className="w-4 h-4" />
                 </a>
                 <a
                   href={socialLinks.email.url}
-                  className="w-9 h-9 rounded-lg bg-[#2a2b5e] hover:bg-red-500 flex items-center justify-center text-gray-400 hover:text-white transition-all duration-200"
+                  className="w-9 h-9 rounded-lg flex items-center justify-center text-muted-foreground hover:text-foreground transition-all duration-200"
+                  style={{ backgroundColor: `hsl(var(--primary) / 0.2)` }}
                 >
                   <Mail className="w-4 h-4" />
                 </a>
@@ -153,13 +156,13 @@ const Footer = () => {
 
             {/* Essential Links Only */}
             <div className="space-y-5">
-              <h4 className="text-white font-semibold text-lg">Quick Links</h4>
+              <h4 className="text-foreground font-semibold text-lg">Quick Links</h4>
               <div className="space-y-4 text-sm">
                 <a
                   href={footerData.sections.quickLinks[0].href}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex items-center text-gray-400 hover:text-white transition-colors"
+                  className="flex items-center text-muted-foreground hover:text-foreground transition-colors"
                 >
                   <FileText className="w-4 h-4 mr-3" />
                   Resume
