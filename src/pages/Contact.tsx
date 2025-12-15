@@ -376,7 +376,7 @@ const Contact = () => {
                   </Button>
 
                   {submitStatus === 'success' && (
-                    <div className="flex items-center justify-center text-sm" style={{ color: 'hsl(120, 100%, 60%)' }}>
+                    <div className="flex items-center justify-center text-sm" style={{ color: 'hsl(var(--skill-database))' }}>
                       <HiCheckCircle className="w-4 h-4 mr-2" />
                       Message sent successfully!
                     </div>
