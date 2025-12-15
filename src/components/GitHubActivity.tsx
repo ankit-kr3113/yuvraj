@@ -325,11 +325,11 @@ const GitHubActivity = ({ className = '' }: GitHubActivityProps) => {
                       </div>
                       <div className="flex items-center gap-3">
                         <div className="flex items-center gap-1">
-                          <Star className="w-3 h-3 text-yellow-500" />
+                          <Star className="w-3 h-3" style={{ color: 'hsl(var(--accent))' }} />
                           <span className="text-xs text-muted-foreground">{repo.stargazers_count}</span>
                         </div>
                         <div className="flex items-center gap-1">
-                          <GitFork className="w-3 h-3 text-blue-500" />
+                          <GitFork className="w-3 h-3" style={{ color: 'hsl(var(--primary))' }} />
                           <span className="text-xs text-muted-foreground">{repo.forks_count}</span>
                         </div>
                       </div>
