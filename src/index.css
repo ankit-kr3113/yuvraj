@@ -418,11 +418,13 @@
   }
 
   body {
-    @apply bg-background text-foreground transition-colors duration-500;
+    @apply bg-background text-foreground transition-colors;
+    transition-duration: var(--transition-normal);
     font-feature-settings: "liga" 1, "kern" 1;
     text-rendering: optimizeLegibility;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+    animation: theme-transition 400ms ease-in-out;
   }
 
   /* Theme-specific body backgrounds */
@@ -578,4 +580,31 @@
     box-shadow: 0 0 30px hsl(var(--primary) / 0.25),
       0 0 60px hsl(var(--primary) / 0.1);
   }
+}
+
+@keyframes theme-transition {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes gradient-shift {
+  0%,
+  100% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+}
+
+html {
+  transition: background-color 300ms cubic-bezier(0.4, 0, 0.2, 1),
+              color 300ms cubic-bezier(0.4, 0, 0.2, 1);
 }
