@@ -400,8 +400,8 @@ const Overview = () => {
                   {/* Achievement Float Cards - Hidden on small screens */}
                   <div className="hidden md:block absolute top-4 -right-2 lg:-right-4 w-24 h-20 md:w-28 md:h-24 bg-card/98 backdrop-blur-lg rounded-2xl border-2 border-primary/40 p-3 md:p-4 shadow-2xl hover:shadow-3xl transition-all duration-300 hover:scale-125 animate-float z-20">
                     <div className="flex justify-center mb-2">
-                      <div className="w-7 h-7 md:w-8 md:h-8 rounded-xl bg-gradient-to-br from-blue-500 to-purple-500 flex items-center justify-center shadow-lg">
-                        <FaRocket className="w-4 h-4 md:w-5 md:h-5 text-white" />
+                      <div className="w-7 h-7 md:w-8 md:h-8 rounded-xl bg-gradient-to-br from-primary to-accent flex items-center justify-center shadow-lg">
+                        <FaRocket className="w-4 h-4 md:w-5 md:h-5 text-primary-foreground" />
                       </div>
                     </div>
                     <div className="text-sm md:text-base text-primary font-bold text-center leading-tight">
@@ -414,8 +414,8 @@ const Overview = () => {
 
                   <div className="hidden md:block absolute bottom-4 -left-2 lg:-left-4 w-24 h-20 md:w-28 md:h-24 bg-card/98 backdrop-blur-lg rounded-2xl border-2 border-primary/40 p-3 md:p-4 shadow-2xl hover:shadow-3xl transition-all duration-300 hover:scale-125 animate-float animation-delay-1000 z-20">
                     <div className="flex justify-center mb-2">
-                      <div className="w-7 h-7 md:w-8 md:h-8 rounded-xl bg-gradient-to-br from-green-500 to-teal-500 flex items-center justify-center shadow-lg">
-                        <FaTrophy className="w-4 h-4 md:w-5 md:h-5 text-white" />
+                      <div className="w-7 h-7 md:w-8 md:h-8 rounded-xl bg-gradient-to-br from-accent to-primary flex items-center justify-center shadow-lg">
+                        <FaTrophy className="w-4 h-4 md:w-5 md:h-5 text-primary-foreground" />
                       </div>
                     </div>
                     <div className="text-sm md:text-base text-primary font-bold text-center leading-tight">
@@ -798,7 +798,7 @@ const Overview = () => {
                       </h3>
                     </div>
                     <div className="flex items-center gap-2">
-                      <div className="w-2 h-2 bg-green-400 rounded-full"></div>
+                      <div className="w-2 h-2 rounded-full" style={{ backgroundColor: 'hsl(var(--accent))' }}></div>
                       <Badge variant="outline" className="text-xs">
                         Real-time
                       </Badge>

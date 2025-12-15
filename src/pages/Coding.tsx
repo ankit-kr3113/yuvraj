@@ -367,7 +367,7 @@ const Coding = () => {
                 return (
                   <Card
                     key={index}
-                    className="group relative overflow-hidden bg-gradient-to-br from-slate-900/90 to-slate-800/90 border border-slate-700/50 rounded-xl transition-all duration-300 hover:border-slate-600/70 hover:scale-[1.02]"
+                    className="group relative overflow-hidden bg-card/70 border border-border/50 rounded-xl transition-all duration-300 hover:border-primary/50 hover:scale-[1.02] hover:shadow-lg hover:shadow-primary/15 backdrop-blur-sm"
                   >
                     <div className="p-6">
                       {/* Header with platform icon and visit button */}
@@ -377,12 +377,12 @@ const Coding = () => {
                             <IconComponent className={`w-6 h-6 ${platform.color}`} />
                           </div>
                           <div>
-                            <h3 className="text-lg font-semibold text-white mb-1">
+                            <h3 className="text-lg font-semibold text-foreground mb-1">
                               {platform.platform}
                             </h3>
                             <div className="flex items-center gap-1 mt-1">
-                              <FaClock className="w-3 h-3 text-slate-500" />
-                              <span className="text-xs text-slate-500">Joined {platform.joinedDate}</span>
+                              <FaClock className="w-3 h-3 text-muted-foreground" />
+                              <span className="text-xs text-muted-foreground">Joined {platform.joinedDate}</span>
                             </div>
                           </div>
                         </div>
@@ -391,14 +391,14 @@ const Coding = () => {
                             <Button
                               size="sm"
                               variant="outline"
-                              className="text-blue-400 border-blue-400/50 hover:bg-blue-400/10 hover:border-blue-400 text-xs px-3 py-1"
+                              className="text-primary border-primary/50 hover:bg-primary/10 hover:border-primary text-xs px-3 py-1"
                             >
                               Visit
                             </Button>
                           </a>
                           <div className="flex items-center gap-1">
                             <div className="w-2 h-2 bg-green-500 rounded-full animate-pulse"></div>
-                            <span className="text-xs text-slate-400">Active</span>
+                            <span className="text-xs text-muted-foreground">Active</span>
                           </div>
                         </div>
                       </div>
@@ -406,10 +406,10 @@ const Coding = () => {
                       <div className="flex items-start justify-between mb-4">
                         {/* Main problem count */}
                         <div>
-                          <div className="text-3xl font-bold text-white mb-1">
+                          <div className="text-3xl font-bold text-foreground mb-1">
                             {animatedCounts.platforms[index]}
                           </div>
-                          <div className="text-sm text-slate-400">
+                          <div className="text-sm text-muted-foreground">
                             Problems Solved
                           </div>
                         </div>
@@ -419,13 +419,13 @@ const Coding = () => {
                           <div className="flex items-center justify-end gap-2">
                             {platform.rating && (
                               <>
-                                <span className="text-xs text-slate-300">Rating: {platform.rating}</span>
+                                <span className="text-xs text-foreground/70">Rating: {platform.rating}</span>
                                 <MdTrendingUp className="w-3 h-3 text-yellow-400" />
                               </>
                             )}
                           </div>
                           <div className="flex items-center justify-end gap-2">
-                            <span className="text-xs text-slate-300">
+                            <span className="text-xs text-foreground/70">
                               {platform.platform === "LeetCode" && platform.rank}
                               {platform.platform === "CodeChef" && platform.rank}
                               {platform.platform === "GeeksforGeeks" && platform.streak}
@@ -439,9 +439,8 @@ const Coding = () => {
                         </div>
                       </div>
 
-
                       {/* Bottom description text */}
-                      <div className="text-xs text-slate-400 border-t border-slate-700/50 pt-3">
+                      <div className="text-xs text-muted-foreground border-t border-border/50 pt-3">
                         {platform.platform === "LeetCode" && `Solved ${platform.solved}+ problems across all difficulty levels`}
                         {platform.platform === "CodeChef" && `${platform.rank} with ${apiData?.codechef?.contests?.attendedCount || 9} contests attended`}
                         {platform.platform === "GeeksforGeeks" && `Solved ${platform.solved}+ problems with ${apiData?.gfg?.profile?.currentStreak || 7} day current streak`}
