@@ -51,8 +51,10 @@ const ParticleBackground = ({
 
   // Initialize particles
   const initParticles = (width: number, height: number) => {
+    if (particleColors.length === 0) return;
+
     const particles: Particle[] = [];
-    
+
     for (let i = 0; i < particleCount; i++) {
       particles.push({
         x: Math.random() * width,
@@ -61,10 +63,10 @@ const ParticleBackground = ({
         speedX: (Math.random() - 0.5) * 0.5,
         speedY: (Math.random() - 0.5) * 0.5,
         opacity: Math.random() * 0.5 + 0.1,
-        color: colors[Math.floor(Math.random() * colors.length)]
+        color: particleColors[Math.floor(Math.random() * particleColors.length)]
       });
     }
-    
+
     particlesRef.current = particles;
   };
 
