@@ -19,22 +19,10 @@ const ThemeContext = createContext<ThemeContextType | undefined>(undefined);
 // Revolutionary theme system with unique visual identities
 export const themes = [
   {
-    id: 'purple' as Theme,
-    name: 'Purple Dream',
-    color: 'hsl(262, 80%, 65%)',
-    description: 'Classic elegant portfolio'
-  },
-  {
     id: 'cyberpunk' as Theme,
     name: 'Cyberpunk',
     color: 'hsl(180, 100%, 50%)',
     description: 'Futuristic hacker aesthetic with neon grids'
-  },
-  {
-    id: 'glassmorphism' as Theme,
-    name: 'Glass Morphism',
-    color: 'hsl(220, 100%, 70%)',
-    description: 'Frosted glass with blur effects'
   },
   {
     id: 'glass-dream' as Theme,
