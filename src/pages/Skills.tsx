@@ -218,11 +218,10 @@ const Skills = () => {
                           </div>
 
                           {/* Level Badge */}
-                          <Badge className={`
-                            ${getLevelColor(sectionName)}
-                            text-xs font-medium px-2 py-1 rounded-md w-full justify-center
-                            transition-all duration-300 group-hover:scale-105
-                          `}>
+                          <Badge
+                            style={getLevelColor(sectionName)}
+                            className="text-xs font-medium px-2 py-1 rounded-md w-full justify-center transition-all duration-300 group-hover:scale-105"
+                          >
                             {skill.level || sectionName}
                           </Badge>
                         </div>
