@@ -646,8 +646,13 @@ const Overview = () => {
                 {/* Contact Information */}
                 <Card className="p-4 border-2 border-primary/40 hover:border-primary/60 shadow-xl hover:shadow-2xl hover:shadow-blue-500/15 transition-all duration-500 backdrop-blur-sm bg-gradient-to-br from-card/90 to-card/70 hover:-translate-y-1">
                   <div className="flex items-center mb-3">
-                    <div className="w-8 h-8 rounded-lg bg-gradient-to-br from-blue-500/30 to-indigo-500/30 flex items-center justify-center mr-2 shadow-lg">
-                      <FaEnvelope className="w-4 h-4 text-blue-400" />
+                    <div
+                      className="w-8 h-8 rounded-lg flex items-center justify-center mr-2 shadow-lg"
+                      style={{
+                        background: `linear-gradient(135deg, hsl(var(--primary) / 0.3) 0%, hsl(var(--accent) / 0.3) 100%)`
+                      }}
+                    >
+                      <FaEnvelope className="w-4 h-4" style={{ color: `hsl(var(--primary))` }} />
                     </div>
                     <h3 className="text-base font-semibold text-foreground">
                       Contact
