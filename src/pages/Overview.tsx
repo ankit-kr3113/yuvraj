@@ -440,8 +440,16 @@ const Overview = () => {
                 {/* Skills Overview - Most Important for Portfolio */}
                 <Card className="p-6 border-primary/30">
                   <div className="flex items-center mb-4">
-                    <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-cyan-500/30 to-blue-500/30 flex items-center justify-center mr-3 shadow-lg">
-                      <Activity className="w-5 h-5 text-cyan-400" />
+                    <div
+                      className="w-10 h-10 rounded-xl flex items-center justify-center mr-3 shadow-lg"
+                      style={{
+                        background: `linear-gradient(135deg, hsl(var(--accent) / 0.3) 0%, hsl(var(--primary) / 0.3) 100%)`
+                      }}
+                    >
+                      <Activity
+                        className="w-5 h-5"
+                        style={{ color: `hsl(var(--accent))` }}
+                      />
                     </div>
                     <h3 className="text-lg font-semibold text-foreground">
                       Technical Skills
