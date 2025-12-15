@@ -221,51 +221,66 @@ export const experiences = [
   },
 ];
 
+// Helper function to get theme-aware color styles
+const getThemeColor = (colorName: string): React.CSSProperties => {
+  const colorMap: { [key: string]: React.CSSProperties } = {
+    primary: { color: 'hsl(var(--primary))' },
+    accent: { color: 'hsl(var(--accent))' },
+    secondary: { color: 'hsl(var(--secondary))' },
+    success: { color: 'hsl(120, 100%, 60%)' },
+    info: { color: 'hsl(180, 100%, 60%)' },
+    warning: { color: 'hsl(39, 100%, 60%)' },
+    danger: { color: 'hsl(0, 100%, 60%)' },
+  };
+  return colorMap[colorName] || { color: 'hsl(var(--primary))' };
+};
+
 export const skills = {
   "Web Development": {
     Frontend: [
-      { name: "React", level: "Advanced", color: "text-blue-400" },
-      { name: "JavaScript", level: "Advanced", color: "text-yellow-400" },
-      { name: "TypeScript", level: "Intermediate", color: "text-blue-500" },
-      { name: "HTML5", level: "Advanced", color: "text-orange-400" },
-      { name: "CSS3", level: "Advanced", color: "text-blue-400" },
-      { name: "Tailwind CSS", level: "Advanced", color: "text-cyan-400" },
-      { name: "Next.js", level: "Intermediate", color: "text-gray-300" },
-      { name: "Redux", level: "Intermediate", color: "text-purple-400" },
-      { name: "Vue", level: "Beginner", color: "text-green-400" },
+      { name: "React", level: "Advanced", colorKey: "primary", style: getThemeColor("primary") },
+      { name: "JavaScript", level: "Advanced", colorKey: "warning", style: getThemeColor("warning") },
+      { name: "TypeScript", level: "Intermediate", colorKey: "primary", style: getThemeColor("primary") },
+      { name: "HTML5", level: "Advanced", colorKey: "danger", style: getThemeColor("danger") },
+      { name: "CSS3", level: "Advanced", colorKey: "primary", style: getThemeColor("primary") },
+      { name: "Tailwind CSS", level: "Advanced", colorKey: "info", style: getThemeColor("info") },
+      { name: "Next.js", level: "Intermediate", colorKey: "secondary", style: getThemeColor("secondary") },
+      { name: "Redux", level: "Intermediate", colorKey: "accent", style: getThemeColor("accent") },
+      { name: "Vue", level: "Beginner", colorKey: "success", style: getThemeColor("success") },
     ],
     Backend: [
-      { name: "Node.js", level: "Intermediate", color: "text-green-400" },
-      { name: "RESTful APIs", level: "Intermediate", color: "text-cyan-400" },
-      { name: "Express.js", level: "Intermediate", color: "text-gray-400" },
+      { name: "Node.js", level: "Intermediate", colorKey: "success", style: getThemeColor("success") },
+      { name: "RESTful APIs", level: "Intermediate", colorKey: "info", style: getThemeColor("info") },
+      { name: "Express.js", level: "Intermediate", colorKey: "secondary", style: getThemeColor("secondary") },
     ],
   },
   Database: {
     Database: [
-      { name: "MongoDB", level: "Intermediate", color: "text-green-400" },
-      { name: "SQL", level: "Intermediate", color: "text-blue-400" },
+      { name: "MongoDB", level: "Intermediate", colorKey: "success", style: getThemeColor("success") },
+      { name: "SQL", level: "Intermediate", colorKey: "primary", style: getThemeColor("primary") },
       {
         name: "Database Design",
         level: "Intermediate",
-        color: "text-purple-400",
+        colorKey: "accent",
+        style: getThemeColor("accent"),
       },
     ],
   },
   Languages: {
     Languages: [
-      { name: "JavaScript", level: "Advanced", color: "text-yellow-400" },
-      { name: "TypeScript", level: "Intermediate", color: "text-blue-500" },
-      { name: "C++", level: "Advanced", color: "text-blue-400" },
-      { name: "Java", level: "Intermediate", color: "text-orange-400" },
-      { name: "Python", level: "Beginner", color: "text-yellow-400" },
+      { name: "JavaScript", level: "Advanced", colorKey: "warning", style: getThemeColor("warning") },
+      { name: "TypeScript", level: "Intermediate", colorKey: "primary", style: getThemeColor("primary") },
+      { name: "C++", level: "Advanced", colorKey: "primary", style: getThemeColor("primary") },
+      { name: "Java", level: "Intermediate", colorKey: "danger", style: getThemeColor("danger") },
+      { name: "Python", level: "Beginner", colorKey: "warning", style: getThemeColor("warning") },
     ],
   },
   Tools: {
     Tools: [
-      { name: "Git & GitHub", level: "Advanced", color: "text-orange-400" },
-      { name: "VS Code", level: "Advanced", color: "text-blue-400" },
-      { name: "Webpack", level: "Intermediate", color: "text-blue-400" },
-      { name: "Docker", level: "Beginner", color: "text-blue-400" },
+      { name: "Git & GitHub", level: "Advanced", colorKey: "danger", style: getThemeColor("danger") },
+      { name: "VS Code", level: "Advanced", colorKey: "primary", style: getThemeColor("primary") },
+      { name: "Webpack", level: "Intermediate", colorKey: "primary", style: getThemeColor("primary") },
+      { name: "Docker", level: "Beginner", colorKey: "primary", style: getThemeColor("primary") },
     ],
   },
 };
