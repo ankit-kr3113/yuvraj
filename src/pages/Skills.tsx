@@ -101,25 +101,25 @@ const Skills = () => {
         };
       case "Database":
         return {
-          backgroundColor: 'hsl(120 100% 50% / 0.15)',
-          color: 'hsl(120 100% 60%)',
-          borderColor: 'hsl(120 100% 50% / 0.4)',
+          backgroundColor: 'hsl(var(--skill-database) / 0.15)',
+          color: 'hsl(var(--skill-database))',
+          borderColor: 'hsl(var(--skill-database) / 0.4)',
           borderWidth: '1px',
           borderStyle: 'solid'
         };
       case "Languages":
         return {
-          backgroundColor: 'hsl(39 100% 50% / 0.15)',
-          color: 'hsl(39 100% 60%)',
-          borderColor: 'hsl(39 100% 50% / 0.4)',
+          backgroundColor: 'hsl(var(--skill-languages) / 0.15)',
+          color: 'hsl(var(--skill-languages))',
+          borderColor: 'hsl(var(--skill-languages) / 0.4)',
           borderWidth: '1px',
           borderStyle: 'solid'
         };
       case "Tools":
         return {
-          backgroundColor: 'hsl(180 100% 50% / 0.15)',
-          color: 'hsl(180 100% 60%)',
-          borderColor: 'hsl(180 100% 50% / 0.4)',
+          backgroundColor: 'hsl(var(--skill-tools) / 0.15)',
+          color: 'hsl(var(--skill-tools))',
+          borderColor: 'hsl(var(--skill-tools) / 0.4)',
           borderWidth: '1px',
           borderStyle: 'solid'
         };
