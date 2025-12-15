@@ -92,17 +92,24 @@ const ParticleBackground = ({
   const drawParticles = (ctx: CanvasRenderingContext2D, width: number, height: number) => {
     ctx.clearRect(0, 0, width, height);
 
+    // Get the accent color for connections
+    const root = document.documentElement;
+    const computedStyle = getComputedStyle(root);
+    const accentColor = computedStyle.getPropertyValue('--particle-accent').trim();
+    const connectionColor = `hsl(${accentColor})`;
+
     // Draw connections between nearby particles
     particlesRef.current.forEach((particle, i) => {
       particlesRef.current.slice(i + 1).forEach(otherParticle => {
         const distance = Math.sqrt(
-          Math.pow(particle.x - otherParticle.x, 2) + 
+          Math.pow(particle.x - otherParticle.x, 2) +
           Math.pow(particle.y - otherParticle.y, 2)
         );
 
         if (distance < 100) {
           ctx.beginPath();
-          ctx.strokeStyle = `rgba(99, 102, 241, ${0.1 * (1 - distance / 100)})`;
+          const opacity = 0.1 * (1 - distance / 100);
+          ctx.strokeStyle = connectionColor.replace(')', `, ${opacity})`);
           ctx.lineWidth = 0.5;
           ctx.moveTo(particle.x, particle.y);
           ctx.lineTo(otherParticle.x, otherParticle.y);
