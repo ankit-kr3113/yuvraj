@@ -695,15 +695,28 @@ const Overview = () => {
                 </Card>
 
                 {/* Interests & Hobbies */}
-                <Card className="p-6 border-2 border-primary/30 hover:border-primary/50 hover:shadow-xl hover:shadow-purple-500/15 transition-all duration-500 backdrop-blur-sm bg-gradient-to-br from-card/95 to-card/80 hover:-translate-y-1 relative overflow-hidden group">
+                <Card className="p-6 border-2 border-primary/30 hover:border-primary/50 hover:shadow-xl transition-all duration-500 backdrop-blur-sm bg-gradient-to-br from-card/95 to-card/80 hover:-translate-y-1 relative overflow-hidden group" style={{ '--hover-shadow-color': 'hsl(var(--primary) / 0.15)' } as React.CSSProperties}>
                   {/* Background decoration */}
-                  <div className="absolute top-0 right-0 w-20 h-20 bg-gradient-to-br from-purple-500/10 to-pink-500/5 rounded-full -translate-y-10 translate-x-10 group-hover:scale-150 transition-transform duration-700"></div>
+                  <div
+                    className="absolute top-0 right-0 w-20 h-20 rounded-full -translate-y-10 translate-x-10 group-hover:scale-150 transition-transform duration-700"
+                    style={{
+                      background: `linear-gradient(135deg, hsl(var(--primary) / 0.1) 0%, hsl(var(--accent) / 0.05) 100%)`
+                    }}
+                  ></div>
                   <div className="absolute bottom-0 left-0 w-16 h-16 bg-gradient-to-tr from-primary/10 to-primary-glow/5 rounded-full translate-y-8 -translate-x-8 group-hover:scale-125 transition-transform duration-700"></div>
 
                   <div className="relative z-10">
                     <div className="flex items-center mb-4">
-                      <div className="w-8 h-8 rounded-lg bg-gradient-to-br from-purple-500/30 to-pink-500/30 flex items-center justify-center mr-3 shadow-lg group-hover:scale-110 transition-transform duration-300">
-                        <FaStar className="w-4 h-4 text-purple-400" />
+                      <div
+                        className="w-8 h-8 rounded-lg flex items-center justify-center mr-3 shadow-lg group-hover:scale-110 transition-transform duration-300"
+                        style={{
+                          background: `linear-gradient(135deg, hsl(var(--primary) / 0.3) 0%, hsl(var(--accent) / 0.3) 100%)`
+                        }}
+                      >
+                        <FaStar
+                          className="w-4 h-4"
+                          style={{ color: `hsl(var(--primary))` }}
+                        />
                       </div>
                       <h3 className="text-base font-semibold text-foreground">
                         Interests & Hobbies
@@ -718,7 +731,7 @@ const Overview = () => {
                             key={index}
                             className="group/item flex items-center gap-3 p-2 rounded-lg bg-primary/10 hover:bg-primary/15 transition-all duration-300 cursor-pointer"
                           >
-                            <div className="text-purple-400 group-hover/item:scale-125 transition-transform duration-300">
+                            <div className="group-hover/item:scale-125 transition-transform duration-300" style={{ color: `hsl(var(--primary))` }}>
                               <IconComponent className="w-4 h-4" />
                             </div>
                             <div className="flex-1 min-w-0">
