@@ -16,15 +16,38 @@ interface ParticleBackgroundProps {
   colors?: string[];
 }
 
-const ParticleBackground = ({ 
-  className = '', 
+const ParticleBackground = ({
+  className = '',
   particleCount = 50,
-  colors = ['rgba(99, 102, 241, 0.1)', 'rgba(147, 51, 234, 0.1)', 'rgba(59, 130, 246, 0.1)']
+  colors
 }: ParticleBackgroundProps) => {
   const canvasRef = useRef<HTMLCanvasElement>(null);
   const particlesRef = useRef<Particle[]>([]);
   const animationFrameRef = useRef<number>();
   const [dimensions, setDimensions] = useState({ width: 0, height: 0 });
+  const [particleColors, setParticleColors] = useState<string[]>([]);
+
+  // Get colors from CSS variables
+  useEffect(() => {
+    if (colors) {
+      setParticleColors(colors);
+      return;
+    }
+
+    const root = document.documentElement;
+    const computedStyle = getComputedStyle(root);
+    const accentColor = computedStyle.getPropertyValue('--particle-accent').trim();
+
+    // Use the accent color with different opacities
+    const baseColor = `hsl(${accentColor})`;
+    const defaultColors = [
+      baseColor.replace(')', ', 0.1)'),
+      baseColor.replace(')', ', 0.15)'),
+      baseColor.replace(')', ', 0.08)')
+    ];
+
+    setParticleColors(defaultColors);
+  }, [colors]);
 
   // Initialize particles
   const initParticles = (width: number, height: number) => {
