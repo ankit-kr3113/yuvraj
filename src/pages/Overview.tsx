@@ -233,8 +233,18 @@ const Overview = () => {
         <section className="relative pt-20 pb-16 min-h-screen flex items-center overflow-hidden">
           {/* Enhanced Background Effects */}
           <div className="absolute inset-0 bg-gradient-to-br from-background via-background/95 to-primary/5"></div>
-          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-gradient-radial from-primary/[0.08] via-primary-glow/[0.04] to-transparent rounded-full blur-3xl opacity-40 animate-pulse"></div>
-          <div className="absolute top-1/4 right-1/4 w-[400px] h-[400px] bg-gradient-radial from-primary-glow/[0.06] to-transparent rounded-full blur-2xl opacity-30 animate-pulse animation-delay-1000"></div>
+          <div
+            className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] rounded-full blur-3xl opacity-40 animate-pulse"
+            style={{
+              background: `radial-gradient(circle, hsl(var(--primary) / 0.08) 0%, hsl(var(--primary-glow) / 0.04) 50%, transparent 100%)`
+            }}
+          ></div>
+          <div
+            className="absolute top-1/4 right-1/4 w-[400px] h-[400px] rounded-full blur-2xl opacity-30 animate-pulse animation-delay-1000"
+            style={{
+              background: `radial-gradient(circle, hsl(var(--primary-glow) / 0.06) 0%, transparent 100%)`
+            }}
+          ></div>
 
           <div className="relative max-w-7xl mx-auto w-full px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16 z-10">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-12 lg:gap-20 xl:gap-24 items-center">
