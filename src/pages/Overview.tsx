@@ -928,7 +928,10 @@ const Overview = () => {
                                   {project.category}
                                 </Badge>
                                 {project.status === "Live" && (
-                                  <div className="w-2 h-2 bg-green-400 rounded-full"></div>
+                                  <div
+                                    className="w-2 h-2 rounded-full"
+                                    style={{ backgroundColor: `hsl(var(--accent))` }}
+                                  ></div>
                                 )}
                               </div>
                               <div className="absolute bottom-2 right-2 flex items-center gap-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
