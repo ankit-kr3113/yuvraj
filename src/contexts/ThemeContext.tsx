@@ -39,7 +39,7 @@ export const themes = [
 ];
 
 export const ThemeProvider = ({ children }: { children: ReactNode }) => {
-  const [theme, setTheme] = useState<Theme>('purple');
+  const [theme, setTheme] = useState<Theme>('glass-dream');
 
   useEffect(() => {
     const savedTheme = localStorage.getItem('portfolio-theme') as Theme;
