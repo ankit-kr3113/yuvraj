@@ -273,7 +273,7 @@ const Footer = () => {
                   <MapPin className="w-4 h-4 mr-2" />
                   <span>{footerData.contact.location}</span>
                 </div>
-                <div className="flex items-center text-gray-400 hover:text-white transition-colors">
+                <div className="flex items-center text-muted-foreground hover:text-foreground transition-colors">
                   <Mail className="w-4 h-4 mr-2" />
                   <span>{footerData.contact.emailDisplay}</span>
                 </div>
@@ -282,10 +282,10 @@ const Footer = () => {
 
             {/* Quick Links Section */}
             <div>
-              <h4 className="text-white font-semibold mb-4 sm:mb-5 text-base sm:text-lg">Quick Links</h4>
+              <h4 className="text-foreground font-semibold mb-4 sm:mb-5 text-base sm:text-lg">Quick Links</h4>
               <div className="space-y-3 sm:space-y-4 text-sm sm:text-base">
                 {footerData.sections.quickLinks.map((link, index) => {
-                  const IconComponent = link.icon === 'FileText' ? FileText : 
+                  const IconComponent = link.icon === 'FileText' ? FileText :
                     link.icon === 'SiLeetcode' ? SiLeetcode :
                     link.icon === 'SiGeeksforgeeks' ? SiGeeksforgeeks :
                     link.icon === 'SiCodechef' ? SiCodechef :
@@ -297,7 +297,7 @@ const Footer = () => {
                       href={link.href}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="flex items-center text-gray-400 hover:text-white transition-colors"
+                      className="flex items-center text-muted-foreground hover:text-foreground transition-colors"
                     >
                       <IconComponent className="w-4 h-4 mr-2" />
                       {link.name}
@@ -306,7 +306,7 @@ const Footer = () => {
                     <Link
                       key={index}
                       to={link.href}
-                      className="flex items-center text-gray-400 hover:text-white transition-colors"
+                      className="flex items-center text-muted-foreground hover:text-foreground transition-colors"
                     >
                       <IconComponent className="w-4 h-4 mr-2" />
                       {link.name}
@@ -318,13 +318,13 @@ const Footer = () => {
 
             {/* Navigation Section */}
             <div>
-              <h4 className="text-white font-semibold mb-4 sm:mb-5 text-base sm:text-lg">Navigation</h4>
+              <h4 className="text-foreground font-semibold mb-4 sm:mb-5 text-base sm:text-lg">Navigation</h4>
               <div className="space-y-3 sm:space-y-4 text-sm sm:text-base">
                 {footerData.sections.navigation.map((navItem, index) => (
-                  <Link 
+                  <Link
                     key={index}
-                    to={navItem.href} 
-                    className="block text-gray-400 hover:text-white transition-colors"
+                    to={navItem.href}
+                    className="block text-muted-foreground hover:text-foreground transition-colors"
                   >
                     {navItem.name}
                   </Link>
@@ -334,31 +334,31 @@ const Footer = () => {
           </div>
 
           {/* Stats Section - Desktop only */}
-          <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 lg:gap-8 py-6 lg:py-8 border-t border-gray-600 border-b border-gray-600">
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 lg:gap-8 py-6 lg:py-8 border-t border-border border-b border-border">
             <div className="text-center py-2 lg:py-3">
               <div className="flex items-center justify-center mb-3 lg:mb-4">
-                <FaStar className="w-4 h-4 lg:w-5 lg:h-5 text-purple-400 mr-2" />
-                <span className="text-xs lg:text-sm text-gray-400 uppercase tracking-wider font-medium">Total Visitors</span>
+                <FaStar className="w-4 h-4 lg:w-5 lg:h-5 mr-2" style={{ color: `hsl(var(--primary))` }} />
+                <span className="text-xs lg:text-sm text-muted-foreground uppercase tracking-wider font-medium">Total Visitors</span>
               </div>
-              <div className="text-xl lg:text-2xl font-bold text-white">{footerData.stats.totalVisitors}</div>
+              <div className="text-xl lg:text-2xl font-bold text-foreground">{footerData.stats.totalVisitors}</div>
             </div>
 
             <div className="text-center py-2 lg:py-3">
               <div className="flex items-center justify-center mb-3 lg:mb-4">
-                <FaMagic className="w-4 h-4 lg:w-5 lg:h-5 text-purple-400 mr-2" />
-                <span className="text-xs lg:text-sm text-gray-400 uppercase tracking-wider font-medium">Last Updated</span>
+                <FaMagic className="w-4 h-4 lg:w-5 lg:h-5 mr-2" style={{ color: `hsl(var(--primary))` }} />
+                <span className="text-xs lg:text-sm text-muted-foreground uppercase tracking-wider font-medium">Last Updated</span>
               </div>
-              <div className="text-lg lg:text-2xl font-bold text-white">{footerData.stats.lastUpdated}</div>
+              <div className="text-lg lg:text-2xl font-bold text-foreground">{footerData.stats.lastUpdated}</div>
             </div>
 
             <div className="text-center py-2 lg:py-3">
               <div className="flex items-center justify-center mb-3 lg:mb-4">
-                <FaLaptopCode className="w-4 h-4 lg:w-5 lg:h-5 text-blue-400 mr-2" />
-                <span className="text-xs lg:text-sm text-gray-400 uppercase tracking-wider font-medium">DSA Skills</span>
+                <FaLaptopCode className="w-4 h-4 lg:w-5 lg:h-5 mr-2" style={{ color: `hsl(var(--accent))` }} />
+                <span className="text-xs lg:text-sm text-muted-foreground uppercase tracking-wider font-medium">DSA Skills</span>
               </div>
               <div className="flex items-center justify-center space-x-1">
                 {[1, 2, 3, 4, 5].map((star) => (
-                  <FaStar key={star} className="w-4 h-4 lg:w-5 lg:h-5 text-yellow-400" />
+                  <FaStar key={star} className="w-4 h-4 lg:w-5 lg:h-5" style={{ color: `hsl(var(--accent))` }} />
                 ))}
               </div>
             </div>
@@ -366,31 +366,31 @@ const Footer = () => {
         </div>
 
         {/* Simple Mobile Stats */}
-        <div className="sm:hidden border-t border-gray-600 py-4 mb-4">
+        <div className="sm:hidden border-t border-border py-4 mb-4">
           <div className="flex justify-center gap-6 text-center">
             <div>
-              <div className="text-lg font-bold text-white">{footerData.stats.totalProblems}</div>
-              <div className="text-xs text-gray-400">Problems</div>
+              <div className="text-lg font-bold text-foreground">{footerData.stats.totalProblems}</div>
+              <div className="text-xs text-muted-foreground">Problems</div>
             </div>
             <div>
-              <div className="text-lg font-bold text-white">{footerData.stats.totalProjects}</div>
-              <div className="text-xs text-gray-400">Projects</div>
+              <div className="text-lg font-bold text-foreground">{footerData.stats.totalProjects}</div>
+              <div className="text-xs text-muted-foreground">Projects</div>
             </div>
             <div>
-              <div className="text-lg font-bold text-white">{footerData.stats.yearsExperience}</div>
-              <div className="text-xs text-gray-400">Years</div>
+              <div className="text-lg font-bold text-foreground">{footerData.stats.yearsExperience}</div>
+              <div className="text-xs text-muted-foreground">Years</div>
             </div>
           </div>
         </div>
 
         {/* Copyright Section */}
         <div className="pt-4 md:pt-8 text-center">
-          <p className="text-gray-400 text-sm mb-1">
+          <p className="text-muted-foreground text-sm mb-1">
             © {footerData.copyright.year} {footerData.copyright.owner}. All rights reserved.
           </p>
-          <p className="text-gray-400 text-xs flex items-center justify-center space-x-1">
+          <p className="text-muted-foreground text-xs flex items-center justify-center space-x-1">
             <span>Crafted with</span>
-            <Heart className="w-3 h-3 text-red-400" />
+            <Heart className="w-3 h-3" style={{ color: 'hsl(0 84% 60%)' }} />
             <span>using {footerData.copyright.tech}</span>
           </p>
         </div>
