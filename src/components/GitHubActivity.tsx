@@ -109,8 +109,13 @@ const GitHubActivity = ({ className = '' }: GitHubActivityProps) => {
     return (
       <Card className={`p-6 border-primary/20 ${className}`}>
         <div className="text-center py-8">
-          <div className="w-12 h-12 bg-red-500/10 rounded-full flex items-center justify-center mx-auto mb-3">
-            <FaGithub className="w-6 h-6 text-red-500" />
+          <div
+            className="w-12 h-12 rounded-full flex items-center justify-center mx-auto mb-3"
+            style={{
+              backgroundColor: 'hsl(0 84% 60% / 0.1)'
+            }}
+          >
+            <FaGithub className="w-6 h-6" style={{ color: 'hsl(0 84% 60%)' }} />
           </div>
           <p className="text-sm text-muted-foreground mb-3">{error}</p>
           <Button onClick={fetchGitHubData} size="sm" variant="outline">
