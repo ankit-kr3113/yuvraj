@@ -660,9 +660,18 @@ const Overview = () => {
                   </div>
 
                   {/* Compact Status */}
-                  <div className="flex items-center gap-2 mb-3 p-2 rounded-lg bg-gradient-to-r from-green-500/10 to-emerald-500/10 border border-green-400/30">
-                    <div className="w-2 h-2 bg-green-400 rounded-full animate-pulse"></div>
-                    <span className="text-xs font-medium text-green-300">
+                  <div
+                    className="flex items-center gap-2 mb-3 p-2 rounded-lg border"
+                    style={{
+                      background: `linear-gradient(90deg, hsl(var(--accent) / 0.1) 0%, hsl(var(--primary) / 0.1) 100%)`,
+                      borderColor: `hsl(var(--accent) / 0.3)`
+                    }}
+                  >
+                    <div
+                      className="w-2 h-2 rounded-full animate-pulse"
+                      style={{ backgroundColor: `hsl(var(--accent))` }}
+                    ></div>
+                    <span className="text-xs font-medium" style={{ color: `hsl(var(--accent))` }}>
                       Available • {contactInfo.location}
                     </span>
                   </div>
