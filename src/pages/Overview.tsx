@@ -798,7 +798,7 @@ const Overview = () => {
                       </h3>
                     </div>
                     <div className="flex items-center gap-2">
-                      <div className="w-2 h-2 bg-green-400 rounded-full"></div>
+                      <div className="w-2 h-2 rounded-full" style={{ backgroundColor: 'hsl(var(--accent))' }}></div>
                       <Badge variant="outline" className="text-xs">
                         Real-time
                       </Badge>
