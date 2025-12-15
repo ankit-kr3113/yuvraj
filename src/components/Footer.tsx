@@ -390,7 +390,7 @@ const Footer = () => {
           </p>
           <p className="text-muted-foreground text-xs flex items-center justify-center space-x-1">
             <span>Crafted with</span>
-            <Heart className="w-3 h-3" style={{ color: 'hsl(0 84% 60%)' }} />
+            <Heart className="w-3 h-3" style={{ color: 'hsl(var(--destructive))' }} />
             <span>using {footerData.copyright.tech}</span>
           </p>
         </div>
