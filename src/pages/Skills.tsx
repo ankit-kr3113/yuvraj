@@ -81,14 +81,56 @@ const Skills = () => {
 
   const skillsData = skills;
 
-  const getLevelColor = (level: string) => {
+  const getLevelColor = (level: string): React.CSSProperties => {
     switch(level) {
-      case "Frontend": return "bg-blue-500/20 text-blue-300 border border-blue-500/30";
-      case "Backend": return "bg-green-500/20 text-green-300 border border-green-500/30";
-      case "Database": return "bg-purple-500/20 text-purple-300 border border-purple-500/30";
-      case "Languages": return "bg-orange-500/20 text-orange-300 border border-orange-500/30";
-      case "Tools": return "bg-cyan-500/20 text-cyan-300 border border-cyan-500/30";
-      default: return "bg-gray-500/20 text-gray-300 border border-gray-500/30";
+      case "Frontend":
+        return {
+          backgroundColor: 'hsl(var(--primary) / 0.15)',
+          color: 'hsl(var(--primary))',
+          borderColor: 'hsl(var(--primary) / 0.4)',
+          borderWidth: '1px',
+          borderStyle: 'solid'
+        };
+      case "Backend":
+        return {
+          backgroundColor: 'hsl(var(--accent) / 0.15)',
+          color: 'hsl(var(--accent))',
+          borderColor: 'hsl(var(--accent) / 0.4)',
+          borderWidth: '1px',
+          borderStyle: 'solid'
+        };
+      case "Database":
+        return {
+          backgroundColor: 'hsl(120 100% 50% / 0.15)',
+          color: 'hsl(120 100% 60%)',
+          borderColor: 'hsl(120 100% 50% / 0.4)',
+          borderWidth: '1px',
+          borderStyle: 'solid'
+        };
+      case "Languages":
+        return {
+          backgroundColor: 'hsl(39 100% 50% / 0.15)',
+          color: 'hsl(39 100% 60%)',
+          borderColor: 'hsl(39 100% 50% / 0.4)',
+          borderWidth: '1px',
+          borderStyle: 'solid'
+        };
+      case "Tools":
+        return {
+          backgroundColor: 'hsl(180 100% 50% / 0.15)',
+          color: 'hsl(180 100% 60%)',
+          borderColor: 'hsl(180 100% 50% / 0.4)',
+          borderWidth: '1px',
+          borderStyle: 'solid'
+        };
+      default:
+        return {
+          backgroundColor: 'hsl(var(--muted) / 0.3)',
+          color: 'hsl(var(--muted-foreground))',
+          borderColor: 'hsl(var(--muted) / 0.4)',
+          borderWidth: '1px',
+          borderStyle: 'solid'
+        };
     }
   };
 
