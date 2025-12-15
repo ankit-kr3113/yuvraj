@@ -22,8 +22,8 @@ const Footer = () => {
 
         {/* Mobile-First: Simplified Brand Section */}
         <div className="text-center mb-6 sm:hidden">
-          <h3 className="text-xl font-bold text-white mb-3">{footerData.brand.name}</h3>
-          <p className="text-gray-400 text-sm mb-4 leading-relaxed">
+          <h3 className="text-xl font-bold text-foreground mb-3">{footerData.brand.name}</h3>
+          <p className="text-muted-foreground text-sm mb-4 leading-relaxed">
             {footerData.brand.title} specializing in modern web technologies
           </p>
 
@@ -33,7 +33,19 @@ const Footer = () => {
               href={socialLinks.github.url}
               target="_blank"
               rel="noopener noreferrer"
-              className="w-10 h-10 rounded-lg bg-[#2a2b5e] hover:bg-gray-700 flex items-center justify-center text-gray-400 hover:text-white transition-all duration-200"
+              className="w-10 h-10 rounded-lg flex items-center justify-center transition-all duration-200"
+              style={{
+                backgroundColor: `hsl(var(--primary) / 0.2)`,
+                color: 'hsl(var(--muted-foreground))',
+              }}
+              onMouseEnter={(e) => {
+                e.currentTarget.style.backgroundColor = `hsl(var(--primary) / 0.3)`;
+                e.currentTarget.style.color = `hsl(var(--foreground))`;
+              }}
+              onMouseLeave={(e) => {
+                e.currentTarget.style.backgroundColor = `hsl(var(--primary) / 0.2)`;
+                e.currentTarget.style.color = `hsl(var(--muted-foreground))`;
+              }}
             >
               <Github className="w-5 h-5" />
             </a>
@@ -41,20 +53,44 @@ const Footer = () => {
               href={socialLinks.linkedin.url}
               target="_blank"
               rel="noopener noreferrer"
-              className="w-10 h-10 rounded-lg bg-[#2a2b5e] hover:bg-blue-600 flex items-center justify-center text-gray-400 hover:text-white transition-all duration-200"
+              className="w-10 h-10 rounded-lg flex items-center justify-center transition-all duration-200"
+              style={{
+                backgroundColor: `hsl(var(--primary) / 0.2)`,
+                color: 'hsl(var(--muted-foreground))',
+              }}
+              onMouseEnter={(e) => {
+                e.currentTarget.style.backgroundColor = `hsl(var(--primary) / 0.3)`;
+                e.currentTarget.style.color = `hsl(var(--foreground))`;
+              }}
+              onMouseLeave={(e) => {
+                e.currentTarget.style.backgroundColor = `hsl(var(--primary) / 0.2)`;
+                e.currentTarget.style.color = `hsl(var(--muted-foreground))`;
+              }}
             >
               <Linkedin className="w-5 h-5" />
             </a>
             <a
               href={socialLinks.email.url}
-              className="w-10 h-10 rounded-lg bg-[#2a2b5e] hover:bg-red-500 flex items-center justify-center text-gray-400 hover:text-white transition-all duration-200"
+              className="w-10 h-10 rounded-lg flex items-center justify-center transition-all duration-200"
+              style={{
+                backgroundColor: `hsl(var(--primary) / 0.2)`,
+                color: 'hsl(var(--muted-foreground))',
+              }}
+              onMouseEnter={(e) => {
+                e.currentTarget.style.backgroundColor = `hsl(var(--primary) / 0.3)`;
+                e.currentTarget.style.color = `hsl(var(--foreground))`;
+              }}
+              onMouseLeave={(e) => {
+                e.currentTarget.style.backgroundColor = `hsl(var(--primary) / 0.2)`;
+                e.currentTarget.style.color = `hsl(var(--muted-foreground))`;
+              }}
             >
               <Mail className="w-5 h-5" />
             </a>
           </div>
 
           {/* Compact Contact */}
-          <div className="text-sm text-gray-400 mb-6">
+          <div className="text-sm text-muted-foreground mb-6">
             <div className="flex items-center justify-center mb-2">
               <MapPin className="w-4 h-4 mr-2" />
               <span>{footerData.contact.location}</span>
@@ -67,14 +103,14 @@ const Footer = () => {
               href={footerData.sections.quickLinks[0].href}
               target="_blank"
               rel="noopener noreferrer"
-              className="text-gray-400 hover:text-white transition-colors"
+              className="text-muted-foreground hover:text-foreground transition-colors"
             >
               Resume
             </a>
-            <Link to="/projects" className="text-gray-400 hover:text-white transition-colors">
+            <Link to="/projects" className="text-muted-foreground hover:text-foreground transition-colors">
               Projects
             </Link>
-            <Link to="/contact" className="text-gray-400 hover:text-white transition-colors">
+            <Link to="/contact" className="text-muted-foreground hover:text-foreground transition-colors">
               Contact
             </Link>
           </div>
