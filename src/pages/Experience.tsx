@@ -175,8 +175,8 @@ const Experience = () => {
             {/* Enhanced Achievements Sidebar */}
             <div className="space-y-8 sm:space-y-10 mt-12 lg:mt-0">
               <div className="flex items-center mb-6 sm:mb-8">
-                <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-xl bg-gradient-to-br from-yellow-500/20 to-orange-500/20 flex items-center justify-center mr-4">
-                  <Trophy className="w-5 h-5 sm:w-6 sm:h-6 text-yellow-500" />
+                <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-xl flex items-center justify-center mr-4" style={{ backgroundColor: 'hsl(39, 100%, 60%, 0.2)' }}>
+                  <Trophy className="w-5 h-5 sm:w-6 sm:h-6" style={{ color: 'hsl(39, 100%, 60%)' }} />
                 </div>
                 <h2 className="text-xl sm:text-2xl font-bold">Achievements</h2>
               </div>
