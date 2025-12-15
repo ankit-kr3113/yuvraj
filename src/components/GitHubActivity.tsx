@@ -79,16 +79,17 @@ const GitHubActivity = ({ className = '' }: GitHubActivityProps) => {
 
   const getCommitIcon = (message: string) => {
     const lowerMessage = message.toLowerCase();
+    let color = 'hsl(var(--muted-foreground))';
+
     if (lowerMessage.includes('fix') || lowerMessage.includes('bug')) {
-      return <div className="w-2 h-2 bg-red-500 rounded-full"></div>;
+      color = 'hsl(0 84% 60%)'; // destructive color
+    } else if (lowerMessage.includes('feat') || lowerMessage.includes('add')) {
+      color = 'hsl(var(--accent))';
+    } else if (lowerMessage.includes('update') || lowerMessage.includes('improve')) {
+      color = 'hsl(var(--primary))';
     }
-    if (lowerMessage.includes('feat') || lowerMessage.includes('add')) {
-      return <div className="w-2 h-2 bg-green-500 rounded-full"></div>;
-    }
-    if (lowerMessage.includes('update') || lowerMessage.includes('improve')) {
-      return <div className="w-2 h-2 bg-blue-500 rounded-full"></div>;
-    }
-    return <div className="w-2 h-2 bg-gray-500 rounded-full"></div>;
+
+    return <div className="w-2 h-2 rounded-full" style={{ backgroundColor: color }}></div>;
   };
 
   if (loading && commits.length === 0) {
