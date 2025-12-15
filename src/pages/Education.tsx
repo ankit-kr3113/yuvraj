@@ -253,7 +253,7 @@ const Education = () => {
                     <Card key={index} className="portfolio-card slide-up hover:shadow-lg hover:shadow-primary/5 transition-all duration-300">
                       <div className="flex items-start gap-3">
                         <div className="w-8 h-8 rounded-lg bg-primary/10 flex items-center justify-center flex-shrink-0 mt-1">
-                          <cert.badge className={`w-4 h-4 ${cert.color}`} />
+                          <cert.badge className="w-4 h-4" style={cert.colorStyle} />
                         </div>
                         
                         <div className="flex-1">
