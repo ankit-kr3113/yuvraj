@@ -214,8 +214,8 @@ const Footer = () => {
 
             {/* Brand Section */}
             <div>
-              <h3 className="text-lg sm:text-xl font-bold text-white mb-4 sm:mb-5">{footerData.brand.name}</h3>
-              <p className="text-gray-400 text-sm sm:text-base mb-5 sm:mb-6 leading-relaxed">
+              <h3 className="text-lg sm:text-xl font-bold text-foreground mb-4 sm:mb-5">{footerData.brand.name}</h3>
+              <p className="text-muted-foreground text-sm sm:text-base mb-5 sm:mb-6 leading-relaxed">
                 {footerData.brand.description}
               </p>
               <div className="flex flex-wrap gap-3">
@@ -223,7 +223,8 @@ const Footer = () => {
                   href={socialLinks.github.url}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="w-8 h-8 rounded-lg bg-[#2a2b5e] hover:bg-gray-700 flex items-center justify-center text-gray-400 hover:text-white transition-all duration-200"
+                  className="w-8 h-8 rounded-lg flex items-center justify-center text-muted-foreground hover:text-foreground transition-all duration-200"
+                  style={{ backgroundColor: `hsl(var(--primary) / 0.2)` }}
                 >
                   <Github className="w-4 h-4" />
                 </a>
@@ -231,7 +232,8 @@ const Footer = () => {
                   href={socialLinks.linkedin.url}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="w-8 h-8 rounded-lg bg-[#2a2b5e] hover:bg-blue-600 flex items-center justify-center text-gray-400 hover:text-white transition-all duration-200"
+                  className="w-8 h-8 rounded-lg flex items-center justify-center text-muted-foreground hover:text-foreground transition-all duration-200"
+                  style={{ backgroundColor: `hsl(var(--primary) / 0.2)` }}
                 >
                   <Linkedin className="w-4 h-4" />
                 </a>
@@ -239,7 +241,8 @@ const Footer = () => {
                   href={socialLinks.twitter.url}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="w-8 h-8 rounded-lg bg-[#2a2b5e] hover:bg-sky-500 flex items-center justify-center text-gray-400 hover:text-white transition-all duration-200"
+                  className="w-8 h-8 rounded-lg flex items-center justify-center text-muted-foreground hover:text-foreground transition-all duration-200"
+                  style={{ backgroundColor: `hsl(var(--primary) / 0.2)` }}
                 >
                   <Twitter className="w-4 h-4" />
                 </a>
@@ -247,13 +250,15 @@ const Footer = () => {
                   href="https://dribbble.com/"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="w-8 h-8 rounded-lg bg-[#2a2b5e] hover:bg-pink-500 flex items-center justify-center text-gray-400 hover:text-white transition-all duration-200"
+                  className="w-8 h-8 rounded-lg flex items-center justify-center text-muted-foreground hover:text-foreground transition-all duration-200"
+                  style={{ backgroundColor: `hsl(var(--primary) / 0.2)` }}
                 >
                   <Edit className="w-4 h-4" />
                 </a>
                 <a
                   href={socialLinks.email.url}
-                  className="w-8 h-8 rounded-lg bg-[#2a2b5e] hover:bg-red-500 flex items-center justify-center text-gray-400 hover:text-white transition-all duration-200"
+                  className="w-8 h-8 rounded-lg flex items-center justify-center text-muted-foreground hover:text-foreground transition-all duration-200"
+                  style={{ backgroundColor: `hsl(var(--primary) / 0.2)` }}
                 >
                   <Mail className="w-4 h-4" />
                 </a>
@@ -262,9 +267,9 @@ const Footer = () => {
 
             {/* Contact Section */}
             <div>
-              <h4 className="text-white font-semibold mb-4 sm:mb-5 text-base sm:text-lg">Contact</h4>
+              <h4 className="text-foreground font-semibold mb-4 sm:mb-5 text-base sm:text-lg">Contact</h4>
               <div className="space-y-3 sm:space-y-4 text-sm sm:text-base">
-                <div className="flex items-center text-gray-400 hover:text-white transition-colors">
+                <div className="flex items-center text-muted-foreground hover:text-foreground transition-colors">
                   <MapPin className="w-4 h-4 mr-2" />
                   <span>{footerData.contact.location}</span>
                 </div>
