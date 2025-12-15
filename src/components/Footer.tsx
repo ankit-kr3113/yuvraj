@@ -121,8 +121,8 @@ const Footer = () => {
           <div className="grid grid-cols-2 gap-8 mb-10">
             {/* Brand Section - Simplified */}
             <div className="space-y-5">
-              <h3 className="text-xl font-bold text-white">{footerData.brand.name}</h3>
-              <p className="text-gray-400 text-sm leading-relaxed">
+              <h3 className="text-xl font-bold text-foreground">{footerData.brand.name}</h3>
+              <p className="text-muted-foreground text-sm leading-relaxed">
                 {footerData.brand.title} specializing in modern web technologies
               </p>
               <div className="flex gap-3">
