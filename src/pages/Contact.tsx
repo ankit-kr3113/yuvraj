@@ -108,35 +108,35 @@ const Contact = () => {
       icon: FaGithub,
       href: socialLinks.github.url,
       description: "Check out my code",
-      color: "text-gray-400",
-      bgColor: "from-gray-500/20 to-gray-600/20",
-      borderColor: "border-gray-500/30"
+      colorStyle: { color: 'hsl(var(--secondary))' },
+      bgColor: "bg-secondary/20",
+      borderColor: "border-secondary/30"
     },
     {
       name: "LinkedIn",
       icon: FaLinkedin,
       href: socialLinks.linkedin.url,
       description: "Let's connect professionally",
-      color: "text-blue-400",
-      bgColor: "from-blue-500/20 to-blue-600/20",
-      borderColor: "border-blue-500/30"
+      colorStyle: { color: 'hsl(var(--primary))' },
+      bgColor: "bg-primary/20",
+      borderColor: "border-primary/30"
     },
     {
       name: "Instagram",
       icon: FaInstagram,
       href: socialLinks.instagram.url,
       description: "Follow for updates",
-      color: "text-pink-400",
-      bgColor: "from-pink-500/20 to-purple-500/20",
-      borderColor: "border-pink-500/30"
+      colorStyle: { color: 'hsl(var(--accent))' },
+      bgColor: "bg-accent/20",
+      borderColor: "border-accent/30"
     },
     {
       name: "Email",
       icon: HiMail,
       href: socialLinks.email.url,
       description: "Send me a message",
-      color: "text-red-400",
-      bgColor: "from-red-500/20 to-orange-500/20",
+      colorStyle: { color: 'hsl(0, 100%, 60%)' },
+      bgColor: "bg-red-500/20",
       borderColor: "border-red-500/30"
     }
   ];
