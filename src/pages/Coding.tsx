@@ -300,13 +300,13 @@ const Coding = () => {
                   </>
                 ) : apiError ? (
                   <>
-                    <FaExclamationTriangle className="w-4 h-4 text-orange-500" />
-                    <span className="text-sm text-orange-600">Using offline data</span>
+                    <FaExclamationTriangle className="w-4 h-4 text-accent" />
+                    <span className="text-sm text-accent">Using offline data</span>
                   </>
                 ) : (
                   <>
-                    <FaWifi className="w-4 h-4 text-green-500" />
-                    <span className="text-sm text-green-600">Live data</span>
+                    <FaWifi className="w-4 h-4 text-primary" />
+                    <span className="text-sm text-primary">Live data</span>
                   </>
                 )}
               </div>
@@ -334,8 +334,8 @@ const Coding = () => {
 
             {/* Inline Stats Display */}
             <div className="flex items-center justify-center gap-6 text-sm animate-fade-in-up animation-delay-600">
-              <div className="flex items-center gap-2 px-3 py-2 bg-green-500/5 rounded-lg border border-green-500/20">
-                <FaTrophy className="w-4 h-4 text-green-500" />
+              <div className="flex items-center gap-2 px-3 py-2 bg-primary/5 rounded-lg border border-primary/20">
+                <FaTrophy className="w-4 h-4 text-primary" />
                 <span className="text-muted-foreground font-medium">4 Platforms</span>
               </div>
               <div className="flex items-center gap-2 px-3 py-2 bg-primary/5 rounded-lg border border-primary/20">
@@ -345,8 +345,8 @@ const Coding = () => {
                 </span>
                 <span className="text-muted-foreground font-medium">Total Solved</span>
               </div>
-              <div className="flex items-center gap-2 px-3 py-2 bg-orange-500/5 rounded-lg border border-orange-500/20">
-                <FaStar className="w-4 h-4 text-orange-500" />
+              <div className="flex items-center gap-2 px-3 py-2 bg-accent/5 rounded-lg border border-accent/20">
+                <FaStar className="w-4 h-4 text-accent" />
                 <span className="text-muted-foreground font-medium">
                   LeetCode {apiData?.leetcode?.contests?.topPercentage ? `Top ${apiData.leetcode.contests.topPercentage}%` : achievements.leetcode.percentile}
                 </span>
