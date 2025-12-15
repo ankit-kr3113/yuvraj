@@ -538,32 +538,32 @@ export const techStack = [
   {
     name: "React",
     icon: "R",
-    color: "from-blue-500 to-cyan-500",
-    textColor: "text-blue-400",
+    color: "from-primary to-primary-glow",
+    textColor: getThemeColor("primary"),
   },
   {
     name: "Node.js",
     icon: "N",
-    color: "from-green-500 to-emerald-500",
-    textColor: "text-green-400",
+    color: "from-success-500 to-success-600",
+    textColor: getThemeColor("success"),
   },
   {
     name: "MongoDB",
     icon: "M",
-    color: "from-yellow-500 to-orange-500",
-    textColor: "text-yellow-400",
+    color: "from-warning-500 to-warning-600",
+    textColor: getThemeColor("warning"),
   },
   {
     name: "TypeScript",
     icon: "TS",
-    color: "from-purple-500 to-pink-500",
-    textColor: "text-purple-400",
+    color: "from-accent to-primary",
+    textColor: getThemeColor("accent"),
   },
   {
     name: "Tailwind",
     icon: "TW",
-    color: "from-indigo-500 to-blue-600",
-    textColor: "text-indigo-400",
+    color: "from-info-500 to-primary",
+    textColor: getThemeColor("info"),
   },
 ];
 
