@@ -250,11 +250,11 @@ const Overview = () => {
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-12 lg:gap-20 xl:gap-24 items-center">
               {/* Left Content - Hero Text */}
               <div className="space-y-6 md:space-y-8 fade-in order-2 lg:order-1 text-center lg:text-left max-w-2xl mx-auto lg:mx-0">
-                {/* Status Badge */}
-                <div className="inline-flex items-center px-4 py-2.5 rounded-full bg-gradient-to-r from-primary/15 to-primary-glow/10 border-2 border-primary/25 text-primary text-sm font-semibold shadow-xl backdrop-blur-sm hover:shadow-2xl hover:scale-105 transition-all duration-300">
-                  <Code className="w-4 h-4 mr-2 animate-pulse" />
+                {/* Status Badge - Enhanced */}
+                <div className="inline-flex items-center px-5 py-3 rounded-full bg-gradient-to-r from-primary/20 to-primary-glow/15 border-2 border-primary/40 text-primary text-sm font-bold shadow-xl backdrop-blur-sm hover:shadow-2xl hover:scale-105 transition-all duration-300 hover:border-primary/60 hover:from-primary/25 hover:to-primary-glow/20 group">
+                  <Code className="w-4 h-4 mr-2.5 group-hover:animate-spin" />
                   <span>Full Stack Developer</span>
-                  <div className="ml-3 w-2 h-2 bg-primary rounded-full animate-pulse shadow-lg shadow-primary/50"></div>
+                  <div className="ml-3 w-2 h-2 bg-primary rounded-full animate-pulse shadow-lg shadow-primary/70 group-hover:shadow-primary"></div>
                 </div>
 
                 {/* Main Heading */}
@@ -294,7 +294,7 @@ const Overview = () => {
                       <FaStar className="w-4 h-4 text-primary animate-pulse" />
                       <span>Skilled in</span>
                     </p>
-                    <div className="flex flex-wrap gap-2 justify-center lg:justify-start">
+                    <div className="flex flex-wrap gap-2.5 justify-center lg:justify-start">
                       {[
                         "React",
                         "Node.js",
@@ -304,10 +304,10 @@ const Overview = () => {
                       ].map((tech, index) => (
                         <div
                           key={index}
-                          className="flex items-center gap-2 bg-primary/10 border border-primary/20 px-3 py-2 rounded-full hover:scale-110 transition-all duration-300 cursor-pointer hover:shadow-lg backdrop-blur-sm"
+                          className="flex items-center gap-2 bg-gradient-to-r from-primary/15 to-primary-glow/10 border border-primary/30 px-4 py-2.5 rounded-full hover:scale-110 transition-all duration-300 cursor-pointer hover:shadow-lg hover:shadow-primary/20 hover:border-primary/50 hover:from-primary/20 hover:to-primary-glow/15 backdrop-blur-sm group"
                         >
-                          <div className="w-2 h-2 rounded-full bg-primary"></div>
-                          <span className="text-xs font-semibold text-foreground">
+                          <div className="w-2 h-2 rounded-full bg-gradient-to-r from-primary to-primary-glow group-hover:shadow-lg group-hover:shadow-primary"></div>
+                          <span className="text-xs font-bold text-foreground group-hover:text-primary-glow transition-colors duration-300">
                             {tech}
                           </span>
                         </div>
@@ -319,7 +319,7 @@ const Overview = () => {
                 {/* Action Buttons */}
                 <div className="flex flex-col sm:flex-row gap-3 md:gap-4 animate-fade-in-up animation-delay-800">
                   <Button
-                    className="group relative overflow-hidden px-6 md:px-8 py-3 md:py-4 text-base md:text-lg font-bold bg-gradient-to-r from-primary via-primary-glow to-accent hover:from-accent hover:via-primary-glow hover:to-primary shadow-2xl hover:shadow-3xl hover:shadow-primary/40 transition-all duration-500 border-0 rounded-2xl hover:scale-105 md:hover:scale-110 active:scale-95 backdrop-blur-sm transform hover:-translate-y-1"
+                    className="group relative overflow-hidden px-6 md:px-8 py-3 md:py-4 text-base md:text-lg font-bold bg-gradient-to-r from-primary via-primary-glow to-accent hover:from-accent hover:via-primary-glow hover:to-primary shadow-2xl hover:shadow-3xl hover:shadow-primary/50 transition-all duration-500 border-0 rounded-2xl hover:scale-105 md:hover:scale-110 active:scale-95 backdrop-blur-sm transform hover:-translate-y-1.5 focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 focus-visible:ring-offset-background"
                     asChild
                   >
                     <Link to="/contact">
