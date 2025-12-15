@@ -170,25 +170,50 @@
 @layer components {
   /* Base Components */
   .btn-hero {
-    @apply bg-primary hover:bg-primary-glow text-primary-foreground font-semibold py-3 px-6 rounded-lg transition-all duration-300 shadow-md hover:shadow-lg active:scale-95;
-    will-change: transform;
+    @apply bg-primary hover:bg-primary-glow text-primary-foreground font-semibold py-3 px-6 rounded-lg transition-all shadow-md hover:shadow-xl active:scale-95;
+    transition-duration: var(--transition-normal);
+    will-change: transform, box-shadow;
     transform: translateZ(0);
+  }
+
+  .btn-hero:focus-visible {
+    @apply outline-none ring-2 ring-offset-2 ring-offset-background;
+    ring-color: hsl(var(--ring));
   }
 
   .btn-outline-hero {
-    @apply border-2 border-primary text-primary hover:bg-primary hover:text-primary-foreground font-semibold py-3 px-6 rounded-lg transition-all duration-300 shadow-md hover:shadow-lg active:scale-95;
-    will-change: transform;
+    @apply border-2 border-primary text-primary hover:bg-primary/10 hover:text-primary font-semibold py-3 px-6 rounded-lg transition-all shadow-md hover:shadow-xl active:scale-95;
+    transition-duration: var(--transition-normal);
+    will-change: transform, box-shadow;
     transform: translateZ(0);
+  }
+
+  .btn-outline-hero:focus-visible {
+    @apply outline-none ring-2 ring-offset-2 ring-offset-background;
+    ring-color: hsl(var(--ring));
   }
 
   .portfolio-card {
-    @apply bg-card border border-border rounded-lg p-4 sm:p-6 transition-all duration-300 backdrop-blur-sm;
-    will-change: transform;
+    @apply bg-card border border-border rounded-lg p-4 sm:p-6 transition-all backdrop-blur-sm;
+    transition-duration: var(--transition-normal);
+    will-change: transform, box-shadow;
     transform: translateZ(0);
   }
 
+  .portfolio-card:hover {
+    @apply border-primary/50;
+    transform: translateY(-2px);
+    box-shadow: 0 10px 32px hsl(var(--primary) / 0.15);
+  }
+
   .glass {
-    @apply bg-card/60 backdrop-blur-xl border-2 border-border/60 shadow-xl;
+    @apply bg-card/60 backdrop-blur-xl border-2 border-border/60 shadow-xl transition-all;
+    transition-duration: var(--transition-normal);
+  }
+
+  .glass:hover {
+    @apply border-primary/40;
+    box-shadow: 0 10px 40px hsl(var(--primary) / 0.15);
   }
 
   .glass-enhanced {
@@ -198,13 +223,19 @@
   }
 
   .glow-on-hover {
-    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    transition: all var(--transition-normal);
   }
 
   .glow-on-hover:hover {
     transform: translateY(-2px);
     box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2),
-      0 0 30px hsl(var(--primary) / 0.3);
+      0 0 30px hsl(var(--primary) / 0.4);
+  }
+
+  .glow-on-hover:focus-visible {
+    @apply outline-none;
+    box-shadow: 0 0 0 2px hsl(var(--background)),
+      0 0 0 4px hsl(var(--ring));
   }
 
   .gradient-text {
