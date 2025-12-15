@@ -173,7 +173,7 @@ const ParticleBackground = ({
 
   // Start animation when dimensions are set
   useEffect(() => {
-    if (dimensions.width > 0 && dimensions.height > 0) {
+    if (dimensions.width > 0 && dimensions.height > 0 && particleColors.length > 0) {
       animate();
     }
 
@@ -182,7 +182,7 @@ const ParticleBackground = ({
         cancelAnimationFrame(animationFrameRef.current);
       }
     };
-  }, [dimensions]);
+  }, [dimensions, particleColors]);
 
   return (
     <canvas
