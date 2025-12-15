@@ -619,7 +619,7 @@ const Overview = () => {
                   </div>
                   <div className="space-y-3">
                     <div className="flex items-center gap-2">
-                      <Zap className="w-4 h-4 text-yellow-500" />
+                      <Zap className="w-4 h-4" style={{ color: `hsl(var(--accent))` }} />
                       <span className="text-sm font-medium text-foreground">
                         Learning:
                       </span>
