@@ -390,10 +390,10 @@ const Contact = () => {
                   )}
                 </form>
 
-                <div className="mt-6 p-4 rounded-xl border" style={{ backgroundColor: 'hsl(120, 100%, 60%, 0.1)', borderColor: 'hsl(120, 100%, 50%, 0.2)' }}>
+                <div className="mt-6 p-4 rounded-xl border" style={{ backgroundColor: `hsl(var(--skill-database) / 0.1)`, borderColor: `hsl(var(--skill-database) / 0.2)` }}>
                   <div className="flex items-start gap-3">
-                    <div className="w-8 h-8 rounded-lg flex items-center justify-center mt-0.5" style={{ backgroundColor: 'hsl(120, 100%, 50%, 0.2)' }}>
-                      <HiChatAlt className="w-4 h-4" style={{ color: 'hsl(120, 100%, 50%)' }} />
+                    <div className="w-8 h-8 rounded-lg flex items-center justify-center mt-0.5" style={{ backgroundColor: `hsl(var(--skill-database) / 0.2)` }}>
+                      <HiChatAlt className="w-4 h-4" style={{ color: 'hsl(var(--skill-database))' }} />
                     </div>
                     <div>
                       <p className="text-sm text-foreground font-medium mb-1">
