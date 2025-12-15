@@ -79,16 +79,17 @@ const GitHubActivity = ({ className = '' }: GitHubActivityProps) => {
 
   const getCommitIcon = (message: string) => {
     const lowerMessage = message.toLowerCase();
+    let color = 'hsl(var(--muted-foreground))';
+
     if (lowerMessage.includes('fix') || lowerMessage.includes('bug')) {
-      return <div className="w-2 h-2 bg-red-500 rounded-full"></div>;
+      color = 'hsl(0 84% 60%)'; // destructive color
+    } else if (lowerMessage.includes('feat') || lowerMessage.includes('add')) {
+      color = 'hsl(var(--accent))';
+    } else if (lowerMessage.includes('update') || lowerMessage.includes('improve')) {
+      color = 'hsl(var(--primary))';
     }
-    if (lowerMessage.includes('feat') || lowerMessage.includes('add')) {
-      return <div className="w-2 h-2 bg-green-500 rounded-full"></div>;
-    }
-    if (lowerMessage.includes('update') || lowerMessage.includes('improve')) {
-      return <div className="w-2 h-2 bg-blue-500 rounded-full"></div>;
-    }
-    return <div className="w-2 h-2 bg-gray-500 rounded-full"></div>;
+
+    return <div className="w-2 h-2 rounded-full" style={{ backgroundColor: color }}></div>;
   };
 
   if (loading && commits.length === 0) {
@@ -108,8 +109,13 @@ const GitHubActivity = ({ className = '' }: GitHubActivityProps) => {
     return (
       <Card className={`p-6 border-primary/20 ${className}`}>
         <div className="text-center py-8">
-          <div className="w-12 h-12 bg-red-500/10 rounded-full flex items-center justify-center mx-auto mb-3">
-            <FaGithub className="w-6 h-6 text-red-500" />
+          <div
+            className="w-12 h-12 rounded-full flex items-center justify-center mx-auto mb-3"
+            style={{
+              backgroundColor: 'hsl(0 84% 60% / 0.1)'
+            }}
+          >
+            <FaGithub className="w-6 h-6" style={{ color: 'hsl(0 84% 60%)' }} />
           </div>
           <p className="text-sm text-muted-foreground mb-3">{error}</p>
           <Button onClick={fetchGitHubData} size="sm" variant="outline">
@@ -319,11 +325,11 @@ const GitHubActivity = ({ className = '' }: GitHubActivityProps) => {
                       </div>
                       <div className="flex items-center gap-3">
                         <div className="flex items-center gap-1">
-                          <Star className="w-3 h-3 text-yellow-500" />
+                          <Star className="w-3 h-3" style={{ color: 'hsl(var(--accent))' }} />
                           <span className="text-xs text-muted-foreground">{repo.stargazers_count}</span>
                         </div>
                         <div className="flex items-center gap-1">
-                          <GitFork className="w-3 h-3 text-blue-500" />
+                          <GitFork className="w-3 h-3" style={{ color: 'hsl(var(--primary))' }} />
                           <span className="text-xs text-muted-foreground">{repo.forks_count}</span>
                         </div>
                       </div>

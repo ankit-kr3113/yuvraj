@@ -182,9 +182,24 @@ const Overview = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-background via-background/95 to-primary/5 relative overflow-hidden">
       {/* Background gradient overlay with animation */}
-      <div className="fixed inset-0 bg-gradient-to-br from-purple-500/5 via-transparent to-cyan-500/5 animate-pulse opacity-50 pointer-events-none"></div>
-      <div className="fixed top-0 left-0 w-full h-full bg-[radial-gradient(ellipse_at_top_right,_var(--tw-gradient-stops))] from-purple-500/10 via-transparent to-transparent pointer-events-none"></div>
-      <div className="fixed bottom-0 right-0 w-full h-full bg-[radial-gradient(ellipse_at_bottom_left,_var(--tw-gradient-stops))] from-cyan-500/8 via-transparent to-transparent pointer-events-none"></div>
+      <div
+        className="fixed inset-0 animate-pulse opacity-50 pointer-events-none"
+        style={{
+          background: `linear-gradient(135deg, hsl(var(--primary) / 0.05) 0%, transparent 50%, hsl(var(--accent) / 0.05) 100%)`
+        }}
+      ></div>
+      <div
+        className="fixed top-0 left-0 w-full h-full pointer-events-none"
+        style={{
+          background: `radial-gradient(ellipse at top right, hsl(var(--primary) / 0.1) 0%, transparent 50%)`
+        }}
+      ></div>
+      <div
+        className="fixed bottom-0 right-0 w-full h-full pointer-events-none"
+        style={{
+          background: `radial-gradient(ellipse at bottom left, hsl(var(--accent) / 0.08) 0%, transparent 50%)`
+        }}
+      ></div>
 
       {/* Content wrapper */}
       <div className="relative z-10">
@@ -218,8 +233,18 @@ const Overview = () => {
         <section className="relative pt-20 pb-16 min-h-screen flex items-center overflow-hidden">
           {/* Enhanced Background Effects */}
           <div className="absolute inset-0 bg-gradient-to-br from-background via-background/95 to-primary/5"></div>
-          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-gradient-radial from-primary/[0.08] via-primary-glow/[0.04] to-transparent rounded-full blur-3xl opacity-40 animate-pulse"></div>
-          <div className="absolute top-1/4 right-1/4 w-[400px] h-[400px] bg-gradient-radial from-primary-glow/[0.06] to-transparent rounded-full blur-2xl opacity-30 animate-pulse animation-delay-1000"></div>
+          <div
+            className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] rounded-full blur-3xl opacity-40 animate-pulse"
+            style={{
+              background: `radial-gradient(circle, hsl(var(--primary) / 0.08) 0%, hsl(var(--primary-glow) / 0.04) 50%, transparent 100%)`
+            }}
+          ></div>
+          <div
+            className="absolute top-1/4 right-1/4 w-[400px] h-[400px] rounded-full blur-2xl opacity-30 animate-pulse animation-delay-1000"
+            style={{
+              background: `radial-gradient(circle, hsl(var(--primary-glow) / 0.06) 0%, transparent 100%)`
+            }}
+          ></div>
 
           <div className="relative max-w-7xl mx-auto w-full px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16 z-10">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-12 lg:gap-20 xl:gap-24 items-center">
@@ -415,8 +440,16 @@ const Overview = () => {
                 {/* Skills Overview - Most Important for Portfolio */}
                 <Card className="p-6 border-primary/30">
                   <div className="flex items-center mb-4">
-                    <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-cyan-500/30 to-blue-500/30 flex items-center justify-center mr-3 shadow-lg">
-                      <Activity className="w-5 h-5 text-cyan-400" />
+                    <div
+                      className="w-10 h-10 rounded-xl flex items-center justify-center mr-3 shadow-lg"
+                      style={{
+                        background: `linear-gradient(135deg, hsl(var(--accent) / 0.3) 0%, hsl(var(--primary) / 0.3) 100%)`
+                      }}
+                    >
+                      <Activity
+                        className="w-5 h-5"
+                        style={{ color: `hsl(var(--accent))` }}
+                      />
                     </div>
                     <h3 className="text-lg font-semibold text-foreground">
                       Technical Skills
@@ -458,8 +491,16 @@ const Overview = () => {
                 {/* Coding Achievements - Key Portfolio Highlight */}
                 <Card className="p-6 border-primary/30 hover:shadow-lg transition-all duration-300">
                   <div className="flex items-center mb-4">
-                    <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-yellow-500/30 to-orange-500/30 flex items-center justify-center mr-3 shadow-lg">
-                      <FaTrophy className="w-5 h-5 text-yellow-400" />
+                    <div
+                      className="w-10 h-10 rounded-xl flex items-center justify-center mr-3 shadow-lg"
+                      style={{
+                        background: `linear-gradient(135deg, hsl(var(--accent) / 0.3) 0%, hsl(var(--primary) / 0.3) 100%)`
+                      }}
+                    >
+                      <FaTrophy
+                        className="w-5 h-5"
+                        style={{ color: `hsl(var(--accent))` }}
+                      />
                     </div>
                     <h3 className="text-lg font-semibold text-foreground">
                       Coding Achievements
@@ -578,7 +619,7 @@ const Overview = () => {
                   </div>
                   <div className="space-y-3">
                     <div className="flex items-center gap-2">
-                      <Zap className="w-4 h-4 text-yellow-500" />
+                      <Zap className="w-4 h-4" style={{ color: `hsl(var(--accent))` }} />
                       <span className="text-sm font-medium text-foreground">
                         Learning:
                       </span>
@@ -588,7 +629,7 @@ const Overview = () => {
                     </p>
 
                     <div className="flex items-center gap-2">
-                      <MapPin className="w-4 h-4 text-blue-500" />
+                      <MapPin className="w-4 h-4" style={{ color: `hsl(var(--primary))` }} />
                       <span className="text-sm font-medium text-foreground">
                         Location:
                       </span>
@@ -605,8 +646,13 @@ const Overview = () => {
                 {/* Contact Information */}
                 <Card className="p-4 border-2 border-primary/40 hover:border-primary/60 shadow-xl hover:shadow-2xl hover:shadow-blue-500/15 transition-all duration-500 backdrop-blur-sm bg-gradient-to-br from-card/90 to-card/70 hover:-translate-y-1">
                   <div className="flex items-center mb-3">
-                    <div className="w-8 h-8 rounded-lg bg-gradient-to-br from-blue-500/30 to-indigo-500/30 flex items-center justify-center mr-2 shadow-lg">
-                      <FaEnvelope className="w-4 h-4 text-blue-400" />
+                    <div
+                      className="w-8 h-8 rounded-lg flex items-center justify-center mr-2 shadow-lg"
+                      style={{
+                        background: `linear-gradient(135deg, hsl(var(--primary) / 0.3) 0%, hsl(var(--accent) / 0.3) 100%)`
+                      }}
+                    >
+                      <FaEnvelope className="w-4 h-4" style={{ color: `hsl(var(--primary))` }} />
                     </div>
                     <h3 className="text-base font-semibold text-foreground">
                       Contact
@@ -614,9 +660,18 @@ const Overview = () => {
                   </div>
 
                   {/* Compact Status */}
-                  <div className="flex items-center gap-2 mb-3 p-2 rounded-lg bg-gradient-to-r from-green-500/10 to-emerald-500/10 border border-green-400/30">
-                    <div className="w-2 h-2 bg-green-400 rounded-full animate-pulse"></div>
-                    <span className="text-xs font-medium text-green-300">
+                  <div
+                    className="flex items-center gap-2 mb-3 p-2 rounded-lg border"
+                    style={{
+                      background: `linear-gradient(90deg, hsl(var(--accent) / 0.1) 0%, hsl(var(--primary) / 0.1) 100%)`,
+                      borderColor: `hsl(var(--accent) / 0.3)`
+                    }}
+                  >
+                    <div
+                      className="w-2 h-2 rounded-full animate-pulse"
+                      style={{ backgroundColor: `hsl(var(--accent))` }}
+                    ></div>
+                    <span className="text-xs font-medium" style={{ color: `hsl(var(--accent))` }}>
                       Available • {contactInfo.location}
                     </span>
                   </div>
@@ -654,15 +709,28 @@ const Overview = () => {
                 </Card>
 
                 {/* Interests & Hobbies */}
-                <Card className="p-6 border-2 border-primary/30 hover:border-primary/50 hover:shadow-xl hover:shadow-purple-500/15 transition-all duration-500 backdrop-blur-sm bg-gradient-to-br from-card/95 to-card/80 hover:-translate-y-1 relative overflow-hidden group">
+                <Card className="p-6 border-2 border-primary/30 hover:border-primary/50 hover:shadow-xl transition-all duration-500 backdrop-blur-sm bg-gradient-to-br from-card/95 to-card/80 hover:-translate-y-1 relative overflow-hidden group" style={{ '--hover-shadow-color': 'hsl(var(--primary) / 0.15)' } as React.CSSProperties}>
                   {/* Background decoration */}
-                  <div className="absolute top-0 right-0 w-20 h-20 bg-gradient-to-br from-purple-500/10 to-pink-500/5 rounded-full -translate-y-10 translate-x-10 group-hover:scale-150 transition-transform duration-700"></div>
+                  <div
+                    className="absolute top-0 right-0 w-20 h-20 rounded-full -translate-y-10 translate-x-10 group-hover:scale-150 transition-transform duration-700"
+                    style={{
+                      background: `linear-gradient(135deg, hsl(var(--primary) / 0.1) 0%, hsl(var(--accent) / 0.05) 100%)`
+                    }}
+                  ></div>
                   <div className="absolute bottom-0 left-0 w-16 h-16 bg-gradient-to-tr from-primary/10 to-primary-glow/5 rounded-full translate-y-8 -translate-x-8 group-hover:scale-125 transition-transform duration-700"></div>
 
                   <div className="relative z-10">
                     <div className="flex items-center mb-4">
-                      <div className="w-8 h-8 rounded-lg bg-gradient-to-br from-purple-500/30 to-pink-500/30 flex items-center justify-center mr-3 shadow-lg group-hover:scale-110 transition-transform duration-300">
-                        <FaStar className="w-4 h-4 text-purple-400" />
+                      <div
+                        className="w-8 h-8 rounded-lg flex items-center justify-center mr-3 shadow-lg group-hover:scale-110 transition-transform duration-300"
+                        style={{
+                          background: `linear-gradient(135deg, hsl(var(--primary) / 0.3) 0%, hsl(var(--accent) / 0.3) 100%)`
+                        }}
+                      >
+                        <FaStar
+                          className="w-4 h-4"
+                          style={{ color: `hsl(var(--primary))` }}
+                        />
                       </div>
                       <h3 className="text-base font-semibold text-foreground">
                         Interests & Hobbies
@@ -677,7 +745,7 @@ const Overview = () => {
                             key={index}
                             className="group/item flex items-center gap-3 p-2 rounded-lg bg-primary/10 hover:bg-primary/15 transition-all duration-300 cursor-pointer"
                           >
-                            <div className="text-purple-400 group-hover/item:scale-125 transition-transform duration-300">
+                            <div className="group-hover/item:scale-125 transition-transform duration-300" style={{ color: `hsl(var(--primary))` }}>
                               <IconComponent className="w-4 h-4" />
                             </div>
                             <div className="flex-1 min-w-0">
@@ -693,8 +761,14 @@ const Overview = () => {
                       })}
                     </div>
 
-                    <div className="mt-4 p-3 rounded-lg bg-gradient-to-r from-purple-500/10 to-pink-500/10 border border-purple-400/30">
-                      <div className="flex items-center gap-2 text-xs text-purple-400 mb-1">
+                    <div
+                      className="mt-4 p-3 rounded-lg border"
+                      style={{
+                        background: `linear-gradient(90deg, hsl(var(--primary) / 0.1) 0%, hsl(var(--accent) / 0.1) 100%)`,
+                        borderColor: `hsl(var(--primary) / 0.3)`
+                      }}
+                    >
+                      <div className="flex items-center gap-2 text-xs mb-1" style={{ color: `hsl(var(--primary))` }}>
                         <FaTrophy className="w-3 h-3" />
                         <span className="font-medium">Recent Achievement</span>
                       </div>
@@ -738,33 +812,21 @@ const Overview = () => {
                         className="group flex items-start gap-3 p-3 rounded-lg hover:bg-primary/5 transition-all duration-300 cursor-pointer"
                       >
                         <div
-                          className={`relative w-8 h-8 rounded-full flex items-center justify-center transition-all duration-300 ${
-                            activity.type === "project"
-                              ? "bg-blue-500/20 group-hover:bg-blue-500/30"
-                              : activity.type === "achievement"
-                              ? "bg-yellow-500/20 group-hover:bg-yellow-500/30"
-                              : activity.type === "learning"
-                              ? "bg-green-500/20 group-hover:bg-green-500/30"
-                              : activity.type === "deployment"
-                              ? "bg-purple-500/20 group-hover:bg-purple-500/30"
-                              : "bg-gray-500/20 group-hover:bg-gray-500/30"
-                          }`}
+                          className="relative w-8 h-8 rounded-full flex items-center justify-center transition-all duration-300"
+                          style={{
+                            backgroundColor: `hsl(var(--primary) / 0.2)`,
+                            '--hover-bg': `hsl(var(--primary) / 0.3)`,
+                          } as React.CSSProperties & { '--hover-bg': string }}
                         >
                           <activity.icon
-                            className={`w-4 h-4 transition-transform duration-300 ${
-                              activity.type === "project"
-                                ? "text-blue-400"
-                                : activity.type === "achievement"
-                                ? "text-yellow-400"
-                                : activity.type === "learning"
-                                ? "text-green-400"
-                                : activity.type === "deployment"
-                                ? "text-purple-400"
-                                : "text-gray-400"
-                            }`}
+                            className="w-4 h-4 transition-transform duration-300"
+                            style={{ color: `hsl(var(--primary))` }}
                           />
                           {activity.isLive && (
-                            <div className="absolute -top-1 -right-1 w-3 h-3 bg-green-400 rounded-full"></div>
+                            <div
+                              className="absolute -top-1 -right-1 w-3 h-3 rounded-full"
+                              style={{ backgroundColor: `hsl(var(--accent))` }}
+                            ></div>
                           )}
                         </div>
                         <div className="flex-1 min-w-0">
@@ -866,7 +928,10 @@ const Overview = () => {
                                   {project.category}
                                 </Badge>
                                 {project.status === "Live" && (
-                                  <div className="w-2 h-2 bg-green-400 rounded-full"></div>
+                                  <div
+                                    className="w-2 h-2 rounded-full"
+                                    style={{ backgroundColor: `hsl(var(--accent))` }}
+                                  ></div>
                                 )}
                               </div>
                               <div className="absolute bottom-2 right-2 flex items-center gap-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
@@ -957,21 +1022,34 @@ const Overview = () => {
                 {/* Education & Background Info */}
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
                   {/* About Summary */}
-                  <Card className="p-6 border-2 border-primary/40 hover:border-primary/60 shadow-xl hover:shadow-2xl hover:shadow-emerald-500/15 transition-all duration-500 backdrop-blur-sm bg-gradient-to-br from-card/90 to-card/70 hover:-translate-y-1 relative overflow-hidden group">
+                  <Card className="p-6 border-2 border-primary/40 hover:border-primary/60 shadow-xl hover:shadow-2xl transition-all duration-500 backdrop-blur-sm bg-gradient-to-br from-card/90 to-card/70 hover:-translate-y-1 relative overflow-hidden group" style={{ '--hover-shadow-color': 'hsl(var(--primary) / 0.15)' } as React.CSSProperties}>
                     {/* Background decoration */}
-                    <div className="absolute top-0 right-0 w-20 h-20 bg-gradient-to-br from-emerald-500/10 to-green-500/5 rounded-full -translate-y-10 translate-x-10 group-hover:scale-150 transition-transform duration-700"></div>
+                    <div
+                      className="absolute top-0 right-0 w-20 h-20 rounded-full -translate-y-10 translate-x-10 group-hover:scale-150 transition-transform duration-700"
+                      style={{
+                        background: `linear-gradient(135deg, hsl(var(--primary) / 0.1) 0%, hsl(var(--accent) / 0.05) 100%)`
+                      }}
+                    ></div>
                     <div className="absolute bottom-0 left-0 w-16 h-16 bg-gradient-to-tr from-primary/10 to-primary-glow/5 rounded-full translate-y-8 -translate-x-8 group-hover:scale-125 transition-transform duration-700"></div>
 
                     <div className="relative z-10">
                       <div className="flex items-center mb-6">
-                        <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-emerald-500/30 to-green-500/30 flex items-center justify-center mr-3 shadow-lg group-hover:scale-110 transition-transform duration-300">
-                          <FaGraduationCap className="w-5 h-5 text-emerald-400" />
+                        <div
+                          className="w-10 h-10 rounded-xl flex items-center justify-center mr-3 shadow-lg group-hover:scale-110 transition-transform duration-300"
+                          style={{
+                            background: `linear-gradient(135deg, hsl(var(--accent) / 0.3) 0%, hsl(var(--primary) / 0.3) 100%)`
+                          }}
+                        >
+                          <FaGraduationCap
+                            className="w-5 h-5"
+                            style={{ color: `hsl(var(--accent))` }}
+                          />
                         </div>
                         <div>
                           <h3 className="text-lg font-bold text-foreground">
                             About Me
                           </h3>
-                          <p className="text-xs text-emerald-400 font-medium">
+                          <p className="text-xs font-medium" style={{ color: `hsl(var(--accent))` }}>
                             Developer & Problem Solver
                           </p>
                         </div>
@@ -985,18 +1063,18 @@ const Overview = () => {
 
                       <div className="space-y-2 mb-6">
                         <div className="flex items-center gap-2 text-xs text-foreground/70">
-                          <MapPin className="w-3 h-3 text-emerald-400" />
+                          <MapPin className="w-3 h-3" style={{ color: `hsl(var(--accent))` }} />
                           <span>{personalInfo.location}</span>
                         </div>
                         <div className="flex items-center gap-2 text-xs text-foreground/70">
-                          <Calendar className="w-3 h-3 text-emerald-400" />
+                          <Calendar className="w-3 h-3" style={{ color: `hsl(var(--accent))` }} />
                           <span>
                             Graduating 2027 • Current Year • CGPA: 7.68/10
                           </span>
                         </div>
                         <div className="flex items-center gap-2 text-xs text-foreground/70">
-                          <CircleDot className="w-3 h-3 text-green-400" />
-                          <span className="text-green-400 font-medium">
+                          <CircleDot className="w-3 h-3" style={{ color: `hsl(var(--accent))` }} />
+                          <span className="font-medium" style={{ color: `hsl(var(--accent))` }}>
                             {personalInfo.status.availability} for opportunities
                           </span>
                         </div>
@@ -1016,21 +1094,34 @@ const Overview = () => {
                   </Card>
 
                   {/* Education */}
-                  <Card className="p-6 border-2 border-primary/30 hover:border-primary/50 hover:shadow-xl hover:shadow-blue-500/15 transition-all duration-500 backdrop-blur-sm bg-gradient-to-br from-card/95 to-card/80 hover:-translate-y-1 relative overflow-hidden group">
+                  <Card className="p-6 border-2 border-primary/30 hover:border-primary/50 hover:shadow-xl transition-all duration-500 backdrop-blur-sm bg-gradient-to-br from-card/95 to-card/80 hover:-translate-y-1 relative overflow-hidden group" style={{ '--hover-shadow-color': 'hsl(var(--primary) / 0.15)' } as React.CSSProperties}>
                     {/* Background decoration */}
-                    <div className="absolute top-0 left-0 w-24 h-24 bg-gradient-to-br from-blue-500/10 to-purple-500/5 rounded-full -translate-y-12 -translate-x-12 group-hover:scale-150 transition-transform duration-700"></div>
+                    <div
+                      className="absolute top-0 left-0 w-24 h-24 rounded-full -translate-y-12 -translate-x-12 group-hover:scale-150 transition-transform duration-700"
+                      style={{
+                        background: `linear-gradient(135deg, hsl(var(--primary) / 0.1) 0%, hsl(var(--accent) / 0.05) 100%)`
+                      }}
+                    ></div>
                     <div className="absolute bottom-0 right-0 w-20 h-20 bg-gradient-to-tl from-primary/10 to-accent/5 rounded-full translate-y-10 translate-x-10 group-hover:scale-125 transition-transform duration-700"></div>
 
                     <div className="relative z-10">
                       <div className="flex items-center mb-6">
-                        <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-blue-500/30 to-purple-500/30 flex items-center justify-center mr-3 shadow-lg group-hover:scale-110 transition-transform duration-300">
-                          <FaGraduationCap className="w-5 h-5 text-blue-400" />
+                        <div
+                          className="w-10 h-10 rounded-xl flex items-center justify-center mr-3 shadow-lg group-hover:scale-110 transition-transform duration-300"
+                          style={{
+                            background: `linear-gradient(135deg, hsl(var(--primary) / 0.3) 0%, hsl(var(--accent) / 0.3) 100%)`
+                          }}
+                        >
+                          <FaGraduationCap
+                            className="w-5 h-5"
+                            style={{ color: `hsl(var(--primary))` }}
+                          />
                         </div>
                         <div>
                           <h3 className="text-lg font-bold text-foreground">
                             Education
                           </h3>
-                          <p className="text-xs text-blue-400 font-medium">
+                          <p className="text-xs font-medium" style={{ color: `hsl(var(--primary))` }}>
                             Academic Journey
                           </p>
                         </div>
@@ -1040,7 +1131,10 @@ const Overview = () => {
                         {/* Current Education */}
                         <div className="group/item p-4 rounded-xl bg-gradient-to-r from-primary/10 to-primary-glow/10 border border-primary/20 hover:border-primary/40 transition-all duration-300 relative">
                           <div className="absolute top-2 right-2">
-                            <div className="w-2 h-2 bg-green-400 rounded-full animate-pulse"></div>
+                            <div
+                              className="w-2 h-2 rounded-full animate-pulse"
+                              style={{ backgroundColor: `hsl(var(--accent))` }}
+                            ></div>
                           </div>
                           <div className="flex items-start gap-3">
                             <div className="w-8 h-8 rounded-lg bg-primary/20 flex items-center justify-center mt-1 group-hover/item:scale-110 transition-transform duration-300">
@@ -1055,7 +1149,14 @@ const Overview = () => {
                               </div>
                               <div className="flex items-center gap-3 text-xs text-foreground/60">
                                 <span>2023 - 2027</span>
-                                <Badge className="bg-green-500/20 text-green-400 border-green-500/30 text-xs">
+                                <Badge
+                                  className="text-xs"
+                                  style={{
+                                    backgroundColor: `hsl(var(--accent) / 0.2)`,
+                                    color: `hsl(var(--accent))`,
+                                    borderColor: `hsl(var(--accent) / 0.3)`
+                                  }}
+                                >
                                   CGPA: 7.68
                                 </Badge>
                               </div>
