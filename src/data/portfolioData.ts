@@ -544,13 +544,13 @@ export const techStack = [
   {
     name: "Node.js",
     icon: "N",
-    color: "from-success-500 to-success-600",
+    color: "from-skill-database to-accent",
     textColor: getThemeColor("success"),
   },
   {
     name: "MongoDB",
     icon: "M",
-    color: "from-warning-500 to-warning-600",
+    color: "from-skill-languages to-accent",
     textColor: getThemeColor("warning"),
   },
   {
@@ -562,7 +562,7 @@ export const techStack = [
   {
     name: "Tailwind",
     icon: "TW",
-    color: "from-info-500 to-primary",
+    color: "from-skill-tools to-primary",
     textColor: getThemeColor("info"),
   },
 ];
