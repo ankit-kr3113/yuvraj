@@ -227,10 +227,10 @@ const getThemeColor = (colorName: string): React.CSSProperties => {
     primary: { color: 'hsl(var(--primary))' },
     accent: { color: 'hsl(var(--accent))' },
     secondary: { color: 'hsl(var(--secondary))' },
-    success: { color: 'hsl(120, 100%, 60%)' },
-    info: { color: 'hsl(180, 100%, 60%)' },
-    warning: { color: 'hsl(39, 100%, 60%)' },
-    danger: { color: 'hsl(0, 100%, 60%)' },
+    success: { color: 'hsl(var(--skill-database))' },
+    info: { color: 'hsl(var(--skill-tools))' },
+    warning: { color: 'hsl(var(--skill-languages))' },
+    danger: { color: 'hsl(var(--destructive))' },
   };
   return colorMap[colorName] || { color: 'hsl(var(--primary))' };
 };
