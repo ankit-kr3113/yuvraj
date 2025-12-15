@@ -85,7 +85,7 @@ const Education = () => {
       year: "2023",
       description: "Comprehensive full-stack web development course covering HTML, CSS, JavaScript, React, and Node.js",
       badge: FaGlobe,
-      color: "text-blue-500"
+      colorStyle: { color: 'hsl(var(--primary))' }
     }
   ];
 
