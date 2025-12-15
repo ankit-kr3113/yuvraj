@@ -182,9 +182,24 @@ const Overview = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-background via-background/95 to-primary/5 relative overflow-hidden">
       {/* Background gradient overlay with animation */}
-      <div className="fixed inset-0 bg-gradient-to-br from-purple-500/5 via-transparent to-cyan-500/5 animate-pulse opacity-50 pointer-events-none"></div>
-      <div className="fixed top-0 left-0 w-full h-full bg-[radial-gradient(ellipse_at_top_right,_var(--tw-gradient-stops))] from-purple-500/10 via-transparent to-transparent pointer-events-none"></div>
-      <div className="fixed bottom-0 right-0 w-full h-full bg-[radial-gradient(ellipse_at_bottom_left,_var(--tw-gradient-stops))] from-cyan-500/8 via-transparent to-transparent pointer-events-none"></div>
+      <div
+        className="fixed inset-0 animate-pulse opacity-50 pointer-events-none"
+        style={{
+          background: `linear-gradient(135deg, hsl(var(--primary) / 0.05) 0%, transparent 50%, hsl(var(--accent) / 0.05) 100%)`
+        }}
+      ></div>
+      <div
+        className="fixed top-0 left-0 w-full h-full pointer-events-none"
+        style={{
+          background: `radial-gradient(ellipse at top right, hsl(var(--primary) / 0.1) 0%, transparent 50%)`
+        }}
+      ></div>
+      <div
+        className="fixed bottom-0 right-0 w-full h-full pointer-events-none"
+        style={{
+          background: `radial-gradient(ellipse at bottom left, hsl(var(--accent) / 0.08) 0%, transparent 50%)`
+        }}
+      ></div>
 
       {/* Content wrapper */}
       <div className="relative z-10">
