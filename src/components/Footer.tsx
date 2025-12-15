@@ -17,7 +17,7 @@ import { footerData, socialLinks } from "@/data/portfolioData";
 
 const Footer = () => {
   return (
-    <footer className="bg-[#1a1b3e] text-white mt-20">
+    <footer className="text-foreground mt-20" style={{ backgroundColor: 'hsl(var(--card))' }}>
       <div className="max-w-7xl mx-auto px-4 sm:px-8 lg:px-8 py-6 sm:py-12">
 
         {/* Mobile-First: Simplified Brand Section */}
