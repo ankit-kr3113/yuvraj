@@ -308,5 +308,5 @@
 }
 
 .text-glow-white {
-  text-shadow: 0 0 20px rgba(255, 255, 255, 0.3);
+  text-shadow: 0 0 20px hsl(var(--foreground) / 0.3);
 }
