@@ -1017,21 +1017,34 @@ const Overview = () => {
                 {/* Education & Background Info */}
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
                   {/* About Summary */}
-                  <Card className="p-6 border-2 border-primary/40 hover:border-primary/60 shadow-xl hover:shadow-2xl hover:shadow-emerald-500/15 transition-all duration-500 backdrop-blur-sm bg-gradient-to-br from-card/90 to-card/70 hover:-translate-y-1 relative overflow-hidden group">
+                  <Card className="p-6 border-2 border-primary/40 hover:border-primary/60 shadow-xl hover:shadow-2xl transition-all duration-500 backdrop-blur-sm bg-gradient-to-br from-card/90 to-card/70 hover:-translate-y-1 relative overflow-hidden group" style={{ '--hover-shadow-color': 'hsl(var(--primary) / 0.15)' } as React.CSSProperties}>
                     {/* Background decoration */}
-                    <div className="absolute top-0 right-0 w-20 h-20 bg-gradient-to-br from-emerald-500/10 to-green-500/5 rounded-full -translate-y-10 translate-x-10 group-hover:scale-150 transition-transform duration-700"></div>
+                    <div
+                      className="absolute top-0 right-0 w-20 h-20 rounded-full -translate-y-10 translate-x-10 group-hover:scale-150 transition-transform duration-700"
+                      style={{
+                        background: `linear-gradient(135deg, hsl(var(--primary) / 0.1) 0%, hsl(var(--accent) / 0.05) 100%)`
+                      }}
+                    ></div>
                     <div className="absolute bottom-0 left-0 w-16 h-16 bg-gradient-to-tr from-primary/10 to-primary-glow/5 rounded-full translate-y-8 -translate-x-8 group-hover:scale-125 transition-transform duration-700"></div>
 
                     <div className="relative z-10">
                       <div className="flex items-center mb-6">
-                        <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-emerald-500/30 to-green-500/30 flex items-center justify-center mr-3 shadow-lg group-hover:scale-110 transition-transform duration-300">
-                          <FaGraduationCap className="w-5 h-5 text-emerald-400" />
+                        <div
+                          className="w-10 h-10 rounded-xl flex items-center justify-center mr-3 shadow-lg group-hover:scale-110 transition-transform duration-300"
+                          style={{
+                            background: `linear-gradient(135deg, hsl(var(--accent) / 0.3) 0%, hsl(var(--primary) / 0.3) 100%)`
+                          }}
+                        >
+                          <FaGraduationCap
+                            className="w-5 h-5"
+                            style={{ color: `hsl(var(--accent))` }}
+                          />
                         </div>
                         <div>
                           <h3 className="text-lg font-bold text-foreground">
                             About Me
                           </h3>
-                          <p className="text-xs text-emerald-400 font-medium">
+                          <p className="text-xs font-medium" style={{ color: `hsl(var(--accent))` }}>
                             Developer & Problem Solver
                           </p>
                         </div>
@@ -1045,18 +1058,18 @@ const Overview = () => {
 
                       <div className="space-y-2 mb-6">
                         <div className="flex items-center gap-2 text-xs text-foreground/70">
-                          <MapPin className="w-3 h-3 text-emerald-400" />
+                          <MapPin className="w-3 h-3" style={{ color: `hsl(var(--accent))` }} />
                           <span>{personalInfo.location}</span>
                         </div>
                         <div className="flex items-center gap-2 text-xs text-foreground/70">
-                          <Calendar className="w-3 h-3 text-emerald-400" />
+                          <Calendar className="w-3 h-3" style={{ color: `hsl(var(--accent))` }} />
                           <span>
                             Graduating 2027 • Current Year • CGPA: 7.68/10
                           </span>
                         </div>
                         <div className="flex items-center gap-2 text-xs text-foreground/70">
-                          <CircleDot className="w-3 h-3 text-green-400" />
-                          <span className="text-green-400 font-medium">
+                          <CircleDot className="w-3 h-3" style={{ color: `hsl(var(--accent))` }} />
+                          <span className="font-medium" style={{ color: `hsl(var(--accent))` }}>
                             {personalInfo.status.availability} for opportunities
                           </span>
                         </div>
