@@ -491,8 +491,16 @@ const Overview = () => {
                 {/* Coding Achievements - Key Portfolio Highlight */}
                 <Card className="p-6 border-primary/30 hover:shadow-lg transition-all duration-300">
                   <div className="flex items-center mb-4">
-                    <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-yellow-500/30 to-orange-500/30 flex items-center justify-center mr-3 shadow-lg">
-                      <FaTrophy className="w-5 h-5 text-yellow-400" />
+                    <div
+                      className="w-10 h-10 rounded-xl flex items-center justify-center mr-3 shadow-lg"
+                      style={{
+                        background: `linear-gradient(135deg, hsl(var(--accent) / 0.3) 0%, hsl(var(--primary) / 0.3) 100%)`
+                      }}
+                    >
+                      <FaTrophy
+                        className="w-5 h-5"
+                        style={{ color: `hsl(var(--accent))` }}
+                      />
                     </div>
                     <h3 className="text-lg font-semibold text-foreground">
                       Coding Achievements
