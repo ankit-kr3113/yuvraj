@@ -812,33 +812,21 @@ const Overview = () => {
                         className="group flex items-start gap-3 p-3 rounded-lg hover:bg-primary/5 transition-all duration-300 cursor-pointer"
                       >
                         <div
-                          className={`relative w-8 h-8 rounded-full flex items-center justify-center transition-all duration-300 ${
-                            activity.type === "project"
-                              ? "bg-blue-500/20 group-hover:bg-blue-500/30"
-                              : activity.type === "achievement"
-                              ? "bg-yellow-500/20 group-hover:bg-yellow-500/30"
-                              : activity.type === "learning"
-                              ? "bg-green-500/20 group-hover:bg-green-500/30"
-                              : activity.type === "deployment"
-                              ? "bg-purple-500/20 group-hover:bg-purple-500/30"
-                              : "bg-gray-500/20 group-hover:bg-gray-500/30"
-                          }`}
+                          className="relative w-8 h-8 rounded-full flex items-center justify-center transition-all duration-300"
+                          style={{
+                            backgroundColor: `hsl(var(--primary) / 0.2)`,
+                            '--hover-bg': `hsl(var(--primary) / 0.3)`,
+                          } as React.CSSProperties & { '--hover-bg': string }}
                         >
                           <activity.icon
-                            className={`w-4 h-4 transition-transform duration-300 ${
-                              activity.type === "project"
-                                ? "text-blue-400"
-                                : activity.type === "achievement"
-                                ? "text-yellow-400"
-                                : activity.type === "learning"
-                                ? "text-green-400"
-                                : activity.type === "deployment"
-                                ? "text-purple-400"
-                                : "text-gray-400"
-                            }`}
+                            className="w-4 h-4 transition-transform duration-300"
+                            style={{ color: `hsl(var(--primary))` }}
                           />
                           {activity.isLive && (
-                            <div className="absolute -top-1 -right-1 w-3 h-3 bg-green-400 rounded-full"></div>
+                            <div
+                              className="absolute -top-1 -right-1 w-3 h-3 rounded-full"
+                              style={{ backgroundColor: `hsl(var(--accent))` }}
+                            ></div>
                           )}
                         </div>
                         <div className="flex-1 min-w-0">
