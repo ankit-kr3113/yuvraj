@@ -144,7 +144,7 @@ const Projects = () => {
                         project.status === "Live" ? "bg-gradient-to-r from-green-500 to-green-600" :
                         project.status === "In Progress" ? "bg-gradient-to-r from-yellow-500 to-yellow-600" :
                         "bg-gradient-to-r from-blue-500 to-blue-600"
-                      } text-foreground`}>
+                      } text-white`}>
                         {project.status === "Live" && <HiGlobeAlt className="w-3 h-3 mr-1" />}
                         {project.status === "In Progress" && <FaClock className="w-3 h-3 mr-1" />}
                         {project.status === "Completed" && <HiCheckCircle className="w-3 h-3 mr-1" />}
