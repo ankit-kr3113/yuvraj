@@ -209,7 +209,7 @@ const Skills = () => {
                         <div className="p-4">
                           {/* Icon and Name Row */}
                           <div className="flex items-center gap-3 mb-3">
-                            <div className={`${skill.color} group-hover:scale-110 transition-transform duration-300`}>
+                            <div style={skill.style} className="group-hover:scale-110 transition-transform duration-300">
                               <IconComponent className="w-6 h-6" />
                             </div>
                             <h4 className="font-medium text-foreground text-sm group-hover:text-primary transition-colors duration-300">
