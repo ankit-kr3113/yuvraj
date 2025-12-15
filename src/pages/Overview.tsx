@@ -629,7 +629,7 @@ const Overview = () => {
                     </p>
 
                     <div className="flex items-center gap-2">
-                      <MapPin className="w-4 h-4 text-blue-500" />
+                      <MapPin className="w-4 h-4" style={{ color: `hsl(var(--primary))` }} />
                       <span className="text-sm font-medium text-foreground">
                         Location:
                       </span>
