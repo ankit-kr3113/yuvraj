@@ -431,10 +431,10 @@ const Coding = () => {
                               {platform.platform === "GeeksforGeeks" && platform.streak}
                               {platform.platform === "Codeforces" && platform.rank}
                             </span>
-                            {platform.platform === "LeetCode" && <MdLeaderboard className="w-3 h-3 text-blue-400" />}
-                            {platform.platform === "CodeChef" && <FaMedal className="w-3 h-3 text-amber-400" />}
-                            {platform.platform === "GeeksforGeeks" && <FaFire className="w-3 h-3 text-green-400" />}
-                            {platform.platform === "Codeforces" && <FaBolt className="w-3 h-3 text-blue-400" />}
+                            {platform.platform === "LeetCode" && <MdLeaderboard className="w-3 h-3 text-secondary" />}
+                            {platform.platform === "CodeChef" && <FaMedal className="w-3 h-3 text-accent" />}
+                            {platform.platform === "GeeksforGeeks" && <FaFire className="w-3 h-3 text-primary" />}
+                            {platform.platform === "Codeforces" && <FaBolt className="w-3 h-3 text-secondary" />}
                           </div>
                         </div>
                       </div>
