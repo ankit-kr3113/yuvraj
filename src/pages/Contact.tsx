@@ -135,9 +135,9 @@ const Contact = () => {
       icon: HiMail,
       href: socialLinks.email.url,
       description: "Send me a message",
-      colorStyle: { color: 'hsl(0, 100%, 60%)' },
-      bgColor: "bg-red-500/20",
-      borderColor: "border-red-500/30"
+      colorStyle: { color: 'hsl(var(--destructive))' },
+      bgColor: "bg-destructive/20",
+      borderColor: "border-destructive/30"
     }
   ];
 
