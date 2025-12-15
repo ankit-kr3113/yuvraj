@@ -169,15 +169,15 @@ const Footer = () => {
                 </a>
                 <Link
                   to="/projects"
-                  className="flex items-center text-gray-400 hover:text-white transition-colors"
+                  className="flex items-center text-muted-foreground hover:text-foreground transition-colors"
                 >
                   <Zap className="w-4 h-4 mr-3" />
                   Projects
                 </Link>
-                <Link to="/about" className="block text-gray-400 hover:text-white transition-colors">
+                <Link to="/about" className="block text-muted-foreground hover:text-foreground transition-colors">
                   About
                 </Link>
-                <Link to="/contact" className="block text-gray-400 hover:text-white transition-colors">
+                <Link to="/contact" className="block text-muted-foreground hover:text-foreground transition-colors">
                   Contact
                 </Link>
               </div>
@@ -185,23 +185,23 @@ const Footer = () => {
           </div>
 
           {/* Simplified Stats for Tablet */}
-          <div className="grid grid-cols-2 gap-8 py-8 border-t border-gray-600 border-b border-gray-600 mb-6">
+          <div className="grid grid-cols-2 gap-8 py-8 border-t border-border border-b border-border mb-6">
             <div className="text-center">
               <div className="flex items-center justify-center mb-4">
-                <FaStar className="w-5 h-5 text-purple-400 mr-2" />
-                <span className="text-xs text-gray-400 uppercase tracking-wider font-medium">Total Visitors</span>
+                <FaStar className="w-5 h-5" style={{ color: `hsl(var(--primary))` }} />
+                <span className="text-xs text-muted-foreground uppercase tracking-wider font-medium ml-2">Total Visitors</span>
               </div>
-              <div className="text-2xl font-bold text-white">{footerData.stats.totalVisitors}</div>
+              <div className="text-2xl font-bold text-foreground">{footerData.stats.totalVisitors}</div>
             </div>
 
             <div className="text-center">
               <div className="flex items-center justify-center mb-4">
-                <FaLaptopCode className="w-5 h-5 text-blue-400 mr-2" />
-                <span className="text-xs text-gray-400 uppercase tracking-wider font-medium">DSA Skills</span>
+                <FaLaptopCode className="w-5 h-5" style={{ color: `hsl(var(--accent))` }} />
+                <span className="text-xs text-muted-foreground uppercase tracking-wider font-medium ml-2">DSA Skills</span>
               </div>
               <div className="flex items-center justify-center space-x-1">
                 {[1, 2, 3, 4, 5].map((star) => (
-                  <FaStar key={star} className="w-5 h-5 text-yellow-400" />
+                  <FaStar key={star} className="w-5 h-5" style={{ color: `hsl(var(--accent))` }} />
                 ))}
               </div>
             </div>
