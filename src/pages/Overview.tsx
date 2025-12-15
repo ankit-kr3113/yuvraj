@@ -1126,7 +1126,10 @@ const Overview = () => {
                         {/* Current Education */}
                         <div className="group/item p-4 rounded-xl bg-gradient-to-r from-primary/10 to-primary-glow/10 border border-primary/20 hover:border-primary/40 transition-all duration-300 relative">
                           <div className="absolute top-2 right-2">
-                            <div className="w-2 h-2 bg-green-400 rounded-full animate-pulse"></div>
+                            <div
+                              className="w-2 h-2 rounded-full animate-pulse"
+                              style={{ backgroundColor: `hsl(var(--accent))` }}
+                            ></div>
                           </div>
                           <div className="flex items-start gap-3">
                             <div className="w-8 h-8 rounded-lg bg-primary/20 flex items-center justify-center mt-1 group-hover/item:scale-110 transition-transform duration-300">
@@ -1141,7 +1144,14 @@ const Overview = () => {
                               </div>
                               <div className="flex items-center gap-3 text-xs text-foreground/60">
                                 <span>2023 - 2027</span>
-                                <Badge className="bg-green-500/20 text-green-400 border-green-500/30 text-xs">
+                                <Badge
+                                  className="text-xs"
+                                  style={{
+                                    backgroundColor: `hsl(var(--accent) / 0.2)`,
+                                    color: `hsl(var(--accent))`,
+                                    borderColor: `hsl(var(--accent) / 0.3)`
+                                  }}
+                                >
                                   CGPA: 7.68
                                 </Badge>
                               </div>
