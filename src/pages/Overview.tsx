@@ -1089,21 +1089,34 @@ const Overview = () => {
                   </Card>
 
                   {/* Education */}
-                  <Card className="p-6 border-2 border-primary/30 hover:border-primary/50 hover:shadow-xl hover:shadow-blue-500/15 transition-all duration-500 backdrop-blur-sm bg-gradient-to-br from-card/95 to-card/80 hover:-translate-y-1 relative overflow-hidden group">
+                  <Card className="p-6 border-2 border-primary/30 hover:border-primary/50 hover:shadow-xl transition-all duration-500 backdrop-blur-sm bg-gradient-to-br from-card/95 to-card/80 hover:-translate-y-1 relative overflow-hidden group" style={{ '--hover-shadow-color': 'hsl(var(--primary) / 0.15)' } as React.CSSProperties}>
                     {/* Background decoration */}
-                    <div className="absolute top-0 left-0 w-24 h-24 bg-gradient-to-br from-blue-500/10 to-purple-500/5 rounded-full -translate-y-12 -translate-x-12 group-hover:scale-150 transition-transform duration-700"></div>
+                    <div
+                      className="absolute top-0 left-0 w-24 h-24 rounded-full -translate-y-12 -translate-x-12 group-hover:scale-150 transition-transform duration-700"
+                      style={{
+                        background: `linear-gradient(135deg, hsl(var(--primary) / 0.1) 0%, hsl(var(--accent) / 0.05) 100%)`
+                      }}
+                    ></div>
                     <div className="absolute bottom-0 right-0 w-20 h-20 bg-gradient-to-tl from-primary/10 to-accent/5 rounded-full translate-y-10 translate-x-10 group-hover:scale-125 transition-transform duration-700"></div>
 
                     <div className="relative z-10">
                       <div className="flex items-center mb-6">
-                        <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-blue-500/30 to-purple-500/30 flex items-center justify-center mr-3 shadow-lg group-hover:scale-110 transition-transform duration-300">
-                          <FaGraduationCap className="w-5 h-5 text-blue-400" />
+                        <div
+                          className="w-10 h-10 rounded-xl flex items-center justify-center mr-3 shadow-lg group-hover:scale-110 transition-transform duration-300"
+                          style={{
+                            background: `linear-gradient(135deg, hsl(var(--primary) / 0.3) 0%, hsl(var(--accent) / 0.3) 100%)`
+                          }}
+                        >
+                          <FaGraduationCap
+                            className="w-5 h-5"
+                            style={{ color: `hsl(var(--primary))` }}
+                          />
                         </div>
                         <div>
                           <h3 className="text-lg font-bold text-foreground">
                             Education
                           </h3>
-                          <p className="text-xs text-blue-400 font-medium">
+                          <p className="text-xs font-medium" style={{ color: `hsl(var(--primary))` }}>
                             Academic Journey
                           </p>
                         </div>
