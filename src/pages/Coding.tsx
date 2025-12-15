@@ -420,7 +420,7 @@ const Coding = () => {
                             {platform.rating && (
                               <>
                                 <span className="text-xs text-foreground/70">Rating: {platform.rating}</span>
-                                <MdTrendingUp className="w-3 h-3 text-yellow-400" />
+                                <MdTrendingUp className="w-3 h-3 text-primary-glow" />
                               </>
                             )}
                           </div>
