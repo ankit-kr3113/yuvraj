@@ -1,0 +1,4 @@
+# robots.txt for Yuvraj Mehta Portfolio
+# Allow all search engines to index everything
+User-agent: *
+Allow: /
