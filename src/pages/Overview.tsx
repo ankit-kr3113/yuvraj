@@ -747,8 +747,14 @@ const Overview = () => {
                       })}
                     </div>
 
-                    <div className="mt-4 p-3 rounded-lg bg-gradient-to-r from-purple-500/10 to-pink-500/10 border border-purple-400/30">
-                      <div className="flex items-center gap-2 text-xs text-purple-400 mb-1">
+                    <div
+                      className="mt-4 p-3 rounded-lg border"
+                      style={{
+                        background: `linear-gradient(90deg, hsl(var(--primary) / 0.1) 0%, hsl(var(--accent) / 0.1) 100%)`,
+                        borderColor: `hsl(var(--primary) / 0.3)`
+                      }}
+                    >
+                      <div className="flex items-center gap-2 text-xs mb-1" style={{ color: `hsl(var(--primary))` }}>
                         <FaTrophy className="w-3 h-3" />
                         <span className="font-medium">Recent Achievement</span>
                       </div>
