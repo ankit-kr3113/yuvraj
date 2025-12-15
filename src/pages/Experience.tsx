@@ -137,13 +137,13 @@ const Experience = () => {
 
                             <div>
                               <h4 className="font-semibold mb-3 flex items-center text-sm sm:text-base">
-                                <span className="text-yellow-500 mr-2">⭐</span>
+                                <span className="mr-2" style={{ color: 'hsl(39, 100%, 60%)' }}>⭐</span>
                                 <span>Key Highlights</span>
                               </h4>
                               <ul className="space-y-2">
                                 {exp.highlights.map((highlight, idx) => (
                                   <li key={idx} className="text-xs sm:text-sm text-muted-foreground flex items-start p-2 rounded-lg hover:bg-primary/5 transition-colors duration-200">
-                                    <span className="text-yellow-500 mr-2 mt-0.5">⭐</span>
+                                    <span className="mr-2 mt-0.5" style={{ color: 'hsl(39, 100%, 60%)' }}>⭐</span>
                                     <span>{highlight}</span>
                                   </li>
                                 ))}
