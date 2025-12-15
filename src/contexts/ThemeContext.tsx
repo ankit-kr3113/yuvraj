@@ -1,7 +1,7 @@
 import { createContext, useContext, useEffect, useState } from 'react';
 import type { ReactNode } from 'react';
 
-type Theme = 'purple' | 'cyberpunk' | 'glassmorphism' | 'glass-dream' | 'ocean-depth';
+type Theme = 'cyberpunk' | 'glass-dream' | 'ocean-depth';
 
 interface ThemeContextType {
   theme: Theme;
@@ -19,22 +19,10 @@ const ThemeContext = createContext<ThemeContextType | undefined>(undefined);
 // Revolutionary theme system with unique visual identities
 export const themes = [
   {
-    id: 'purple' as Theme,
-    name: 'Purple Dream',
-    color: 'hsl(262, 80%, 65%)',
-    description: 'Classic elegant portfolio'
-  },
-  {
     id: 'cyberpunk' as Theme,
     name: 'Cyberpunk',
     color: 'hsl(180, 100%, 50%)',
     description: 'Futuristic hacker aesthetic with neon grids'
-  },
-  {
-    id: 'glassmorphism' as Theme,
-    name: 'Glass Morphism',
-    color: 'hsl(220, 100%, 70%)',
-    description: 'Frosted glass with blur effects'
   },
   {
     id: 'glass-dream' as Theme,
@@ -51,7 +39,7 @@ export const themes = [
 ];
 
 export const ThemeProvider = ({ children }: { children: ReactNode }) => {
-  const [theme, setTheme] = useState<Theme>('purple');
+  const [theme, setTheme] = useState<Theme>('glass-dream');
 
   useEffect(() => {
     const savedTheme = localStorage.getItem('portfolio-theme') as Theme;
@@ -62,12 +50,12 @@ export const ThemeProvider = ({ children }: { children: ReactNode }) => {
 
   useEffect(() => {
     localStorage.setItem('portfolio-theme', theme);
-    
+
     // Remove all theme classes
     document.documentElement.removeAttribute('data-theme');
-    
+
     // Apply new theme
-    if (theme !== 'purple') {
+    if (theme !== 'glass-dream') {
       document.documentElement.setAttribute('data-theme', theme);
     }
   }, [theme]);
