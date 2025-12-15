@@ -376,7 +376,7 @@ const Contact = () => {
                   </Button>
 
                   {submitStatus === 'success' && (
-                    <div className="flex items-center justify-center text-green-600 text-sm">
+                    <div className="flex items-center justify-center text-sm" style={{ color: 'hsl(120, 100%, 60%)' }}>
                       <HiCheckCircle className="w-4 h-4 mr-2" />
                       Message sent successfully!
                     </div>
@@ -390,10 +390,10 @@ const Contact = () => {
                   )}
                 </form>
 
-                <div className="mt-6 p-4 bg-gradient-to-r from-green-500/10 to-blue-500/10 rounded-xl border border-green-500/20">
+                <div className="mt-6 p-4 rounded-xl border" style={{ backgroundColor: 'hsl(120, 100%, 60%, 0.1)', borderColor: 'hsl(120, 100%, 50%, 0.2)' }}>
                   <div className="flex items-start gap-3">
-                    <div className="w-8 h-8 rounded-lg bg-green-500/20 flex items-center justify-center mt-0.5">
-                      <HiChatAlt className="w-4 h-4 text-green-600" />
+                    <div className="w-8 h-8 rounded-lg flex items-center justify-center mt-0.5" style={{ backgroundColor: 'hsl(120, 100%, 50%, 0.2)' }}>
+                      <HiChatAlt className="w-4 h-4" style={{ color: 'hsl(120, 100%, 50%)' }} />
                     </div>
                     <div>
                       <p className="text-sm text-foreground font-medium mb-1">
