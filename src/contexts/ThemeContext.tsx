@@ -50,12 +50,12 @@ export const ThemeProvider = ({ children }: { children: ReactNode }) => {
 
   useEffect(() => {
     localStorage.setItem('portfolio-theme', theme);
-    
+
     // Remove all theme classes
     document.documentElement.removeAttribute('data-theme');
-    
+
     // Apply new theme
-    if (theme !== 'purple') {
+    if (theme !== 'glass-dream') {
       document.documentElement.setAttribute('data-theme', theme);
     }
   }, [theme]);
