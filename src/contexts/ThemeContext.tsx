@@ -1,7 +1,7 @@
 import { createContext, useContext, useEffect, useState } from 'react';
 import type { ReactNode } from 'react';
 
-type Theme = 'cyberpunk' | 'glass-dream' | 'ocean-depth' | 'midnight' | 'cosmic';
+type Theme = 'cyberpunk' | 'ocean-depth' | 'midnight' | 'cosmic' | 'cosmic-white';
 
 interface ThemeContextType {
   theme: Theme;
@@ -25,12 +25,6 @@ export const themes = [
     description: 'Futuristic hacker aesthetic with neon grids'
   },
   {
-    id: 'glass-dream' as Theme,
-    name: 'Purple Glass Dream',
-    color: 'hsl(262, 80%, 65%)',
-    description: 'Elegant purple with dreamy glass effects'
-  },
-  {
     id: 'ocean-depth' as Theme,
     name: 'Ocean Depth',
     color: 'hsl(205, 100%, 45%)',
@@ -47,11 +41,17 @@ export const themes = [
     name: 'Cosmic',
     color: 'hsl(200, 100%, 50%)',
     description: 'Pitch black universe with stars and nebula'
+  },
+  {
+    id: 'cosmic-white' as Theme,
+    name: 'Cosmic White',
+    color: 'hsl(45, 100%, 65%)',
+    description: 'Black night sky with white moon, stars, and golden accents'
   }
 ];
 
 export const ThemeProvider = ({ children }: { children: ReactNode }) => {
-  const [theme, setTheme] = useState<Theme>('glass-dream');
+  const [theme, setTheme] = useState<Theme>('cyberpunk');
 
   useEffect(() => {
     const savedTheme = localStorage.getItem('portfolio-theme') as Theme;
@@ -67,9 +67,7 @@ export const ThemeProvider = ({ children }: { children: ReactNode }) => {
     document.documentElement.removeAttribute('data-theme');
 
     // Apply new theme
-    if (theme !== 'glass-dream') {
-      document.documentElement.setAttribute('data-theme', theme);
-    }
+    document.documentElement.setAttribute('data-theme', theme);
   }, [theme]);
 
   const value = {

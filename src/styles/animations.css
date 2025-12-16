@@ -218,11 +218,11 @@
 }
 
 .animate-float {
-  animation: float 3s ease-in-out infinite;
+  animation: float 8s ease-in-out infinite;
 }
 
 .animate-float-delayed {
-  animation: float-delayed 4s ease-in-out infinite;
+  animation: float-delayed 8s ease-in-out infinite;
   animation-delay: 1s;
 }
 
@@ -289,6 +289,10 @@
 
 .animation-delay-1000 {
   animation-delay: 1000ms;
+}
+
+.animation-delay-2000 {
+  animation-delay: 2000ms;
 }
 
 /* Hover effects */
