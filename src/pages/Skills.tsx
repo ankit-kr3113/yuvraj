@@ -204,7 +204,7 @@ const Skills = () => {
                     return (
                       <Card
                         key={`${sectionName}-${index}`}
-                        className="group bg-card/40 backdrop-blur-sm border-border/30 hover:border-primary/40 hover:bg-card/60 transition-all duration-300 hover:scale-105 cursor-pointer"
+                        className="group portfolio-card hover:border-primary/50 hover:-translate-y-0.5 transition-all duration-300 cursor-pointer"
                       >
                         <div className="p-4">
                           {/* Icon and Name Row */}
