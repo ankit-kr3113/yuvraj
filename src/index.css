@@ -225,6 +225,38 @@
     --highlight-achievement: 40 100% 55%;
     --particle-accent: 280 100% 60%;
   }
+
+  /* Theme 5: Cosmic - Universe Inspired with Stars */
+  [data-theme="cosmic"] {
+    --background: 220 20% 2%;
+    --foreground: 200 50% 95%;
+    --card: 220 25% 6%;
+    --card-foreground: 200 50% 95%;
+    --popover: 220 25% 6%;
+    --popover-foreground: 200 50% 95%;
+    --primary: 200 100% 55%;
+    --primary-foreground: 220 20% 2%;
+    --primary-glow: 180 100% 70%;
+    --secondary: 260 70% 40%;
+    --secondary-foreground: 200 50% 95%;
+    --muted: 220 20% 12%;
+    --muted-foreground: 200 30% 55%;
+    --accent: 45 100% 60%;
+    --accent-foreground: 220 20% 2%;
+    --destructive: 0 100% 55%;
+    --destructive-foreground: 200 50% 95%;
+    --border: 220 30% 18%;
+    --input: 220 20% 10%;
+    --ring: 200 100% 55%;
+    --radius: 0.875rem;
+
+    /* Skill & Feature Colors for Cosmic */
+    --skill-database: 150 100% 50%;
+    --skill-languages: 45 100% 60%;
+    --skill-tools: 200 100% 55%;
+    --highlight-achievement: 45 100% 60%;
+    --particle-accent: 200 100% 55%;
+  }
 }
 
 @layer components {
