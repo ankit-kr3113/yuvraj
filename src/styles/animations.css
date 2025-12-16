@@ -46,19 +46,19 @@
 /* Glow effects */
 @keyframes glow-pulse {
   0%, 100% {
-    box-shadow: 0 0 20px rgba(99, 102, 241, 0.3);
+    box-shadow: 0 0 20px hsl(var(--primary) / 0.3);
   }
   50% {
-    box-shadow: 0 0 30px rgba(99, 102, 241, 0.5), 0 0 40px rgba(147, 51, 234, 0.3);
+    box-shadow: 0 0 30px hsl(var(--primary) / 0.5), 0 0 40px hsl(var(--accent) / 0.3);
   }
 }
 
 @keyframes text-glow {
   0%, 100% {
-    text-shadow: 0 0 10px rgba(99, 102, 241, 0.5);
+    text-shadow: 0 0 10px hsl(var(--primary) / 0.5);
   }
   50% {
-    text-shadow: 0 0 20px rgba(99, 102, 241, 0.8), 0 0 30px rgba(147, 51, 234, 0.5);
+    text-shadow: 0 0 20px hsl(var(--primary) / 0.8), 0 0 30px hsl(var(--accent) / 0.5);
   }
 }
 

@@ -78,7 +78,7 @@ const ThemeSwitcher = () => {
                   
                   <div className="flex items-center gap-3 mb-3">
                     <div
-                      className="w-8 h-8 rounded-full border-2 border-white/20"
+                      className="w-8 h-8 rounded-full border-2 border-border/50"
                       style={{ backgroundColor: themeOption.color }}
                     />
                     <div>

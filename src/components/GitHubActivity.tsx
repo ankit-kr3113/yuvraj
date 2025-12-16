@@ -90,7 +90,7 @@ const GitHubActivity = ({ className = '' }: GitHubActivityProps) => {
     let color = 'hsl(var(--muted-foreground))';
 
     if (lowerMessage.includes('fix') || lowerMessage.includes('bug')) {
-      color = 'hsl(0 84% 60%)'; // destructive color
+      color = 'hsl(var(--destructive))'; // destructive color
     } else if (lowerMessage.includes('feat') || lowerMessage.includes('add')) {
       color = 'hsl(var(--accent))';
     } else if (lowerMessage.includes('update') || lowerMessage.includes('improve')) {

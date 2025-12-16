@@ -32,6 +32,13 @@
     --ring: 262 85% 68%;
     --radius: 1.5rem;
 
+    /* Skill & Feature Colors */
+    --skill-database: 120 100% 60%;
+    --skill-languages: 39 100% 60%;
+    --skill-tools: 180 100% 60%;
+    --highlight-achievement: 39 100% 60%;
+    --particle-accent: 262 85% 68%;
+
     /* Glass morphism variables with purple tint */
     --glass-bg: hsla(228, 18%, 12%, 0.75);
     --glass-border: hsla(262, 85%, 68%, 0.4);
@@ -68,6 +75,13 @@
     --input: 180 20% 14%;
     --ring: 180 100% 48%;
     --radius: 0.125rem;
+
+    /* Skill & Feature Colors */
+    --skill-database: 120 100% 52%;
+    --skill-languages: 0 100% 55%;
+    --skill-tools: 180 100% 48%;
+    --highlight-achievement: 0 100% 55%;
+    --particle-accent: 180 100% 48%;
 
     /* Cyberpunk specific variables */
     --cyber-grid: repeating-linear-gradient(
@@ -117,6 +131,13 @@
     --ring: 205 100% 42%;
     --radius: 0.5rem;
 
+    /* Skill & Feature Colors */
+    --skill-database: 120 100% 52%;
+    --skill-languages: 30 100% 55%;
+    --skill-tools: 190 100% 55%;
+    --highlight-achievement: 30 100% 55%;
+    --particle-accent: 205 100% 42%;
+
     --ocean-gradient: linear-gradient(
       180deg,
       hsl(205, 100%, 42%) 0%,
@@ -153,6 +174,13 @@
     --ring: 262 85% 68%;
     --radius: 1.5rem;
 
+    /* Skill & Feature Colors */
+    --skill-database: 120 100% 60%;
+    --skill-languages: 39 100% 60%;
+    --skill-tools: 180 100% 60%;
+    --highlight-achievement: 39 100% 60%;
+    --particle-accent: 262 85% 68%;
+
     /* Glass morphism variables with purple tint */
     --glass-bg: hsla(228, 18%, 12%, 0.75);
     --glass-border: hsla(262, 85%, 68%, 0.4);
@@ -164,6 +192,70 @@
       0 0 80px hsl(262 95% 78% / 0.15);
     --transition-fast: 200ms cubic-bezier(0.4, 0, 0.2, 1);
     --transition-normal: 300ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  /* Theme 4: Midnight - True Dark with Neon Accents */
+  [data-theme="midnight"] {
+    --background: 0 0% 4%;
+    --foreground: 0 0% 96%;
+    --card: 0 0% 8%;
+    --card-foreground: 0 0% 96%;
+    --popover: 0 0% 8%;
+    --popover-foreground: 0 0% 96%;
+    --primary: 280 100% 60%;
+    --primary-foreground: 0 0% 4%;
+    --primary-glow: 280 100% 70%;
+    --secondary: 0 0% 15%;
+    --secondary-foreground: 0 0% 96%;
+    --muted: 0 0% 12%;
+    --muted-foreground: 0 0% 60%;
+    --accent: 10 100% 55%;
+    --accent-foreground: 0 0% 4%;
+    --destructive: 0 100% 55%;
+    --destructive-foreground: 0 0% 96%;
+    --border: 0 0% 18%;
+    --input: 0 0% 10%;
+    --ring: 280 100% 60%;
+    --radius: 0.75rem;
+
+    /* Skill & Feature Colors for Midnight */
+    --skill-database: 120 100% 50%;
+    --skill-languages: 40 100% 55%;
+    --skill-tools: 190 100% 55%;
+    --highlight-achievement: 40 100% 55%;
+    --particle-accent: 280 100% 60%;
+  }
+
+  /* Theme 5: Cosmic - Universe Inspired with Stars */
+  [data-theme="cosmic"] {
+    --background: 220 20% 2%;
+    --foreground: 200 50% 95%;
+    --card: 220 25% 6%;
+    --card-foreground: 200 50% 95%;
+    --popover: 220 25% 6%;
+    --popover-foreground: 200 50% 95%;
+    --primary: 200 100% 55%;
+    --primary-foreground: 220 20% 2%;
+    --primary-glow: 180 100% 70%;
+    --secondary: 260 70% 40%;
+    --secondary-foreground: 200 50% 95%;
+    --muted: 220 20% 12%;
+    --muted-foreground: 200 30% 55%;
+    --accent: 45 100% 60%;
+    --accent-foreground: 220 20% 2%;
+    --destructive: 0 100% 55%;
+    --destructive-foreground: 200 50% 95%;
+    --border: 220 30% 18%;
+    --input: 220 20% 10%;
+    --ring: 200 100% 55%;
+    --radius: 0.875rem;
+
+    /* Skill & Feature Colors for Cosmic */
+    --skill-database: 150 100% 50%;
+    --skill-languages: 45 100% 60%;
+    --skill-tools: 200 100% 55%;
+    --highlight-achievement: 45 100% 60%;
+    --particle-accent: 200 100% 55%;
   }
 }
 
@@ -402,6 +494,119 @@
     animation: gradient-shift 4s ease-in-out infinite;
   }
 
+  /* Midnight Theme Overrides */
+  [data-theme="midnight"] .portfolio-card {
+    background: hsl(var(--card));
+    border: 1px solid hsl(var(--primary) / 0.4);
+    box-shadow: 0 0 20px hsl(var(--primary) / 0.2),
+      inset 0 0 20px hsl(var(--primary) / 0.05);
+    transition: all var(--transition-normal);
+  }
+
+  [data-theme="midnight"] .portfolio-card:hover {
+    border-color: hsl(var(--primary) / 0.8);
+    box-shadow: 0 0 30px hsl(var(--primary) / 0.4),
+      inset 0 0 20px hsl(var(--primary) / 0.1);
+    transform: translateY(-2px);
+  }
+
+  [data-theme="midnight"] .btn-hero {
+    background: linear-gradient(135deg, hsl(var(--primary)), hsl(var(--primary-glow)));
+    box-shadow: 0 0 25px hsl(var(--primary) / 0.6),
+      0 0 40px hsl(var(--accent) / 0.3);
+    border: 1px solid hsl(var(--primary) / 0.6);
+    transition: all var(--transition-normal);
+  }
+
+  [data-theme="midnight"] .btn-hero:hover {
+    box-shadow: 0 0 40px hsl(var(--primary) / 0.8),
+      0 0 60px hsl(var(--accent) / 0.5);
+    transform: translateY(-3px);
+  }
+
+  [data-theme="midnight"] .glass {
+    background: hsl(var(--card) / 0.6);
+    border: 1px solid hsl(var(--primary) / 0.3);
+    backdrop-filter: blur(20px) saturate(150%);
+    transition: all var(--transition-normal);
+  }
+
+  [data-theme="midnight"] .glass:hover {
+    border-color: hsl(var(--primary) / 0.6);
+    box-shadow: 0 0 30px hsl(var(--primary) / 0.3);
+  }
+
+  [data-theme="midnight"] .gradient-text {
+    background: linear-gradient(
+      135deg,
+      hsl(var(--primary)),
+      hsl(var(--primary-glow)),
+      hsl(var(--accent))
+    );
+    background-size: 200% 200%;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: gradient-shift 4s ease-in-out infinite;
+  }
+
+  /* Cosmic Theme Overrides */
+  [data-theme="cosmic"] .portfolio-card {
+    background: hsl(var(--card));
+    border: 1px solid hsl(var(--primary) / 0.35);
+    box-shadow: 0 0 20px hsl(var(--primary) / 0.15),
+      inset 0 0 20px hsl(var(--primary) / 0.03);
+    transition: all var(--transition-normal);
+  }
+
+  [data-theme="cosmic"] .portfolio-card:hover {
+    border-color: hsl(var(--primary) / 0.7);
+    box-shadow: 0 0 30px hsl(var(--primary) / 0.3),
+      0 0 60px hsl(var(--accent) / 0.15),
+      inset 0 0 20px hsl(var(--primary) / 0.05);
+    transform: translateY(-3px);
+  }
+
+  [data-theme="cosmic"] .btn-hero {
+    background: linear-gradient(135deg, hsl(var(--primary)), hsl(var(--primary-glow)));
+    box-shadow: 0 0 25px hsl(var(--primary) / 0.5),
+      0 0 50px hsl(var(--primary) / 0.2);
+    border: 1px solid hsl(var(--primary) / 0.5);
+    transition: all var(--transition-normal);
+  }
+
+  [data-theme="cosmic"] .btn-hero:hover {
+    box-shadow: 0 0 40px hsl(var(--primary) / 0.7),
+      0 0 80px hsl(var(--primary) / 0.3);
+    transform: translateY(-4px);
+  }
+
+  [data-theme="cosmic"] .glass {
+    background: hsl(var(--card) / 0.5);
+    border: 1px solid hsl(var(--primary) / 0.25);
+    backdrop-filter: blur(20px) saturate(120%);
+    transition: all var(--transition-normal);
+  }
+
+  [data-theme="cosmic"] .glass:hover {
+    border-color: hsl(var(--primary) / 0.5);
+    box-shadow: 0 0 40px hsl(var(--primary) / 0.25);
+  }
+
+  [data-theme="cosmic"] .gradient-text {
+    background: linear-gradient(
+      135deg,
+      hsl(var(--primary)),
+      hsl(var(--primary-glow)),
+      hsl(var(--accent))
+    );
+    background-size: 200% 200%;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: gradient-shift 4s ease-in-out infinite;
+  }
+
   /* Animations */
   .fade-in {
     animation: fadeIn 0.6s ease-out forwards;
@@ -482,6 +687,81 @@
         hsl(210, 50%, 7%) 100%
       );
   }
+
+  /* Midnight Background - True Dark */
+  [data-theme="midnight"] body {
+    background: radial-gradient(
+        circle at 15% 25%,
+        hsla(280, 100%, 60%, 0.15) 0%,
+        transparent 50%
+      ),
+      radial-gradient(
+        circle at 85% 75%,
+        hsla(10, 100%, 55%, 0.1) 0%,
+        transparent 50%
+      ),
+      radial-gradient(
+        circle at 50% 50%,
+        hsla(280, 100%, 60%, 0.05) 0%,
+        transparent 70%
+      ),
+      hsl(var(--background));
+  }
+
+  /* Cosmic Background - Universe with Stars and Nebula */
+  [data-theme="cosmic"] body {
+    background:
+      radial-gradient(
+        circle at 20% 30%,
+        hsla(260, 70%, 40%, 0.2) 0%,
+        transparent 40%
+      ),
+      radial-gradient(
+        circle at 80% 70%,
+        hsla(200, 100%, 55%, 0.15) 0%,
+        transparent 45%
+      ),
+      radial-gradient(
+        circle at 50% 80%,
+        hsla(45, 100%, 60%, 0.08) 0%,
+        transparent 50%
+      ),
+      radial-gradient(
+        circle at 10% 70%,
+        hsla(200, 100%, 55%, 0.1) 0%,
+        transparent 35%
+      ),
+      hsl(var(--background));
+    position: relative;
+  }
+
+  /* Cosmic starfield effect */
+  [data-theme="cosmic"] body::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image:
+      radial-gradient(2px 2px at 20% 30%, hsl(0 0% 100%), transparent),
+      radial-gradient(2px 2px at 60% 70%, hsl(0 0% 95%), transparent),
+      radial-gradient(1px 1px at 50% 50%, hsl(0 0% 100%), transparent),
+      radial-gradient(1px 1px at 80% 20%, hsl(0 0% 92%), transparent),
+      radial-gradient(1px 1px at 10% 40%, hsl(0 0% 95%), transparent),
+      radial-gradient(2px 2px at 40% 90%, hsl(0 0% 90%), transparent),
+      radial-gradient(1px 1px at 70% 10%, hsl(0 0% 98%), transparent),
+      radial-gradient(1px 1px at 30% 60%, hsl(0 0% 93%), transparent),
+      radial-gradient(2px 2px at 90% 50%, hsl(0 0% 91%), transparent),
+      radial-gradient(1px 1px at 25% 15%, hsl(0 0% 96%), transparent);
+    background-repeat: repeat;
+    background-size: 200% 200%, 150% 150%, 180% 180%, 250% 250%, 220% 220%, 200% 200%, 240% 240%, 210% 210%, 190% 190%, 230% 230%;
+    background-position: 0% 0%, 10% 20%, 20% 10%, 30% 30%, 5% 25%, 15% 35%, 25% 5%, 10% 30%, 35% 20%, 20% 25%;
+    pointer-events: none;
+    z-index: -1;
+    opacity: 0.8;
+    animation: cosmic-twinkle 8s ease-in-out infinite;
+  }
 }
 
 @keyframes fadeIn {
@@ -503,6 +783,15 @@
   to {
     opacity: 1;
     transform: translateY(0);
+  }
+}
+
+@keyframes cosmic-twinkle {
+  0%, 100% {
+    opacity: 0.8;
+  }
+  50% {
+    opacity: 1;
   }
 }
 

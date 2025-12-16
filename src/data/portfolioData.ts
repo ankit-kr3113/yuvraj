@@ -227,10 +227,10 @@ const getThemeColor = (colorName: string): React.CSSProperties => {
     primary: { color: 'hsl(var(--primary))' },
     accent: { color: 'hsl(var(--accent))' },
     secondary: { color: 'hsl(var(--secondary))' },
-    success: { color: 'hsl(120, 100%, 60%)' },
-    info: { color: 'hsl(180, 100%, 60%)' },
-    warning: { color: 'hsl(39, 100%, 60%)' },
-    danger: { color: 'hsl(0, 100%, 60%)' },
+    success: { color: 'hsl(var(--skill-database))' },
+    info: { color: 'hsl(var(--skill-tools))' },
+    warning: { color: 'hsl(var(--skill-languages))' },
+    danger: { color: 'hsl(var(--destructive))' },
   };
   return colorMap[colorName] || { color: 'hsl(var(--primary))' };
 };
@@ -544,13 +544,13 @@ export const techStack = [
   {
     name: "Node.js",
     icon: "N",
-    color: "from-success-500 to-success-600",
+    color: "from-skill-database to-accent",
     textColor: getThemeColor("success"),
   },
   {
     name: "MongoDB",
     icon: "M",
-    color: "from-warning-500 to-warning-600",
+    color: "from-skill-languages to-accent",
     textColor: getThemeColor("warning"),
   },
   {
@@ -562,7 +562,7 @@ export const techStack = [
   {
     name: "Tailwind",
     icon: "TW",
-    color: "from-info-500 to-primary",
+    color: "from-skill-tools to-primary",
     textColor: getThemeColor("info"),
   },
 ];
@@ -769,28 +769,28 @@ export const overviewData = {
         icon: FaGithub,
         url: socialLinks.github.url,
         username: "@" + socialLinks.github.username,
-        color: "text-gray-300 hover:text-white",
+        color: "text-secondary hover:text-secondary-foreground",
       },
       {
         name: "LinkedIn",
         icon: FaLinkedin,
         url: socialLinks.linkedin.url,
         username: socialLinks.linkedin.username,
-        color: "text-blue-400 hover:text-blue-300",
+        color: "text-primary hover:text-primary-foreground",
       },
       {
         name: "Twitter",
         icon: FaTwitter,
         url: socialLinks.twitter.url,
         username: socialLinks.twitter.username,
-        color: "text-sky-400 hover:text-sky-300",
+        color: "text-accent hover:text-accent-foreground",
       },
       {
         name: "Email",
         icon: FaEnvelope,
         url: socialLinks.email.url,
         username: socialLinks.email.address,
-        color: "text-red-400 hover:text-red-300",
+        color: "text-destructive hover:text-destructive-foreground",
       },
     ],
   },
