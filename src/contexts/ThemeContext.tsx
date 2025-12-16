@@ -35,6 +35,12 @@ export const themes = [
     name: 'Ocean Depth',
     color: 'hsl(205, 100%, 45%)',
     description: 'Deep blue ocean with aquatic vibes'
+  },
+  {
+    id: 'midnight' as Theme,
+    name: 'Midnight',
+    color: 'hsl(0, 0%, 8%)',
+    description: 'True dark theme with striking neon accents'
   }
 ];
 
