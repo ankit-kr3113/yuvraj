@@ -30,7 +30,7 @@
     transform: translateY(0px);
   }
   50% {
-    transform: translateY(-10px);
+    transform: translateY(-5px);
   }
 }
 
@@ -39,7 +39,7 @@
     transform: translateY(0px);
   }
   50% {
-    transform: translateY(-15px);
+    transform: translateY(-8px);
   }
 }
 
@@ -218,11 +218,11 @@
 }
 
 .animate-float {
-  animation: float 8s ease-in-out infinite;
+  animation: float 30s linear infinite;
 }
 
 .animate-float-delayed {
-  animation: float-delayed 8s ease-in-out infinite;
+  animation: float-delayed 30s linear infinite;
   animation-delay: 1s;
 }
 
