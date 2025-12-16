@@ -193,6 +193,38 @@
     --transition-fast: 200ms cubic-bezier(0.4, 0, 0.2, 1);
     --transition-normal: 300ms cubic-bezier(0.4, 0, 0.2, 1);
   }
+
+  /* Theme 4: Midnight - True Dark with Neon Accents */
+  [data-theme="midnight"] {
+    --background: 0 0% 4%;
+    --foreground: 0 0% 96%;
+    --card: 0 0% 8%;
+    --card-foreground: 0 0% 96%;
+    --popover: 0 0% 8%;
+    --popover-foreground: 0 0% 96%;
+    --primary: 280 100% 60%;
+    --primary-foreground: 0 0% 4%;
+    --primary-glow: 280 100% 70%;
+    --secondary: 0 0% 15%;
+    --secondary-foreground: 0 0% 96%;
+    --muted: 0 0% 12%;
+    --muted-foreground: 0 0% 60%;
+    --accent: 10 100% 55%;
+    --accent-foreground: 0 0% 4%;
+    --destructive: 0 100% 55%;
+    --destructive-foreground: 0 0% 96%;
+    --border: 0 0% 18%;
+    --input: 0 0% 10%;
+    --ring: 280 100% 60%;
+    --radius: 0.75rem;
+
+    /* Skill & Feature Colors for Midnight */
+    --skill-database: 120 100% 50%;
+    --skill-languages: 40 100% 55%;
+    --skill-tools: 190 100% 55%;
+    --highlight-achievement: 40 100% 55%;
+    --particle-accent: 280 100% 60%;
+  }
 }
 
 @layer components {
