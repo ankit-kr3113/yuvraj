@@ -426,7 +426,7 @@ const Overview = () => {
                     </div>
                   </div>
 
-                  <div className="hidden md:block absolute top-1/2 -translate-y-1/2 -right-2 lg:-right-4 w-28 h-24 md:w-32 md:h-28 bg-card/98 backdrop-blur-lg rounded-2xl border-2 border-primary/40 p-4 md:p-5 shadow-2xl hover:shadow-3xl transition-all duration-300 hover:scale-125 animate-float animation-delay-2000 z-20">
+                  <div className="hidden md:block absolute top-1/2 -translate-y-1/2 -right-2 lg:-right-4 w-28 h-24 md:w-32 md:h-28 bg-card/98 backdrop-blur-lg rounded-2xl border-2 border-primary/40 p-4 md:p-5 shadow-2xl hover:shadow-3xl transition-all duration-300 hover:scale-125 animate-float [animation-duration:1.5s] animation-delay-2000 z-20">
                     <div className="flex justify-center mb-2">
                       <div className="w-7 h-7 md:w-8 md:h-8 rounded-xl bg-gradient-to-br from-primary to-primary-glow flex items-center justify-center shadow-lg">
                         <BiGitCommit className="w-4 h-4 md:w-5 md:h-5 text-primary-foreground" />
