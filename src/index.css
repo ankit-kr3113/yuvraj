@@ -888,7 +888,7 @@
     pointer-events: none;
     z-index: -1;
     opacity: 1;
-    animation: cosmic-white-twinkle 6s ease-in-out infinite, shooting-stars 8s ease-in infinite infinite;
+    animation: cosmic-white-twinkle 6s ease-in-out infinite;
   }
 }
 
