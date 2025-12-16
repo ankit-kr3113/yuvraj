@@ -257,6 +257,38 @@
     --highlight-achievement: 45 100% 60%;
     --particle-accent: 200 100% 55%;
   }
+
+  /* Theme 6: Cosmic White - Black Night Sky with White Stars and Moon */
+  [data-theme="cosmic-white"] {
+    --background: 0 0% 2%;
+    --foreground: 0 0% 95%;
+    --card: 0 0% 6%;
+    --card-foreground: 0 0% 95%;
+    --popover: 0 0% 6%;
+    --popover-foreground: 0 0% 95%;
+    --primary: 0 0% 90%;
+    --primary-foreground: 0 0% 2%;
+    --primary-glow: 0 0% 100%;
+    --secondary: 240 10% 20%;
+    --secondary-foreground: 0 0% 95%;
+    --muted: 0 0% 12%;
+    --muted-foreground: 0 0% 55%;
+    --accent: 45 100% 65%;
+    --accent-foreground: 0 0% 2%;
+    --destructive: 0 100% 55%;
+    --destructive-foreground: 0 0% 95%;
+    --border: 0 0% 18%;
+    --input: 0 0% 10%;
+    --ring: 0 0% 90%;
+    --radius: 0.875rem;
+
+    /* Skill & Feature Colors for Cosmic White */
+    --skill-database: 120 100% 50%;
+    --skill-languages: 45 100% 60%;
+    --skill-tools: 0 0% 85%;
+    --highlight-achievement: 45 100% 60%;
+    --particle-accent: 0 0% 90%;
+  }
 }
 
 @layer components {
