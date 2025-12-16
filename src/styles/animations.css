@@ -291,6 +291,10 @@
   animation-delay: 1000ms;
 }
 
+.animation-delay-2000 {
+  animation-delay: 2000ms;
+}
+
 /* Hover effects */
 .hover-glow:hover {
   animation: glow-pulse 0.5s ease-in-out;
