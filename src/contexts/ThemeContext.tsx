@@ -1,7 +1,7 @@
 import { createContext, useContext, useEffect, useState } from 'react';
 import type { ReactNode } from 'react';
 
-type Theme = 'cyberpunk' | 'glass-dream' | 'ocean-depth';
+type Theme = 'cyberpunk' | 'glass-dream' | 'ocean-depth' | 'midnight';
 
 interface ThemeContextType {
   theme: Theme;
