@@ -41,6 +41,12 @@ export const themes = [
     name: 'Midnight',
     color: 'hsl(0, 0%, 8%)',
     description: 'True dark theme with striking neon accents'
+  },
+  {
+    id: 'cosmic' as Theme,
+    name: 'Cosmic',
+    color: 'hsl(200, 100%, 50%)',
+    description: 'Pitch black universe with stars and nebula'
   }
 ];
 
