@@ -1,7 +1,7 @@
 import { createContext, useContext, useEffect, useState } from 'react';
 import type { ReactNode } from 'react';
 
-type Theme = 'cyberpunk' | 'ocean-depth' | 'midnight' | 'cosmic';
+type Theme = 'cyberpunk' | 'ocean-depth' | 'midnight' | 'cosmic' | 'cosmic-white';
 
 interface ThemeContextType {
   theme: Theme;
@@ -41,6 +41,12 @@ export const themes = [
     name: 'Cosmic',
     color: 'hsl(200, 100%, 50%)',
     description: 'Pitch black universe with stars and nebula'
+  },
+  {
+    id: 'cosmic-white' as Theme,
+    name: 'Cosmic White',
+    color: 'hsl(0, 0%, 95%)',
+    description: 'Black night sky with white moon, stars, and shooting stars'
   }
 ];
 
