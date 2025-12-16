@@ -218,11 +218,11 @@
 }
 
 .animate-float {
-  animation: float 30s ease-in-out infinite;
+  animation: float 30s linear infinite;
 }
 
 .animate-float-delayed {
-  animation: float-delayed 30s ease-in-out infinite;
+  animation: float-delayed 30s linear infinite;
   animation-delay: 1s;
 }
 
