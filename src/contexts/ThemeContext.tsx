@@ -1,7 +1,7 @@
 import { createContext, useContext, useEffect, useState } from 'react';
 import type { ReactNode } from 'react';
 
-type Theme = 'cyberpunk' | 'ocean-depth' | 'midnight' | 'cosmic' | 'cosmic-white' | 'cosmic-white-cyan' | 'cosmic-white-pink' | 'cosmic-white-purple' | 'cosmic-white-silver' | 'cosmic-white-aurora' | 'cosmic-white-meteor';
+type Theme = 'cyberpunk' | 'ocean-depth' | 'midnight' | 'cosmic' | 'cosmic-white';
 
 interface ThemeContextType {
   theme: Theme;
@@ -44,45 +44,9 @@ export const themes = [
   },
   {
     id: 'cosmic-white' as Theme,
-    name: 'Cosmic White (Golden)',
+    name: 'Cosmic White',
     color: 'hsl(45, 100%, 65%)',
-    description: 'Black night sky with white moon and golden accents'
-  },
-  {
-    id: 'cosmic-white-cyan' as Theme,
-    name: 'Cosmic White (Cyan)',
-    color: 'hsl(180, 100%, 60%)',
-    description: 'Black night sky with white moon and cyan aurora accents'
-  },
-  {
-    id: 'cosmic-white-pink' as Theme,
-    name: 'Cosmic White (Pink)',
-    color: 'hsl(320, 100%, 60%)',
-    description: 'Black night sky with white moon and pink nebula accents'
-  },
-  {
-    id: 'cosmic-white-purple' as Theme,
-    name: 'Cosmic White (Purple)',
-    color: 'hsl(270, 100%, 65%)',
-    description: 'Black night sky with white moon and purple cosmic accents'
-  },
-  {
-    id: 'cosmic-white-silver' as Theme,
-    name: 'Cosmic White (Silver)',
-    color: 'hsl(0, 0%, 80%)',
-    description: 'Black night sky with white moon and subtle silver accents'
-  },
-  {
-    id: 'cosmic-white-aurora' as Theme,
-    name: 'Cosmic White (Aurora)',
-    color: 'hsl(150, 100%, 50%)',
-    description: 'Black night sky with white moon and green aurora accents'
-  },
-  {
-    id: 'cosmic-white-meteor' as Theme,
-    name: 'Cosmic White (Meteor)',
-    color: 'hsl(15, 100%, 60%)',
-    description: 'Black night sky with white moon and red meteor accents'
+    description: 'Black night sky with white moon, stars, and golden accents'
   }
 ];
 
