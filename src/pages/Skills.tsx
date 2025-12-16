@@ -204,27 +204,25 @@ const Skills = () => {
                     return (
                       <Card
                         key={`${sectionName}-${index}`}
-                        className="group portfolio-card hover:border-primary/50 hover:-translate-y-0.5 transition-all duration-300 cursor-pointer"
+                        className="group portfolio-card hover:border-primary/50 hover:-translate-y-0.5 transition-all duration-300 cursor-pointer !p-3 sm:!p-4"
                       >
-                        <div className="p-4">
-                          {/* Icon and Name Row */}
-                          <div className="flex items-center gap-3 mb-3">
-                            <div style={skill.style} className="group-hover:scale-110 transition-transform duration-300">
-                              <IconComponent className="w-6 h-6" />
-                            </div>
-                            <h4 className="font-medium text-foreground text-sm group-hover:text-primary transition-colors duration-300">
-                              {skill.name}
-                            </h4>
+                        {/* Icon and Name Row */}
+                        <div className="flex items-center gap-3 mb-3">
+                          <div style={skill.style} className="group-hover:scale-110 transition-transform duration-300">
+                            <IconComponent className="w-6 h-6" />
                           </div>
-
-                          {/* Level Badge */}
-                          <Badge
-                            style={getLevelColor(sectionName)}
-                            className="text-xs font-medium px-2 py-1 rounded-md w-full justify-center transition-all duration-300 group-hover:scale-105"
-                          >
-                            {skill.level || sectionName}
-                          </Badge>
+                          <h4 className="font-medium text-foreground text-sm group-hover:text-primary transition-colors duration-300">
+                            {skill.name}
+                          </h4>
                         </div>
+
+                        {/* Level Badge */}
+                        <Badge
+                          style={getLevelColor(sectionName)}
+                          className="text-xs font-medium px-2 py-1 rounded-md w-full justify-center transition-all duration-300 group-hover:scale-105"
+                        >
+                          {skill.level || sectionName}
+                        </Badge>
                       </Card>
                     );
                   })}
