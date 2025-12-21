@@ -4,7 +4,8 @@ import {
   Mail,
   MapPin,
   Heart,
-  FileText
+  FileText,
+  Zap
 } from "lucide-react";
 import { FaStar, FaMagic, FaLaptopCode } from "react-icons/fa";
 import { SiLeetcode, SiGeeksforgeeks, SiCodechef, SiCodeforces } from "react-icons/si";
