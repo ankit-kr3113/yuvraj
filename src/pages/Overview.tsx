@@ -71,6 +71,65 @@ import {
   overviewData,
 } from "@/data/portfolioData";
 
+// Framer Motion Animation Variants
+const containerVariants = {
+  hidden: { opacity: 0 },
+  visible: {
+    opacity: 1,
+    transition: {
+      staggerChildren: 0.1,
+      delayChildren: 0.2,
+    },
+  },
+};
+
+const itemVariants = {
+  hidden: { opacity: 0, y: 20 },
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: {
+      duration: 0.6,
+      ease: "easeOut",
+    },
+  },
+};
+
+const cardHoverVariants = {
+  hover: {
+    y: -8,
+    boxShadow: "0 20px 40px rgba(0, 0, 0, 0.2)",
+    transition: {
+      duration: 0.3,
+      ease: "easeOut",
+    },
+  },
+};
+
+const pulseVariants = {
+  animate: {
+    scale: [1, 1.1, 1],
+    opacity: [0.5, 1, 0.5],
+    transition: {
+      duration: 2,
+      repeat: Infinity,
+      ease: "easeInOut",
+    },
+  },
+};
+
+const skillBarVariants = {
+  initial: { scaleX: 0, originX: 0 },
+  animate: (delay: number) => ({
+    scaleX: 1,
+    transition: {
+      duration: 0.8,
+      delay,
+      ease: "easeOut",
+    },
+  }),
+};
+
 // Optimized typewriter effect with reduced re-renders
 const useTypewriter = (text: string, speed: number = 100) => {
   const [displayText, setDisplayText] = useState("");
