@@ -41,11 +41,82 @@ const About = () => {
     window.open(personalInfo.resume, '_blank');
   };
 
+  const headerVariants = {
+    hidden: { opacity: 0, y: 20 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: { duration: 0.6, ease: "easeOut" }
+    }
+  };
+
+  const backgroundVariants = {
+    animate: {
+      y: [0, -10, 0],
+      transition: { duration: 4, repeat: Infinity, ease: "easeInOut" }
+    }
+  };
+
+  const backgroundVariants2 = {
+    animate: {
+      y: [0, 10, 0],
+      transition: { duration: 5, repeat: Infinity, ease: "easeInOut", delay: 1 }
+    }
+  };
+
+  const containerVariants = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.2,
+        delayChildren: 0.1
+      }
+    }
+  };
+
+  const cardVariants = {
+    hidden: { opacity: 0, y: 30 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: { duration: 0.6, ease: "easeOut" }
+    }
+  };
+
+  const interestVariants = {
+    hidden: { opacity: 0, x: -10 },
+    visible: {
+      opacity: 1,
+      x: 0,
+      transition: { duration: 0.4 }
+    },
+    whileHover: {
+      backgroundColor: "hsl(var(--primary) / 0.05)",
+      transition: { duration: 0.2 }
+    }
+  };
+
+  const statVariants = {
+    whileHover: {
+      scale: 1.05,
+      backgroundColor: "hsl(var(--primary) / 0.1)",
+      transition: { duration: 0.3 }
+    }
+  };
+
+  const profileImageVariants = {
+    whileHover: {
+      scale: 1.05,
+      transition: { duration: 0.3 }
+    }
+  };
+
   return (
     <div className="min-h-screen bg-background">
       <Navigation />
       <ThemeSwitcher />
-      
+
       <div className="relative pt-28 pb-8 px-4 sm:px-6 lg:px-8 overflow-hidden">
         {/* Enhanced Background Elements */}
         <div className="absolute inset-0 bg-gradient-to-br from-background via-background to-primary/8"></div>
@@ -56,16 +127,33 @@ const About = () => {
             className="w-full h-full object-cover"
           />
         </div>
-        <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-primary/5 rounded-full blur-3xl animate-pulse opacity-60"></div>
-        <div className="absolute bottom-1/4 right-1/4 w-80 h-80 bg-primary-glow/5 rounded-full blur-3xl animate-pulse opacity-40 animation-delay-2000"></div>
+        <motion.div
+          className="absolute top-1/4 left-1/4 w-96 h-96 bg-primary/5 rounded-full blur-3xl opacity-60"
+          variants={backgroundVariants}
+          animate="animate"
+        />
+        <motion.div
+          className="absolute bottom-1/4 right-1/4 w-80 h-80 bg-primary-glow/5 rounded-full blur-3xl opacity-40"
+          variants={backgroundVariants2}
+          animate="animate"
+        />
 
         <div className="relative max-w-7xl mx-auto">
           {/* Enhanced Header */}
-          <div className="text-center mb-16 fade-in">
-            <div className="inline-flex items-center px-4 py-2 rounded-full bg-primary/10 border border-primary/20 text-primary text-sm font-medium mb-4">
+          <motion.div
+            className="text-center mb-16"
+            variants={headerVariants}
+            initial="hidden"
+            animate="visible"
+          >
+            <motion.div
+              className="inline-flex items-center px-4 py-2 rounded-full bg-primary/10 border border-primary/20 text-primary text-sm font-medium mb-4"
+              whileHover={{ scale: 1.05 }}
+              transition={{ duration: 0.2 }}
+            >
               <HiHand className="w-4 h-4 mr-2" />
               Personal Background
-            </div>
+            </motion.div>
             <h1 className="text-4xl md:text-5xl font-bold mb-4">
               <span className="text-foreground">Get to Know</span>{" "}
               <span className="bg-gradient-to-r from-primary to-primary-glow bg-clip-text text-transparent">
@@ -75,7 +163,7 @@ const About = () => {
             <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
               {personalInfo.tagline}
             </p>
-          </div>
+          </motion.div>
 
           {/* Enhanced Hero Section */}
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-8 mb-8">
