@@ -171,11 +171,11 @@ export function Hero() {
                 {/* Floating Tech Badges */}
                 {techStack.map((tech, index) => {
                   const positions = [
-                    { top: '-20px', left: '50%', transform: 'translate(-50%, 0)' },
-                    { top: '30%', right: '-30px' },
-                    { bottom: '30%', right: '-30px' },
-                    { bottom: '-20px', left: '50%', transform: 'translate(-50%, 0)' },
-                    { top: '30%', left: '-30px' },
+                    { top: '20%', left: '-35px' }, // top-left sparse
+                    { top: '15%', right: '-35px' }, // top-right
+                    { bottom: '35%', right: '-35px' }, // bottom-right
+                    { bottom: '20%', right: '-50px' }, // bottom-right cluster
+                    { bottom: '10%', right: '-25px' }, // bottom-right cluster
                   ]
                   return (
                     <motion.div
