@@ -207,141 +207,138 @@ const Footer = () => {
 
         {/* Desktop: Full Content */}
         <div className="hidden md:block">
-          <div className="grid grid-cols-3 gap-12 mb-12">
+          <div className="grid grid-cols-4 gap-6 mb-12">
             {/* Left Column - Brand & Social */}
             <div>
-              <h3 className="text-2xl font-bold text-foreground mb-4">{footerData.brand.name}</h3>
-              <p className="text-muted-foreground text-sm leading-relaxed mb-6">
+              <h3 className="text-lg font-bold text-foreground mb-2">{footerData.brand.name}</h3>
+              <p className="text-muted-foreground text-xs leading-relaxed mb-4">
                 Full Stack Developer passionate about creating impactful digital solutions and continuously learning new technologies.
               </p>
-              <div className="flex gap-3">
+              <div className="flex gap-2">
                 <a
                   href={socialLinks.github.url}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="w-9 h-9 rounded-lg flex items-center justify-center text-muted-foreground hover:text-foreground hover:bg-primary/20 transition-all duration-200"
+                  className="w-8 h-8 rounded-lg flex items-center justify-center text-muted-foreground hover:text-foreground hover:bg-primary/20 transition-all duration-200"
                 >
-                  <Github className="w-5 h-5" />
+                  <Github className="w-4 h-4" />
                 </a>
                 <a
                   href={socialLinks.linkedin.url}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="w-9 h-9 rounded-lg flex items-center justify-center text-muted-foreground hover:text-foreground hover:bg-primary/20 transition-all duration-200"
+                  className="w-8 h-8 rounded-lg flex items-center justify-center text-muted-foreground hover:text-foreground hover:bg-primary/20 transition-all duration-200"
                 >
-                  <Linkedin className="w-5 h-5" />
+                  <Linkedin className="w-4 h-4" />
                 </a>
                 <a
                   href={socialLinks.email.url}
-                  className="w-9 h-9 rounded-lg flex items-center justify-center text-muted-foreground hover:text-foreground hover:bg-primary/20 transition-all duration-200"
+                  className="w-8 h-8 rounded-lg flex items-center justify-center text-muted-foreground hover:text-foreground hover:bg-primary/20 transition-all duration-200"
                 >
-                  <Mail className="w-5 h-5" />
+                  <Mail className="w-4 h-4" />
                 </a>
               </div>
             </div>
 
-            {/* Middle Column - Quick Links */}
+            {/* Second Column - Quick Links */}
             <div>
-              <h4 className="text-lg font-semibold text-foreground mb-6">Quick Links</h4>
-              <div className="space-y-4">
+              <h4 className="text-sm font-semibold text-foreground mb-3">Quick Links</h4>
+              <div className="space-y-2">
                 <Link
                   to="/"
-                  className="block text-muted-foreground hover:text-foreground transition-colors text-sm"
+                  className="block text-muted-foreground hover:text-foreground transition-colors text-xs"
                 >
                   Overview
                 </Link>
                 <Link
                   to="/projects"
-                  className="block text-muted-foreground hover:text-foreground transition-colors text-sm"
+                  className="block text-muted-foreground hover:text-foreground transition-colors text-xs"
                 >
                   Projects
                 </Link>
                 <Link
                   to="/skills"
-                  className="block text-muted-foreground hover:text-foreground transition-colors text-sm"
+                  className="block text-muted-foreground hover:text-foreground transition-colors text-xs"
                 >
                   Skills
                 </Link>
                 <Link
                   to="/experience"
-                  className="block text-muted-foreground hover:text-foreground transition-colors text-sm"
+                  className="block text-muted-foreground hover:text-foreground transition-colors text-xs"
                 >
                   Experience
                 </Link>
                 <Link
                   to="/contact"
-                  className="block text-muted-foreground hover:text-foreground transition-colors text-sm"
+                  className="block text-muted-foreground hover:text-foreground transition-colors text-xs"
                 >
                   Contact
                 </Link>
               </div>
             </div>
 
-            {/* Right Column - Coding Profiles & Contact */}
-            <div className="grid grid-cols-2 gap-8">
-              {/* Coding Profiles Section */}
-              <div>
-                <h4 className="text-lg font-semibold text-foreground mb-4">Coding Profiles</h4>
-                <div className="space-y-3">
-                  <a
-                    href={socialLinks.leetcode.url}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="flex items-center gap-2 text-muted-foreground hover:text-foreground transition-colors text-sm"
-                  >
-                    <SiLeetcode className="w-4 h-4" />
-                    LeetCode
-                  </a>
-                  <a
-                    href={socialLinks.codechef.url}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="flex items-center gap-2 text-muted-foreground hover:text-foreground transition-colors text-sm"
-                  >
-                    <SiCodechef className="w-4 h-4" />
-                    CodeChef
-                  </a>
-                  <a
-                    href={socialLinks.codeforces.url}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="flex items-center gap-2 text-muted-foreground hover:text-foreground transition-colors text-sm"
-                  >
-                    <SiCodeforces className="w-4 h-4" />
-                    Codeforces
-                  </a>
-                  <a
-                    href={socialLinks.geeksforgeeks.url}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="flex items-center gap-2 text-muted-foreground hover:text-foreground transition-colors text-sm"
-                  >
-                    <SiGeeksforgeeks className="w-4 h-4" />
-                    GeeksforGeeks
-                  </a>
-                </div>
+            {/* Third Column - Coding Profiles */}
+            <div>
+              <h4 className="text-sm font-semibold text-foreground mb-3">Coding Profiles</h4>
+              <div className="space-y-2">
+                <a
+                  href={socialLinks.leetcode.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center gap-2 text-muted-foreground hover:text-foreground transition-colors text-xs"
+                >
+                  <SiLeetcode className="w-3 h-3" />
+                  LeetCode
+                </a>
+                <a
+                  href={socialLinks.codechef.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center gap-2 text-muted-foreground hover:text-foreground transition-colors text-xs"
+                >
+                  <SiCodechef className="w-3 h-3" />
+                  CodeChef
+                </a>
+                <a
+                  href={socialLinks.codeforces.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center gap-2 text-muted-foreground hover:text-foreground transition-colors text-xs"
+                >
+                  <SiCodeforces className="w-3 h-3" />
+                  Codeforces
+                </a>
+                <a
+                  href={socialLinks.geeksforgeeks.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center gap-2 text-muted-foreground hover:text-foreground transition-colors text-xs"
+                >
+                  <SiGeeksforgeeks className="w-3 h-3" />
+                  GeeksforGeeks
+                </a>
               </div>
+            </div>
 
-              {/* Contact Section */}
-              <div>
-                <h4 className="text-lg font-semibold text-foreground mb-4">Contact</h4>
-                <div className="space-y-3 text-sm">
-                  <div className="flex items-start gap-2 text-muted-foreground">
-                    <Mail className="w-4 h-4 mt-0.5 flex-shrink-0" />
-                    <span>{personalInfo.email}</span>
-                  </div>
-                  <div className="flex items-start gap-2 text-muted-foreground">
-                    <span className="text-xs">📱</span>
-                    <span>{personalInfo.phone}</span>
-                  </div>
-                  <div className="flex items-start gap-2 text-muted-foreground">
-                    <MapPin className="w-4 h-4 mt-0.5 flex-shrink-0" />
-                    <span>{personalInfo.location}</span>
-                  </div>
-                  <div className="flex items-start gap-2 text-muted-foreground">
-                    <span className="text-xs">🕐</span>
-                    <span>{personalInfo.timezone}</span>
-                  </div>
+            {/* Fourth Column - Contact */}
+            <div>
+              <h4 className="text-sm font-semibold text-foreground mb-3">Contact</h4>
+              <div className="space-y-2 text-xs">
+                <div className="flex items-start gap-2 text-muted-foreground">
+                  <Mail className="w-3 h-3 mt-0.5 flex-shrink-0" />
+                  <span className="break-words">{personalInfo.email}</span>
+                </div>
+                <div className="flex items-start gap-2 text-muted-foreground">
+                  <span>📱</span>
+                  <span>{personalInfo.phone}</span>
+                </div>
+                <div className="flex items-start gap-2 text-muted-foreground">
+                  <MapPin className="w-3 h-3 mt-0.5 flex-shrink-0" />
+                  <span>{personalInfo.location}</span>
+                </div>
+                <div className="flex items-start gap-2 text-muted-foreground">
+                  <span>🕐</span>
+                  <span>{personalInfo.timezone}</span>
                 </div>
               </div>
             </div>
