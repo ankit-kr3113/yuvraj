@@ -40,7 +40,7 @@ export function Hero() {
               initial={{ opacity: 0, x: -50 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.8, delay: 0.5 }}
-              className="space-y-8"
+              className="space-y-4"
             >
               {/* Status Badge */}
               <div className="inline-flex items-center gap-2 bg-primary/10 text-primary px-4 py-2 rounded-full text-sm font-medium">
@@ -49,7 +49,7 @@ export function Hero() {
               </div>
 
               {/* Name & Title */}
-              <div className="space-y-4">
+              <div className="space-y-2">
                 <h1 className="text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-black leading-tight text-foreground">
                   Hi, I'm{' '}
                   <span className="bg-gradient-to-r from-primary via-primary-glow to-accent bg-clip-text text-transparent">
@@ -116,7 +116,7 @@ export function Hero() {
               </div>
 
               {/* Social Links */}
-              <div className="flex items-center gap-4 pt-4">
+              <div className="flex items-center gap-4 pt-2">
                 <a
                   href={socialLinks.github.url}
                   target="_blank"
