@@ -1,18 +1,18 @@
 import { motion } from 'framer-motion'
-import { Menu, X, Github, Linkedin, Mail, MapPin, Download, ChevronDown } from 'lucide-react'
+import { Menu, X, Github, Linkedin, Mail, MapPin, Download, ChevronDown, Code, Target, Trophy, CheckCircle } from 'lucide-react'
 import { useState, useEffect } from 'react'
 import { personalInfo, socialLinks, achievements } from '@/data/portfolioData'
 import ThemeSwitcher from './ThemeSwitcher'
-import { FaReact, FaNodeJs } from 'react-icons/fa'
+import { FaReact, FaNodeJs, FaGitAlt } from 'react-icons/fa'
 import { SiTypescript, SiMongodb, SiNextdotjs } from 'react-icons/si'
 
 export function Hero() {
-  const techStack = [
-    { name: 'React', icon: <FaReact className="w-5 h-5" /> },
-    { name: 'Node.js', icon: <FaNodeJs className="w-5 h-5" /> },
-    { name: 'TypeScript', icon: <SiTypescript className="w-5 h-5" /> },
-    { name: 'MongoDB', icon: <SiMongodb className="w-5 h-5" /> },
-    { name: 'Next.js', icon: <SiNextdotjs className="w-5 h-5" /> },
+  const statBadges = [
+    { label: 'Projects', value: achievements.stats.totalProjects, icon: <Code className="w-5 h-5" /> },
+    { label: 'Commits', value: achievements.stats.commits, icon: <FaGitAlt className="w-5 h-5" /> },
+    { label: 'Problems', value: achievements.leetcode.problemsSolved, icon: <Target className="w-5 h-5" /> },
+    { label: 'Rating', value: achievements.leetcode.rating, icon: <Trophy className="w-5 h-5" /> },
+    { label: 'Available', value: 'Now', icon: <CheckCircle className="w-5 h-5" /> },
   ]
 
   return (
