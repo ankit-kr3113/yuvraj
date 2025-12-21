@@ -5,10 +5,20 @@ import { personalInfo, socialLinks, achievements } from '@/data/portfolioData'
 import ThemeSwitcher from './ThemeSwitcher'
 import { FaReact, FaNodeJs, FaGitAlt } from 'react-icons/fa'
 import { SiTypescript, SiMongodb, SiNextdotjs } from 'react-icons/si'
-import { useTypewriter } from '@/hooks/useTypewriter'
 
 export function Hero() {
-  const { displayedText: typewriterName } = useTypewriter(personalInfo.name, 150, 500);
+  const nameVariants = {
+    hidden: { opacity: 0, y: 20 },
+    visible: (i: number) => ({
+      opacity: 1,
+      y: 0,
+      transition: {
+        delay: 0.5 + i * 0.05,
+        duration: 0.6,
+        ease: 'easeOut'
+      }
+    })
+  };
 
   const statBadges = [
     { label: 'Projects', value: achievements.stats.totalProjects, icon: <Code className="w-5 h-5" /> },
