@@ -16,6 +16,7 @@ import Footer from "@/components/Footer";
 import ThemeSwitcher from "@/components/ThemeSwitcher";
 import { useNavigate } from "react-router-dom";
 import { personalInfo, socialLinks, achievements, interests, aboutPageData } from "@/data/portfolioData";
+import { motion } from "framer-motion";
 
 const About = () => {
   const navigate = useNavigate();
