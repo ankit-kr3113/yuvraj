@@ -279,13 +279,13 @@ const Footer = () => {
 
             {/* Third Column - Coding Profiles */}
             <div>
-              <h4 className="text-base font-semibold text-foreground mb-3">Coding Profiles</h4>
+              <h4 className="text-lg font-semibold text-foreground mb-3">Coding Profiles</h4>
               <div className="space-y-2">
                 <a
                   href={socialLinks.leetcode.url}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex items-center gap-2 text-muted-foreground hover:text-foreground transition-colors text-sm"
+                  className="flex items-center gap-2 text-muted-foreground hover:text-foreground transition-colors text-base"
                 >
                   <SiLeetcode className="w-4 h-4" />
                   LeetCode
@@ -294,7 +294,7 @@ const Footer = () => {
                   href={socialLinks.codechef.url}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex items-center gap-2 text-muted-foreground hover:text-foreground transition-colors text-sm"
+                  className="flex items-center gap-2 text-muted-foreground hover:text-foreground transition-colors text-base"
                 >
                   <SiCodechef className="w-4 h-4" />
                   CodeChef
@@ -303,7 +303,7 @@ const Footer = () => {
                   href={socialLinks.codeforces.url}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex items-center gap-2 text-muted-foreground hover:text-foreground transition-colors text-sm"
+                  className="flex items-center gap-2 text-muted-foreground hover:text-foreground transition-colors text-base"
                 >
                   <SiCodeforces className="w-4 h-4" />
                   Codeforces
@@ -312,7 +312,7 @@ const Footer = () => {
                   href={socialLinks.geeksforgeeks.url}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex items-center gap-2 text-muted-foreground hover:text-foreground transition-colors text-sm"
+                  className="flex items-center gap-2 text-muted-foreground hover:text-foreground transition-colors text-base"
                 >
                   <SiGeeksforgeeks className="w-4 h-4" />
                   GeeksforGeeks
