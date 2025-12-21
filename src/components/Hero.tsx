@@ -63,9 +63,20 @@ export function Hero() {
               <div className="space-y-2">
                 <h1 className="text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-black leading-tight text-foreground">
                   <div>Hi, I'm</div>
-                  <span className="bg-gradient-to-r from-primary via-primary-glow to-accent bg-clip-text text-transparent whitespace-nowrap">
-                    {typewriterName}
-                  </span>
+                  <motion.span className="bg-gradient-to-r from-primary via-primary-glow to-accent bg-clip-text text-transparent whitespace-nowrap inline-block">
+                    {personalInfo.name.split('').map((char, i) => (
+                      <motion.span
+                        key={i}
+                        custom={i}
+                        variants={nameVariants}
+                        initial="hidden"
+                        animate="visible"
+                        className="inline-block"
+                      >
+                        {char}
+                      </motion.span>
+                    ))}
+                  </motion.span>
                 </h1>
                 <p className="text-xl sm:text-2xl lg:text-3xl text-muted-foreground font-medium">
                   {personalInfo.title}
