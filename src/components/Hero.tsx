@@ -8,7 +8,7 @@ import { SiTypescript, SiMongodb, SiNextdotjs } from 'react-icons/si'
 import { useTypewriter } from '@/hooks/useTypewriter'
 
 export function Hero() {
-  const { displayedText: typewriterName } = useTypewriter(personalInfo.name, 80, 500);
+  const { displayedText: typewriterName } = useTypewriter(personalInfo.name, 150, 500);
 
   const statBadges = [
     { label: 'Projects', value: achievements.stats.totalProjects, icon: <Code className="w-5 h-5" /> },
