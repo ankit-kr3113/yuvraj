@@ -13,8 +13,8 @@ export function Hero() {
       opacity: 1,
       y: 0,
       transition: {
-        delay: 0.5 + i * 0.05,
-        duration: 0.6,
+        delay: 0.5 + i * 0.1,
+        duration: 1.2,
         ease: 'easeOut'
       }
     })
