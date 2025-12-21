@@ -141,7 +141,7 @@ export function Hero() {
               className="relative"
             >
               {/* Profile Image Container */}
-              <div className="relative mx-auto w-80 h-80 lg:w-96 lg:h-96">
+              <div className="relative mx-auto w-96 h-96 lg:w-[28rem] lg:h-[28rem]">
                 {/* Decorative Rings */}
                 <div className="absolute inset-0 rounded-full border-2 border-dashed border-primary/30 animate-spin" style={{ animationDuration: '20s' }} />
                 <div className="absolute inset-4 rounded-full border-2 border-dashed border-accent/20 animate-spin" style={{ animationDuration: '15s', animationDirection: 'reverse' }} />
