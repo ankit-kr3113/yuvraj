@@ -288,8 +288,28 @@ const Overview = () => {
                     .
                   </p>
 
-                  {/* Key Skills/Tech */}
-                  <div className="animate-fade-in-up animation-delay-600">
+                  {/* Statistics Section */}
+                  <div className="animate-fade-in-up animation-delay-600 grid grid-cols-4 gap-4 py-6 border-y border-primary/20">
+                    <div className="text-center">
+                      <div className="text-2xl md:text-3xl font-bold text-primary">2+</div>
+                      <div className="text-xs text-foreground/70 mt-1">Years Exp</div>
+                    </div>
+                    <div className="text-center">
+                      <div className="text-2xl md:text-3xl font-bold text-primary">4</div>
+                      <div className="text-xs text-foreground/70 mt-1">Projects</div>
+                    </div>
+                    <div className="text-center">
+                      <div className="text-2xl md:text-3xl font-bold text-primary">459</div>
+                      <div className="text-xs text-foreground/70 mt-1">Problems Solved</div>
+                    </div>
+                    <div className="text-center">
+                      <div className="text-2xl md:text-3xl font-bold text-primary">1649</div>
+                      <div className="text-xs text-foreground/70 mt-1">LeetCode Rating</div>
+                    </div>
+                  </div>
+
+                {/* Key Skills/Tech */}
+                  <div className="animate-fade-in-up animation-delay-700">
                     <p className="text-sm font-bold text-foreground/70 mb-3 flex items-center justify-center lg:justify-start gap-2">
                       <FaStar className="w-4 h-4 text-primary animate-pulse" />
                       <span>Skilled in</span>
