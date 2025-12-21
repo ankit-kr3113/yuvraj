@@ -16,7 +16,7 @@ export function Hero() {
   ]
 
   return (
-    <div className="relative min-h-screen flex items-center overflow-hidden bg-gradient-to-br from-background via-background to-card">
+    <div className="relative min-h-screen flex items-center overflow-hidden bg-gradient-to-br from-background via-background to-card pt-20">
       {/* Animated Background Elements */}
       <div className="absolute inset-0 overflow-hidden">
         <div className="absolute top-20 left-10 w-72 h-72 bg-primary/10 rounded-full blur-3xl animate-pulse" />
