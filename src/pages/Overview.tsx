@@ -205,10 +205,6 @@ const Overview = () => {
       <meta property="og:type" content="website" />
       <meta name="twitter:card" content="summary_large_image" />
 
-      {/* Navigation and Theme Switcher */}
-      <Navigation />
-      <ThemeSwitcher />
-
       {/* Hero Section */}
       <Hero />
 
