@@ -167,6 +167,30 @@ export function Hero() {
                     className="w-full h-full object-cover"
                   />
                 </motion.div>
+
+                {/* Floating Tech Badges */}
+                {techStack.map((tech, index) => {
+                  const positions = [
+                    { top: '-20px', left: '50%', transform: 'translate(-50%, 0)' },
+                    { top: '30%', right: '-30px' },
+                    { bottom: '30%', right: '-30px' },
+                    { bottom: '-20px', left: '50%', transform: 'translate(-50%, 0)' },
+                    { top: '30%', left: '-30px' },
+                  ]
+                  return (
+                    <motion.div
+                      key={tech.name}
+                      initial={{ opacity: 0, scale: 0 }}
+                      animate={{ opacity: 1, scale: 1 }}
+                      transition={{ delay: 1.2 + index * 0.1 }}
+                      whileHover={{ scale: 1.1, y: -5 }}
+                      className="absolute bg-background border border-border rounded-full p-3 shadow-lg flex items-center justify-center text-primary hover:shadow-xl transition-shadow duration-300"
+                      style={positions[index]}
+                    >
+                      {tech.icon}
+                    </motion.div>
+                  )
+                })}
               </div>
             </motion.div>
           </div>
