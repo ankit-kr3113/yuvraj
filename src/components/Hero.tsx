@@ -168,18 +168,18 @@ export function Hero() {
                   />
                 </motion.div>
 
-                {/* Floating Tech Badges */}
-                {techStack.map((tech, index) => {
+                {/* Floating Stat Badges */}
+                {statBadges.map((badge, index) => {
                   const positions = [
-                    { top: '20%', left: '-12px' }, // top-left sparse
-                    { top: '15%', right: '-12px' }, // top-right
-                    { bottom: '35%', right: '-12px' }, // bottom-right
-                    { bottom: '20%', right: '-15px' }, // bottom-right cluster
-                    { bottom: '10%', right: '-10px' }, // bottom-right cluster
+                    { top: '5%', left: '50%', transform: 'translate(-50%, 0)' }, // top-center sparse
+                    { top: '25%', right: '-80px' }, // top-right
+                    { bottom: '30%', right: '-80px' }, // bottom-right
+                    { bottom: '15%', right: '-95px' }, // bottom-right cluster
+                    { bottom: '5%', right: '-75px' }, // bottom-right cluster
                   ]
                   return (
                     <motion.div
-                      key={tech.name}
+                      key={badge.label}
                       initial={{ opacity: 0, scale: 0 }}
                       animate={{
                         opacity: 1,
@@ -191,11 +191,17 @@ export function Hero() {
                         scale: { delay: 1.2 + index * 0.1 },
                         y: { delay: 1.5 + index * 0.1, duration: 3, repeat: Infinity, ease: 'easeInOut' }
                       }}
-                      whileHover={{ scale: 1.15, y: -15 }}
-                      className="absolute bg-background border border-border rounded-full p-3 shadow-lg flex items-center justify-center text-primary hover:shadow-xl transition-shadow duration-300"
+                      whileHover={{ scale: 1.1, y: -8 }}
+                      className="absolute bg-background/80 backdrop-blur-sm border border-primary/40 rounded-lg px-3 py-2 shadow-lg hover:shadow-xl transition-shadow duration-300"
                       style={positions[index]}
                     >
-                      {tech.icon}
+                      <div className="flex items-center gap-2">
+                        <span className="text-primary">{badge.icon}</span>
+                        <div className="text-right">
+                          <div className="text-sm font-bold text-foreground">{badge.value}</div>
+                          <div className="text-xs text-muted-foreground">{badge.label}</div>
+                        </div>
+                      </div>
                     </motion.div>
                   )
                 })}
