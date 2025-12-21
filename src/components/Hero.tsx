@@ -9,10 +9,8 @@ import { SiTypescript, SiMongodb, SiNextdotjs } from 'react-icons/si'
 export function Hero() {
   const statBadges = [
     { label: 'Projects', value: achievements.stats.totalProjects, icon: <Code className="w-5 h-5" /> },
-    { label: 'Commits', value: achievements.stats.commits, icon: <FaGitAlt className="w-5 h-5" /> },
     { label: 'Problems', value: achievements.leetcode.problemsSolved, icon: <Target className="w-5 h-5" /> },
-    { label: 'Rating', value: achievements.leetcode.rating, icon: <Trophy className="w-5 h-5" /> },
-    { label: 'Available', value: 'Now', icon: <CheckCircle className="w-5 h-5" /> },
+    { label: 'Commits', value: achievements.stats.commits, icon: <FaGitAlt className="w-5 h-5" /> },
   ]
 
   return (
