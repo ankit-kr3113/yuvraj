@@ -322,8 +322,8 @@ const Footer = () => {
 
             {/* Fourth Column - Contact */}
             <div>
-              <h4 className="text-base font-semibold text-foreground mb-3">Contact</h4>
-              <div className="space-y-2 text-sm">
+              <h4 className="text-lg font-semibold text-foreground mb-3">Contact</h4>
+              <div className="space-y-2 text-base">
                 <div className="flex items-start gap-2 text-muted-foreground">
                   <Mail className="w-4 h-4 mt-0.5 flex-shrink-0" />
                   <span className="break-words">{personalInfo.email}</span>
