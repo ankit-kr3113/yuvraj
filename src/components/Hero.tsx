@@ -5,6 +5,7 @@ import { personalInfo, socialLinks, achievements } from '@/data/portfolioData'
 import ThemeSwitcher from './ThemeSwitcher'
 import { FaReact, FaNodeJs, FaGitAlt } from 'react-icons/fa'
 import { SiTypescript, SiMongodb, SiNextdotjs } from 'react-icons/si'
+import { useTypewriter } from '@/hooks/useTypewriter'
 
 export function Hero() {
   const statBadges = [
