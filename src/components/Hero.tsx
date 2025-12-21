@@ -3,8 +3,17 @@ import { Menu, X, Github, Linkedin, Mail, MapPin, Download, ChevronDown } from '
 import { useState, useEffect } from 'react'
 import { personalInfo, socialLinks, achievements } from '@/data/portfolioData'
 import ThemeSwitcher from './ThemeSwitcher'
+import { FaReact, FaNodeJs } from 'react-icons/fa'
+import { SiTypescript, SiMongodb, SiNextdotjs } from 'react-icons/si'
 
 export function Hero() {
+  const techStack = [
+    { name: 'React', icon: <FaReact className="w-5 h-5" /> },
+    { name: 'Node.js', icon: <FaNodeJs className="w-5 h-5" /> },
+    { name: 'TypeScript', icon: <SiTypescript className="w-5 h-5" /> },
+    { name: 'MongoDB', icon: <SiMongodb className="w-5 h-5" /> },
+    { name: 'Next.js', icon: <SiNextdotjs className="w-5 h-5" /> },
+  ]
 
   return (
     <div className="relative h-screen flex items-center overflow-hidden bg-gradient-to-br from-background via-background to-card pt-16">
