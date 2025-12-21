@@ -2,18 +2,14 @@ import {
   Github,
   Linkedin,
   Mail,
-  Twitter,
   MapPin,
-  Zap,
   Heart,
-  Calendar,
-  Edit,
   FileText
 } from "lucide-react";
 import { FaStar, FaMagic, FaLaptopCode } from "react-icons/fa";
-import { SiLeetcode, SiGeeksforgeeks, SiCodechef } from "react-icons/si";
+import { SiLeetcode, SiGeeksforgeeks, SiCodechef, SiCodeforces } from "react-icons/si";
 import { Link } from "react-router-dom";
-import { footerData, socialLinks } from "@/data/portfolioData";
+import { footerData, socialLinks, personalInfo } from "@/data/portfolioData";
 
 const Footer = () => {
   return (
