@@ -242,35 +242,35 @@ const Footer = () => {
 
             {/* Second Column - Quick Links */}
             <div>
-              <h4 className="text-base font-semibold text-foreground mb-3">Quick Links</h4>
+              <h4 className="text-lg font-semibold text-foreground mb-3">Quick Links</h4>
               <div className="space-y-2">
                 <Link
                   to="/"
-                  className="block text-muted-foreground hover:text-foreground transition-colors text-sm"
+                  className="block text-muted-foreground hover:text-foreground transition-colors text-base"
                 >
                   Overview
                 </Link>
                 <Link
                   to="/projects"
-                  className="block text-muted-foreground hover:text-foreground transition-colors text-sm"
+                  className="block text-muted-foreground hover:text-foreground transition-colors text-base"
                 >
                   Projects
                 </Link>
                 <Link
                   to="/skills"
-                  className="block text-muted-foreground hover:text-foreground transition-colors text-sm"
+                  className="block text-muted-foreground hover:text-foreground transition-colors text-base"
                 >
                   Skills
                 </Link>
                 <Link
                   to="/experience"
-                  className="block text-muted-foreground hover:text-foreground transition-colors text-sm"
+                  className="block text-muted-foreground hover:text-foreground transition-colors text-base"
                 >
                   Experience
                 </Link>
                 <Link
                   to="/contact"
-                  className="block text-muted-foreground hover:text-foreground transition-colors text-sm"
+                  className="block text-muted-foreground hover:text-foreground transition-colors text-base"
                 >
                   Contact
                 </Link>
