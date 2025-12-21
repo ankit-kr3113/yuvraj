@@ -210,8 +210,8 @@ const Footer = () => {
           <div className="grid grid-cols-4 gap-6 mb-12">
             {/* Left Column - Brand & Social */}
             <div>
-              <h3 className="text-lg font-bold text-foreground mb-2">{footerData.brand.name}</h3>
-              <p className="text-muted-foreground text-xs leading-relaxed mb-4">
+              <h3 className="text-base font-bold text-foreground mb-2">{footerData.brand.name}</h3>
+              <p className="text-muted-foreground text-sm leading-relaxed mb-4">
                 Full Stack Developer passionate about creating impactful digital solutions and continuously learning new technologies.
               </p>
               <div className="flex gap-2">
@@ -242,35 +242,35 @@ const Footer = () => {
 
             {/* Second Column - Quick Links */}
             <div>
-              <h4 className="text-sm font-semibold text-foreground mb-3">Quick Links</h4>
+              <h4 className="text-base font-semibold text-foreground mb-3">Quick Links</h4>
               <div className="space-y-2">
                 <Link
                   to="/"
-                  className="block text-muted-foreground hover:text-foreground transition-colors text-xs"
+                  className="block text-muted-foreground hover:text-foreground transition-colors text-sm"
                 >
                   Overview
                 </Link>
                 <Link
                   to="/projects"
-                  className="block text-muted-foreground hover:text-foreground transition-colors text-xs"
+                  className="block text-muted-foreground hover:text-foreground transition-colors text-sm"
                 >
                   Projects
                 </Link>
                 <Link
                   to="/skills"
-                  className="block text-muted-foreground hover:text-foreground transition-colors text-xs"
+                  className="block text-muted-foreground hover:text-foreground transition-colors text-sm"
                 >
                   Skills
                 </Link>
                 <Link
                   to="/experience"
-                  className="block text-muted-foreground hover:text-foreground transition-colors text-xs"
+                  className="block text-muted-foreground hover:text-foreground transition-colors text-sm"
                 >
                   Experience
                 </Link>
                 <Link
                   to="/contact"
-                  className="block text-muted-foreground hover:text-foreground transition-colors text-xs"
+                  className="block text-muted-foreground hover:text-foreground transition-colors text-sm"
                 >
                   Contact
                 </Link>
@@ -279,42 +279,42 @@ const Footer = () => {
 
             {/* Third Column - Coding Profiles */}
             <div>
-              <h4 className="text-sm font-semibold text-foreground mb-3">Coding Profiles</h4>
+              <h4 className="text-base font-semibold text-foreground mb-3">Coding Profiles</h4>
               <div className="space-y-2">
                 <a
                   href={socialLinks.leetcode.url}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex items-center gap-2 text-muted-foreground hover:text-foreground transition-colors text-xs"
+                  className="flex items-center gap-2 text-muted-foreground hover:text-foreground transition-colors text-sm"
                 >
-                  <SiLeetcode className="w-3 h-3" />
+                  <SiLeetcode className="w-4 h-4" />
                   LeetCode
                 </a>
                 <a
                   href={socialLinks.codechef.url}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex items-center gap-2 text-muted-foreground hover:text-foreground transition-colors text-xs"
+                  className="flex items-center gap-2 text-muted-foreground hover:text-foreground transition-colors text-sm"
                 >
-                  <SiCodechef className="w-3 h-3" />
+                  <SiCodechef className="w-4 h-4" />
                   CodeChef
                 </a>
                 <a
                   href={socialLinks.codeforces.url}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex items-center gap-2 text-muted-foreground hover:text-foreground transition-colors text-xs"
+                  className="flex items-center gap-2 text-muted-foreground hover:text-foreground transition-colors text-sm"
                 >
-                  <SiCodeforces className="w-3 h-3" />
+                  <SiCodeforces className="w-4 h-4" />
                   Codeforces
                 </a>
                 <a
                   href={socialLinks.geeksforgeeks.url}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex items-center gap-2 text-muted-foreground hover:text-foreground transition-colors text-xs"
+                  className="flex items-center gap-2 text-muted-foreground hover:text-foreground transition-colors text-sm"
                 >
-                  <SiGeeksforgeeks className="w-3 h-3" />
+                  <SiGeeksforgeeks className="w-4 h-4" />
                   GeeksforGeeks
                 </a>
               </div>
@@ -322,10 +322,10 @@ const Footer = () => {
 
             {/* Fourth Column - Contact */}
             <div>
-              <h4 className="text-sm font-semibold text-foreground mb-3">Contact</h4>
-              <div className="space-y-2 text-xs">
+              <h4 className="text-base font-semibold text-foreground mb-3">Contact</h4>
+              <div className="space-y-2 text-sm">
                 <div className="flex items-start gap-2 text-muted-foreground">
-                  <Mail className="w-3 h-3 mt-0.5 flex-shrink-0" />
+                  <Mail className="w-4 h-4 mt-0.5 flex-shrink-0" />
                   <span className="break-words">{personalInfo.email}</span>
                 </div>
                 <div className="flex items-start gap-2 text-muted-foreground">
@@ -333,7 +333,7 @@ const Footer = () => {
                   <span>{personalInfo.phone}</span>
                 </div>
                 <div className="flex items-start gap-2 text-muted-foreground">
-                  <MapPin className="w-3 h-3 mt-0.5 flex-shrink-0" />
+                  <MapPin className="w-4 h-4 mt-0.5 flex-shrink-0" />
                   <span>{personalInfo.location}</span>
                 </div>
                 <div className="flex items-start gap-2 text-muted-foreground">
