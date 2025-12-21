@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion'
-import { Menu, X, Github, Linkedin, Mail, MapPin, Download, ChevronDown, Code, Target, Trophy, CheckCircle } from 'lucide-react'
+import { Menu, X, Github, Linkedin, Mail, MapPin, Download, ChevronDown, Code, Target } from 'lucide-react'
 import { useState, useEffect } from 'react'
 import { personalInfo, socialLinks, achievements } from '@/data/portfolioData'
 import ThemeSwitcher from './ThemeSwitcher'
