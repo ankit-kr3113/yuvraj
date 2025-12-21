@@ -170,7 +170,7 @@ export function Hero() {
                 {statBadges.map((badge, index) => {
                   const positions = [
                     { top: '10%', right: '-70px' }, // top-right
-                    { bottom: '30%', left: '-70px' }, // bottom-left
+                    { bottom: '10%', left: '-70px' }, // bottom-left
                     { bottom: '10%', right: '-70px' }, // bottom-right
                   ]
                   return (
