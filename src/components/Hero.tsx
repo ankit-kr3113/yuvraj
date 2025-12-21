@@ -1,21 +1,29 @@
 import { motion } from 'framer-motion'
 import { Menu, X, Github, Linkedin, Mail, MapPin, Download, ChevronDown, Code, Target } from 'lucide-react'
 import { useState, useEffect } from 'react'
-import { personalInfo, socialLinks, achievements } from '@/data/portfolioData'
+import { personalInfo, socialLinks, achievements, techStack } from '@/data/portfolioData'
 import ThemeSwitcher from './ThemeSwitcher'
 import { FaReact, FaNodeJs, FaGitAlt } from 'react-icons/fa'
 import { SiTypescript, SiMongodb, SiNextdotjs } from 'react-icons/si'
 
 export function Hero() {
   const nameVariants = {
-    hidden: { opacity: 0, filter: 'blur(12px)' },
+    hidden: {
+      opacity: 0,
+      y: 20,
+      rotateZ: -10
+    },
     visible: (i: number) => ({
       opacity: 1,
-      filter: 'blur(0px)',
+      y: 0,
+      rotateZ: 0,
       transition: {
-        delay: 0.5 + i * 0.08,
-        duration: 0.8,
-        ease: 'easeOut'
+        delay: 0.5 + i * 0.06,
+        duration: 0.6,
+        type: 'spring',
+        stiffness: 120,
+        damping: 12,
+        mass: 1
       }
     })
   };
@@ -92,24 +100,29 @@ export function Hero() {
                 {personalInfo.bio.intro}
               </p>
 
-              {/* Stats */}
-              <div className="flex flex-wrap gap-6">
-                <div className="text-center">
-                  <div className="text-3xl font-black text-foreground">{achievements.stats.yearsExperience}</div>
-                  <div className="text-sm text-muted-foreground">Years Exp.</div>
-                </div>
-                <div className="text-center">
-                  <div className="text-3xl font-black text-foreground">{achievements.stats.totalProjects}</div>
-                  <div className="text-sm text-muted-foreground">Projects</div>
-                </div>
-                <div className="text-center">
-                  <div className="text-3xl font-black text-foreground">{achievements.stats.totalProblemsSolved}</div>
-                  <div className="text-sm text-muted-foreground">Problems Solved</div>
-                </div>
-                <div className="text-center">
-                  <div className="text-3xl font-black text-foreground">{achievements.leetcode.rating}</div>
-                  <div className="text-sm text-muted-foreground">LeetCode Rating</div>
-                </div>
+              {/* Tech Stack Scrolling - Infinite Circular */}
+              <div className="overflow-hidden py-3 -mx-4 px-4">
+                <motion.div
+                  className="flex gap-3"
+                  animate={{ x: [0, -2000] }}
+                  transition={{
+                    duration: 30,
+                    repeat: Infinity,
+                    ease: 'linear',
+                    repeatType: 'loop'
+                  }}
+                >
+                  {[...techStack, ...techStack, ...techStack, ...techStack].map((tech, i) => (
+                    <motion.div
+                      key={i}
+                      whileHover={{ scale: 1.05 }}
+                      className="flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-primary/10 border border-primary/20 whitespace-nowrap flex-shrink-0 cursor-pointer"
+                    >
+                      <span className="text-xs font-semibold text-primary">{tech.icon}</span>
+                      <span className="text-xs font-medium text-foreground">{tech.name}</span>
+                    </motion.div>
+                  ))}
+                </motion.div>
               </div>
 
               {/* CTA Buttons */}
