@@ -181,9 +181,17 @@ export function Hero() {
                     <motion.div
                       key={tech.name}
                       initial={{ opacity: 0, scale: 0 }}
-                      animate={{ opacity: 1, scale: 1 }}
-                      transition={{ delay: 1.2 + index * 0.1 }}
-                      whileHover={{ scale: 1.1, y: -5 }}
+                      animate={{
+                        opacity: 1,
+                        scale: 1,
+                        y: [0, -12, 0],
+                      }}
+                      transition={{
+                        opacity: { delay: 1.2 + index * 0.1 },
+                        scale: { delay: 1.2 + index * 0.1 },
+                        y: { delay: 1.5 + index * 0.1, duration: 3, repeat: Infinity, ease: 'easeInOut' }
+                      }}
+                      whileHover={{ scale: 1.15, y: -15 }}
                       className="absolute bg-background border border-border rounded-full p-3 shadow-lg flex items-center justify-center text-primary hover:shadow-xl transition-shadow duration-300"
                       style={positions[index]}
                     >
