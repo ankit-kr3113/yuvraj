@@ -206,156 +206,142 @@ const Footer = () => {
 
         {/* Desktop: Full Content */}
         <div className="hidden md:block">
-          <div className="grid grid-cols-1 lg:grid-cols-4 gap-8 lg:gap-8 mb-8 lg:mb-12">
-
-            {/* Brand Section */}
+          <div className="grid grid-cols-3 gap-12 mb-12">
+            {/* Left Column - Brand & Social */}
             <div>
-              <h3 className="text-lg sm:text-xl font-bold text-foreground mb-4 sm:mb-5">{footerData.brand.name}</h3>
-              <p className="text-muted-foreground text-sm sm:text-base mb-5 sm:mb-6 leading-relaxed">
-                {footerData.brand.description}
+              <h3 className="text-2xl font-bold text-foreground mb-4">{footerData.brand.name}</h3>
+              <p className="text-muted-foreground text-sm leading-relaxed mb-6">
+                Full Stack Developer passionate about creating impactful digital solutions and continuously learning new technologies.
               </p>
-              <div className="flex flex-wrap gap-3">
+              <div className="flex gap-3">
                 <a
                   href={socialLinks.github.url}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="w-8 h-8 rounded-lg flex items-center justify-center text-muted-foreground hover:text-foreground transition-all duration-200"
-                  style={{ backgroundColor: `hsl(var(--primary) / 0.2)` }}
+                  className="w-9 h-9 rounded-lg flex items-center justify-center text-muted-foreground hover:text-foreground hover:bg-primary/20 transition-all duration-200"
                 >
-                  <Github className="w-4 h-4" />
+                  <Github className="w-5 h-5" />
                 </a>
                 <a
                   href={socialLinks.linkedin.url}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="w-8 h-8 rounded-lg flex items-center justify-center text-muted-foreground hover:text-foreground transition-all duration-200"
-                  style={{ backgroundColor: `hsl(var(--primary) / 0.2)` }}
+                  className="w-9 h-9 rounded-lg flex items-center justify-center text-muted-foreground hover:text-foreground hover:bg-primary/20 transition-all duration-200"
                 >
-                  <Linkedin className="w-4 h-4" />
-                </a>
-                <a
-                  href={socialLinks.twitter.url}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="w-8 h-8 rounded-lg flex items-center justify-center text-muted-foreground hover:text-foreground transition-all duration-200"
-                  style={{ backgroundColor: `hsl(var(--primary) / 0.2)` }}
-                >
-                  <Twitter className="w-4 h-4" />
-                </a>
-                <a
-                  href="https://dribbble.com/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="w-8 h-8 rounded-lg flex items-center justify-center text-muted-foreground hover:text-foreground transition-all duration-200"
-                  style={{ backgroundColor: `hsl(var(--primary) / 0.2)` }}
-                >
-                  <Edit className="w-4 h-4" />
+                  <Linkedin className="w-5 h-5" />
                 </a>
                 <a
                   href={socialLinks.email.url}
-                  className="w-8 h-8 rounded-lg flex items-center justify-center text-muted-foreground hover:text-foreground transition-all duration-200"
-                  style={{ backgroundColor: `hsl(var(--primary) / 0.2)` }}
+                  className="w-9 h-9 rounded-lg flex items-center justify-center text-muted-foreground hover:text-foreground hover:bg-primary/20 transition-all duration-200"
                 >
-                  <Mail className="w-4 h-4" />
+                  <Mail className="w-5 h-5" />
                 </a>
               </div>
             </div>
 
-            {/* Contact Section */}
+            {/* Middle Column - Quick Links */}
             <div>
-              <h4 className="text-foreground font-semibold mb-4 sm:mb-5 text-base sm:text-lg">Contact</h4>
-              <div className="space-y-3 sm:space-y-4 text-sm sm:text-base">
-                <div className="flex items-center text-muted-foreground hover:text-foreground transition-colors">
-                  <MapPin className="w-4 h-4 mr-2" />
-                  <span>{footerData.contact.location}</span>
-                </div>
-                <div className="flex items-center text-muted-foreground hover:text-foreground transition-colors">
-                  <Mail className="w-4 h-4 mr-2" />
-                  <span>{footerData.contact.emailDisplay}</span>
-                </div>
+              <h4 className="text-lg font-semibold text-foreground mb-6">Quick Links</h4>
+              <div className="space-y-4">
+                <Link
+                  to="/"
+                  className="block text-muted-foreground hover:text-foreground transition-colors text-sm"
+                >
+                  Overview
+                </Link>
+                <Link
+                  to="/projects"
+                  className="block text-muted-foreground hover:text-foreground transition-colors text-sm"
+                >
+                  Projects
+                </Link>
+                <Link
+                  to="/skills"
+                  className="block text-muted-foreground hover:text-foreground transition-colors text-sm"
+                >
+                  Skills
+                </Link>
+                <Link
+                  to="/experience"
+                  className="block text-muted-foreground hover:text-foreground transition-colors text-sm"
+                >
+                  Experience
+                </Link>
+                <Link
+                  to="/contact"
+                  className="block text-muted-foreground hover:text-foreground transition-colors text-sm"
+                >
+                  Contact
+                </Link>
               </div>
             </div>
 
-            {/* Quick Links Section */}
-            <div>
-              <h4 className="text-foreground font-semibold mb-4 sm:mb-5 text-base sm:text-lg">Quick Links</h4>
-              <div className="space-y-3 sm:space-y-4 text-sm sm:text-base">
-                {footerData.sections.quickLinks.map((link, index) => {
-                  const IconComponent = link.icon === 'FileText' ? FileText :
-                    link.icon === 'SiLeetcode' ? SiLeetcode :
-                    link.icon === 'SiGeeksforgeeks' ? SiGeeksforgeeks :
-                    link.icon === 'SiCodechef' ? SiCodechef :
-                    Zap;
-
-                  return link.external ? (
-                    <a
-                      key={index}
-                      href={link.href}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="flex items-center text-muted-foreground hover:text-foreground transition-colors"
-                    >
-                      <IconComponent className="w-4 h-4 mr-2" />
-                      {link.name}
-                    </a>
-                  ) : (
-                    <Link
-                      key={index}
-                      to={link.href}
-                      className="flex items-center text-muted-foreground hover:text-foreground transition-colors"
-                    >
-                      <IconComponent className="w-4 h-4 mr-2" />
-                      {link.name}
-                    </Link>
-                  );
-                })}
-              </div>
-            </div>
-
-            {/* Navigation Section */}
-            <div>
-              <h4 className="text-foreground font-semibold mb-4 sm:mb-5 text-base sm:text-lg">Navigation</h4>
-              <div className="space-y-3 sm:space-y-4 text-sm sm:text-base">
-                {footerData.sections.navigation.map((navItem, index) => (
-                  <Link
-                    key={index}
-                    to={navItem.href}
-                    className="block text-muted-foreground hover:text-foreground transition-colors"
+            {/* Right Column - Coding Profiles & Contact */}
+            <div className="space-y-8">
+              {/* Coding Profiles Section */}
+              <div>
+                <h4 className="text-lg font-semibold text-foreground mb-4">Coding Profiles</h4>
+                <div className="space-y-3">
+                  <a
+                    href={socialLinks.leetcode.url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex items-center gap-2 text-muted-foreground hover:text-foreground transition-colors text-sm"
                   >
-                    {navItem.name}
-                  </Link>
-                ))}
+                    <SiLeetcode className="w-4 h-4" />
+                    LeetCode
+                  </a>
+                  <a
+                    href={socialLinks.codechef.url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex items-center gap-2 text-muted-foreground hover:text-foreground transition-colors text-sm"
+                  >
+                    <SiCodechef className="w-4 h-4" />
+                    CodeChef
+                  </a>
+                  <a
+                    href={socialLinks.codeforces.url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex items-center gap-2 text-muted-foreground hover:text-foreground transition-colors text-sm"
+                  >
+                    <SiCodeforces className="w-4 h-4" />
+                    Codeforces
+                  </a>
+                  <a
+                    href={socialLinks.geeksforgeeks.url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex items-center gap-2 text-muted-foreground hover:text-foreground transition-colors text-sm"
+                  >
+                    <SiGeeksforgeeks className="w-4 h-4" />
+                    GeeksforGeeks
+                  </a>
+                </div>
               </div>
-            </div>
-          </div>
 
-          {/* Stats Section - Desktop only */}
-          <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 lg:gap-8 py-6 lg:py-8 border-t border-border border-b border-border">
-            <div className="text-center py-2 lg:py-3">
-              <div className="flex items-center justify-center mb-3 lg:mb-4">
-                <FaStar className="w-4 h-4 lg:w-5 lg:h-5 mr-2" style={{ color: `hsl(var(--primary))` }} />
-                <span className="text-xs lg:text-sm text-muted-foreground uppercase tracking-wider font-medium">Total Visitors</span>
-              </div>
-              <div className="text-xl lg:text-2xl font-bold text-foreground">{footerData.stats.totalVisitors}</div>
-            </div>
-
-            <div className="text-center py-2 lg:py-3">
-              <div className="flex items-center justify-center mb-3 lg:mb-4">
-                <FaMagic className="w-4 h-4 lg:w-5 lg:h-5 mr-2" style={{ color: `hsl(var(--primary))` }} />
-                <span className="text-xs lg:text-sm text-muted-foreground uppercase tracking-wider font-medium">Last Updated</span>
-              </div>
-              <div className="text-lg lg:text-2xl font-bold text-foreground">{footerData.stats.lastUpdated}</div>
-            </div>
-
-            <div className="text-center py-2 lg:py-3">
-              <div className="flex items-center justify-center mb-3 lg:mb-4">
-                <FaLaptopCode className="w-4 h-4 lg:w-5 lg:h-5 mr-2" style={{ color: `hsl(var(--accent))` }} />
-                <span className="text-xs lg:text-sm text-muted-foreground uppercase tracking-wider font-medium">DSA Skills</span>
-              </div>
-              <div className="flex items-center justify-center space-x-1">
-                {[1, 2, 3, 4, 5].map((star) => (
-                  <FaStar key={star} className="w-4 h-4 lg:w-5 lg:h-5" style={{ color: `hsl(var(--accent))` }} />
-                ))}
+              {/* Contact Section */}
+              <div>
+                <h4 className="text-lg font-semibold text-foreground mb-4">Contact</h4>
+                <div className="space-y-3 text-sm">
+                  <div className="flex items-start gap-2 text-muted-foreground">
+                    <Mail className="w-4 h-4 mt-0.5 flex-shrink-0" />
+                    <span>{personalInfo.email}</span>
+                  </div>
+                  <div className="flex items-start gap-2 text-muted-foreground">
+                    <span className="text-xs">📱</span>
+                    <span>{personalInfo.phone}</span>
+                  </div>
+                  <div className="flex items-start gap-2 text-muted-foreground">
+                    <MapPin className="w-4 h-4 mt-0.5 flex-shrink-0" />
+                    <span>{personalInfo.location}</span>
+                  </div>
+                  <div className="flex items-start gap-2 text-muted-foreground">
+                    <span className="text-xs">🕐</span>
+                    <span>{personalInfo.timezone}</span>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
