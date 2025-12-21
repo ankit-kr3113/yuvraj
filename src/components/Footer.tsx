@@ -346,6 +346,37 @@ const Footer = () => {
               </div>
             </div>
           </div>
+
+          {/* Stats Section - Desktop only */}
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 lg:gap-8 py-6 lg:py-8 border-t border-border border-b border-border">
+            <div className="text-center py-2 lg:py-3">
+              <div className="flex items-center justify-center mb-3 lg:mb-4">
+                <FaStar className="w-4 h-4 lg:w-5 lg:h-5 mr-2" style={{ color: `hsl(var(--primary))` }} />
+                <span className="text-xs lg:text-sm text-muted-foreground uppercase tracking-wider font-medium">Total Visitors</span>
+              </div>
+              <div className="text-xl lg:text-2xl font-bold text-foreground">{footerData.stats.totalVisitors}</div>
+            </div>
+
+            <div className="text-center py-2 lg:py-3">
+              <div className="flex items-center justify-center mb-3 lg:mb-4">
+                <FaMagic className="w-4 h-4 lg:w-5 lg:h-5 mr-2" style={{ color: `hsl(var(--primary))` }} />
+                <span className="text-xs lg:text-sm text-muted-foreground uppercase tracking-wider font-medium">Last Updated</span>
+              </div>
+              <div className="text-lg lg:text-2xl font-bold text-foreground">{footerData.stats.lastUpdated}</div>
+            </div>
+
+            <div className="text-center py-2 lg:py-3">
+              <div className="flex items-center justify-center mb-3 lg:mb-4">
+                <FaLaptopCode className="w-4 h-4 lg:w-5 lg:h-5 mr-2" style={{ color: `hsl(var(--accent))` }} />
+                <span className="text-xs lg:text-sm text-muted-foreground uppercase tracking-wider font-medium">DSA Skills</span>
+              </div>
+              <div className="flex items-center justify-center space-x-1">
+                {[1, 2, 3, 4, 5].map((star) => (
+                  <FaStar key={star} className="w-4 h-4 lg:w-5 lg:h-5" style={{ color: `hsl(var(--accent))` }} />
+                ))}
+              </div>
+            </div>
+          </div>
         </div>
 
         {/* Simple Mobile Stats */}
