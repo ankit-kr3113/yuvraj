@@ -7,36 +7,6 @@ import { FaReact, FaNodeJs } from 'react-icons/fa'
 import { SiTypescript, SiMongodb, SiNextdotjs } from 'react-icons/si'
 
 export function Hero() {
-  const [isScrolled, setIsScrolled] = useState(false)
-  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
-
-  useEffect(() => {
-    const handleScroll = () => {
-      setIsScrolled(window.scrollY > 50)
-    }
-    window.addEventListener('scroll', handleScroll)
-    return () => window.removeEventListener('scroll', handleScroll)
-  }, [])
-
-  useEffect(() => {
-    if (isMobileMenuOpen) {
-      document.body.style.overflow = 'hidden'
-    } else {
-      document.body.style.overflow = 'unset'
-    }
-    return () => {
-      document.body.style.overflow = 'unset'
-    }
-  }, [isMobileMenuOpen])
-
-  const navLinks = [
-    { href: '#about', label: 'About' },
-    { href: '#projects', label: 'Projects' },
-    { href: '#skills', label: 'Skills' },
-    { href: '#experience', label: 'Experience' },
-    { href: '#contact', label: 'Contact' },
-  ]
-
   const techStack = [
     { name: 'React', icon: <FaReact className="w-5 h-5" /> },
     { name: 'Node.js', icon: <FaNodeJs className="w-5 h-5" /> },
@@ -46,7 +16,7 @@ export function Hero() {
   ]
 
   return (
-    <div className="relative min-h-screen w-full overflow-hidden bg-gradient-to-br from-background via-background to-card">
+    <div className="relative pt-20 pb-16 min-h-screen flex items-center overflow-hidden bg-gradient-to-br from-background via-background to-card">
       {/* Animated Background Elements */}
       <div className="absolute inset-0 overflow-hidden">
         <div className="absolute top-20 left-10 w-72 h-72 bg-primary/10 rounded-full blur-3xl animate-pulse" />
@@ -59,105 +29,6 @@ export function Hero() {
         backgroundImage: `radial-gradient(circle at 1px 1px, currentColor 1px, transparent 0)`,
         backgroundSize: '40px 40px'
       }} />
-
-      {/* Navigation */}
-      <motion.nav
-        initial={{ opacity: 0, y: -30 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.8, delay: 0.3 }}
-        className="fixed top-0 left-0 right-0 w-full z-[110]"
-      >
-        <div className={`w-full px-6 sm:px-8 lg:px-12 py-4 transition-all duration-300 ease-out ${
-          isScrolled 
-            ? 'bg-background/80 backdrop-blur-xl border-b border-border' 
-            : 'bg-transparent'
-        }`}>
-          <div className="flex items-center justify-between max-w-7xl mx-auto">
-            {/* Logo */}
-            <motion.div
-              whileHover={{ scale: 1.05 }}
-              className="flex items-center cursor-pointer"
-              onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
-            >
-              <span className="font-bold text-xl text-foreground">
-                {personalInfo.name.split(' ')[0]}
-                <span className="text-primary">.</span>
-              </span>
-            </motion.div>
-
-            {/* Desktop Navigation */}
-            <div className="hidden md:flex items-center space-x-8">
-              {navLinks.map((link) => (
-                <a
-                  key={link.href}
-                  href={link.href}
-                  className="text-muted-foreground hover:text-foreground font-medium transition-colors duration-300 hover:scale-105"
-                >
-                  {link.label}
-                </a>
-              ))}
-            </div>
-
-            {/* Right Side Actions */}
-            <div className="flex items-center space-x-3">
-              
-              <motion.a
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-                href="#contact"
-                className="hidden sm:block bg-foreground text-background font-semibold px-6 py-2.5 rounded-lg hover:bg-foreground/90 transition-colors duration-300"
-              >
-                Hire Me
-              </motion.a>
-
-              {/* Mobile Menu Button */}
-              <button
-                onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-                className="md:hidden p-2 rounded-lg text-foreground hover:bg-muted transition-colors duration-300"
-              >
-                {isMobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
-              </button>
-            </div>
-          </div>
-        </div>
-      </motion.nav>
-
-      {/* Mobile Menu Overlay */}
-      {isMobileMenuOpen && (
-        <motion.div
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          exit={{ opacity: 0 }}
-          className="md:hidden fixed inset-0 bg-background/95 backdrop-blur-md z-[100]"
-          onClick={() => setIsMobileMenuOpen(false)}
-        >
-          <div className="flex flex-col items-center justify-center h-full space-y-8">
-            {navLinks.map((link, index) => (
-              <motion.a
-                key={link.href}
-                href={link.href}
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: index * 0.1 }}
-                className="text-2xl font-bold text-foreground hover:text-primary transition-colors duration-300"
-                onClick={() => setIsMobileMenuOpen(false)}
-              >
-                {link.label}
-              </motion.a>
-            ))}
-            <motion.a
-              href="#contact"
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.5 }}
-              className="bg-foreground text-background font-semibold px-8 py-3 rounded-lg mt-4"
-              onClick={() => setIsMobileMenuOpen(false)}
-            >
-              Hire Me
-            </motion.a>
-          </div>
-        </motion.div>
-      )}
 
       {/* Hero Content */}
       <div className="relative z-10 min-h-screen flex items-center">
