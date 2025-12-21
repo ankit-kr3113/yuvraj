@@ -278,7 +278,7 @@ const Footer = () => {
             </div>
 
             {/* Right Column - Coding Profiles & Contact */}
-            <div className="space-y-8">
+            <div className="grid grid-cols-2 gap-8">
               {/* Coding Profiles Section */}
               <div>
                 <h4 className="text-lg font-semibold text-foreground mb-4">Coding Profiles</h4>
