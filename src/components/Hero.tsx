@@ -171,11 +171,11 @@ export function Hero() {
                 {/* Floating Stat Badges */}
                 {statBadges.map((badge, index) => {
                   const positions = [
-                    { top: '8%', right: '-75px' }, // top-right sparse
-                    { top: '35%', right: '-75px' }, // upper-right
-                    { top: '55%', right: '-75px' }, // middle-right
-                    { bottom: '20%', right: '-75px' }, // lower-right
-                    { bottom: '5%', right: '-75px' }, // bottom-right
+                    { top: '-25px', left: '50%', transform: 'translate(-50%, 0)' }, // top-center sparse
+                    { top: '15%', right: '-65px' }, // top-right sparse
+                    { top: '50%', right: '-65px', transform: 'translateY(-50%)' }, // right-middle
+                    { bottom: '30%', right: '-75px' }, // bottom-right dense
+                    { bottom: '8%', right: '-70px' }, // bottom-right dense
                   ]
                   return (
                     <motion.div
