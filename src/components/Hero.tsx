@@ -147,37 +147,17 @@ export function Hero() {
                 <div className="absolute inset-4 rounded-full border-2 border-dashed border-accent/20 animate-spin" style={{ animationDuration: '15s', animationDirection: 'reverse' }} />
                 
                 {/* Profile Image */}
-                <div className="absolute inset-8 rounded-full overflow-hidden border-4 border-background shadow-2xl">
+                <motion.div
+                  whileHover={{ scale: 1.05 }}
+                  transition={{ duration: 0.3, ease: 'easeOut' }}
+                  className="absolute inset-8 rounded-full overflow-hidden border-4 border-background shadow-2xl cursor-pointer"
+                >
                   <img
                     src={personalInfo.profileImage}
                     alt={personalInfo.name}
                     className="w-full h-full object-cover"
                   />
-                </div>
-
-                {/* Floating Tech Badges */}
-                {techStack.map((tech, index) => {
-                  const positions = [
-                    { top: '0%', left: '50%', transform: 'translate(-50%, -50%)' },
-                    { top: '25%', right: '-10%' },
-                    { bottom: '25%', right: '-10%' },
-                    { bottom: '0%', left: '50%', transform: 'translate(-50%, 50%)' },
-                    { top: '25%', left: '-10%' },
-                  ]
-                  return (
-                    <motion.div
-                      key={tech.name}
-                      initial={{ opacity: 0, scale: 0 }}
-                      animate={{ opacity: 1, scale: 1 }}
-                      transition={{ delay: 1 + index * 0.1 }}
-                      className="absolute bg-background border border-border rounded-xl px-3 py-2 shadow-lg flex items-center gap-2"
-                      style={positions[index]}
-                    >
-                      <span className="text-lg text-primary">{tech.icon}</span>
-                      <span className="text-sm font-medium text-foreground">{tech.name}</span>
-                    </motion.div>
-                  )
-                })}
+                </motion.div>
               </div>
             </motion.div>
           </div>
