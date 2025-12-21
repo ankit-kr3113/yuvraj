@@ -54,7 +54,7 @@ export function Hero() {
                 <h1 className="text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-black leading-tight text-foreground">
                   Hi, I'm{' '}
                   <span className="bg-gradient-to-r from-primary via-primary-glow to-accent bg-clip-text text-transparent">
-                    {personalInfo.name}
+                    {typewriterName}
                   </span>
                 </h1>
                 <p className="text-xl sm:text-2xl lg:text-3xl text-muted-foreground font-medium">
