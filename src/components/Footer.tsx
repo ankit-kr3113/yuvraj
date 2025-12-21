@@ -210,8 +210,8 @@ const Footer = () => {
           <div className="grid grid-cols-4 gap-6 mb-12">
             {/* Left Column - Brand & Social */}
             <div>
-              <h3 className="text-base font-bold text-foreground mb-2">{footerData.brand.name}</h3>
-              <p className="text-muted-foreground text-sm leading-relaxed mb-4">
+              <h3 className="text-lg font-bold text-foreground mb-3">{footerData.brand.name}</h3>
+              <p className="text-muted-foreground text-base leading-relaxed mb-4">
                 Full Stack Developer passionate about creating impactful digital solutions and continuously learning new technologies.
               </p>
               <div className="flex gap-2">
