@@ -337,7 +337,7 @@ const Overview = () => {
                 </div>
 
                 {/* Action Buttons */}
-                <div className="flex flex-col sm:flex-row gap-3 md:gap-4 animate-fade-in-up animation-delay-800">
+                <div className="flex flex-col sm:flex-row gap-3 md:gap-4 animate-fade-in-up animation-delay-900">
                   <Button
                     className="group relative overflow-hidden px-6 md:px-8 py-3 md:py-4 text-base md:text-lg font-bold bg-gradient-to-r from-primary via-primary-glow to-accent hover:from-accent hover:via-primary-glow hover:to-primary shadow-2xl hover:shadow-3xl hover:shadow-primary/50 transition-all duration-500 border-0 rounded-2xl hover:scale-105 md:hover:scale-110 active:scale-95 backdrop-blur-sm transform hover:-translate-y-1.5 focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 focus-visible:ring-offset-background"
                     asChild
