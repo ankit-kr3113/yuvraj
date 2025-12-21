@@ -7,6 +7,19 @@ import { FaReact, FaNodeJs, FaGitAlt } from 'react-icons/fa'
 import { SiTypescript, SiMongodb, SiNextdotjs } from 'react-icons/si'
 
 export function Hero() {
+  const nameVariants = {
+    hidden: { opacity: 0, filter: 'blur(12px)' },
+    visible: (i: number) => ({
+      opacity: 1,
+      filter: 'blur(0px)',
+      transition: {
+        delay: 0.5 + i * 0.08,
+        duration: 0.8,
+        ease: 'easeOut'
+      }
+    })
+  };
+
   const statBadges = [
     { label: 'Projects', value: achievements.stats.totalProjects, icon: <Code className="w-5 h-5" /> },
     { label: 'Problems', value: achievements.leetcode.problemsSolved, icon: <Target className="w-5 h-5" /> },
@@ -49,10 +62,21 @@ export function Hero() {
               {/* Name & Title */}
               <div className="space-y-2">
                 <h1 className="text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-black leading-tight text-foreground">
-                  Hi, I'm{' '}
-                  <span className="bg-gradient-to-r from-primary via-primary-glow to-accent bg-clip-text text-transparent">
-                    {personalInfo.name}
-                  </span>
+                  <div>Hi, I'm</div>
+                  <motion.span className="bg-gradient-to-r from-primary via-primary-glow to-accent bg-clip-text text-transparent whitespace-nowrap inline-block">
+                    {personalInfo.name.split('').map((char, i) => (
+                      <motion.span
+                        key={i}
+                        custom={i}
+                        variants={nameVariants}
+                        initial="hidden"
+                        animate="visible"
+                        className="inline"
+                      >
+                        {char === ' ' ? '\u00A0' : char}
+                      </motion.span>
+                    ))}
+                  </motion.span>
                 </h1>
                 <p className="text-xl sm:text-2xl lg:text-3xl text-muted-foreground font-medium">
                   {personalInfo.title}
@@ -169,9 +193,9 @@ export function Hero() {
                 {/* Floating Stat Badges */}
                 {statBadges.map((badge, index) => {
                   const positions = [
-                    { top: '10%', right: '-70px' }, // top-right
-                    { bottom: '30%', left: '-70px' }, // bottom-left
-                    { bottom: '10%', right: '-70px' }, // bottom-right
+                    { top: '10%', right: '-30px' }, // top-right
+                    { bottom: '10%', left: '-30px' }, // bottom-left
+                    { bottom: '10%', right: '-30px' }, // bottom-right
                   ]
                   return (
                     <motion.div
