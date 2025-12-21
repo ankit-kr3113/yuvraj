@@ -57,6 +57,7 @@ import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import ThemeSwitcher from "@/components/ThemeSwitcher";
 import GitHubActivity from "@/components/GitHubActivity";
+import { Hero } from "@/components/Hero";
 import { Link } from "react-router-dom";
 import { useState, useEffect, useMemo } from "react";
 import {
