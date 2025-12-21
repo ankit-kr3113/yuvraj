@@ -100,8 +100,6 @@ export function Hero() {
 
             {/* Right Side Actions */}
             <div className="flex items-center space-x-3">
-              {/* Theme Toggle */}
-              <ThemeToggle />
               
               <motion.a
                 whileHover={{ scale: 1.05 }}
