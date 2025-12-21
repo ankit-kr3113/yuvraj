@@ -100,18 +100,19 @@ export function Hero() {
                 {personalInfo.bio.intro}
               </p>
 
-              {/* Tech Stack Scrolling */}
+              {/* Tech Stack Scrolling - Infinite Circular */}
               <div className="overflow-hidden py-3 -mx-4 px-4">
                 <motion.div
                   className="flex gap-3"
-                  animate={{ x: [0, -1500] }}
+                  animate={{ x: [0, -2000] }}
                   transition={{
-                    duration: 25,
+                    duration: 30,
                     repeat: Infinity,
-                    ease: 'linear'
+                    ease: 'linear',
+                    repeatType: 'loop'
                   }}
                 >
-                  {[...techStack, ...techStack, ...techStack].map((tech, i) => (
+                  {[...techStack, ...techStack, ...techStack, ...techStack].map((tech, i) => (
                     <motion.div
                       key={i}
                       whileHover={{ scale: 1.05 }}
