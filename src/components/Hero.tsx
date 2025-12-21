@@ -8,14 +8,22 @@ import { SiTypescript, SiMongodb, SiNextdotjs } from 'react-icons/si'
 
 export function Hero() {
   const nameVariants = {
-    hidden: { opacity: 0, filter: 'blur(12px)' },
+    hidden: {
+      opacity: 0,
+      y: 20,
+      rotateZ: -10
+    },
     visible: (i: number) => ({
       opacity: 1,
-      filter: 'blur(0px)',
+      y: 0,
+      rotateZ: 0,
       transition: {
-        delay: 0.5 + i * 0.08,
-        duration: 0.8,
-        ease: 'easeOut'
+        delay: 0.5 + i * 0.06,
+        duration: 0.6,
+        type: 'spring',
+        stiffness: 120,
+        damping: 12,
+        mass: 1
       }
     })
   };
