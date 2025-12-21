@@ -71,9 +71,9 @@ export function Hero() {
                         variants={nameVariants}
                         initial="hidden"
                         animate="visible"
-                        className="inline-block"
+                        className="inline"
                       >
-                        {char}
+                        {char === ' ' ? '\u00A0' : char}
                       </motion.span>
                     ))}
                   </motion.span>
