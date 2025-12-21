@@ -60,6 +60,7 @@ import GitHubActivity from "@/components/GitHubActivity";
 import { Hero } from "@/components/Hero";
 import { Link } from "react-router-dom";
 import { useState, useEffect, useMemo } from "react";
+import { motion } from "framer-motion";
 import {
   personalInfo,
   socialLinks,
