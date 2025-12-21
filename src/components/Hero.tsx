@@ -102,27 +102,33 @@ export function Hero() {
 
               {/* Tech Stack Scrolling - Infinite Circular */}
               <div className="overflow-hidden py-3 -mx-4 px-4">
-                <motion.div
-                  className="flex gap-3"
-                  animate={{ x: [0, -2000] }}
-                  transition={{
-                    duration: 30,
-                    repeat: Infinity,
-                    ease: 'linear',
-                    repeatType: 'loop'
-                  }}
-                >
-                  {[...techStack, ...techStack, ...techStack, ...techStack].map((tech, i) => (
-                    <motion.div
-                      key={i}
-                      whileHover={{ scale: 1.05 }}
-                      className="flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-primary/10 border border-primary/20 whitespace-nowrap flex-shrink-0 cursor-pointer"
-                    >
-                      <span className="text-xs font-semibold text-primary">{tech.icon}</span>
-                      <span className="text-xs font-medium text-foreground">{tech.name}</span>
-                    </motion.div>
-                  ))}
-                </motion.div>
+                <style>{`
+                  @keyframes infiniteScroll {
+                    0% {
+                      transform: translateX(0);
+                    }
+                    100% {
+                      transform: translateX(calc(-${techStack.length * 140}px));
+                    }
+                  }
+                  .tech-scroll-container {
+                    animation: infiniteScroll 30s linear infinite;
+                  }
+                `}</style>
+                <div className="flex gap-3 tech-scroll-container">
+                  {[...Array(8)].map((_, setIndex) =>
+                    techStack.map((tech, i) => (
+                      <motion.div
+                        key={`${setIndex}-${i}`}
+                        whileHover={{ scale: 1.05 }}
+                        className="flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-primary/10 border border-primary/20 whitespace-nowrap flex-shrink-0 cursor-pointer"
+                      >
+                        <span className="text-xs font-semibold text-primary">{tech.icon}</span>
+                        <span className="text-xs font-medium text-foreground">{tech.name}</span>
+                      </motion.div>
+                    ))
+                  )}
+                </div>
               </div>
 
               {/* CTA Buttons */}
