@@ -1,18 +1,16 @@
 import { motion } from 'framer-motion'
-import { Menu, X, Github, Linkedin, Mail, MapPin, Download, ChevronDown } from 'lucide-react'
+import { Menu, X, Github, Linkedin, Mail, MapPin, Download, ChevronDown, Code, Target } from 'lucide-react'
 import { useState, useEffect } from 'react'
 import { personalInfo, socialLinks, achievements } from '@/data/portfolioData'
 import ThemeSwitcher from './ThemeSwitcher'
-import { FaReact, FaNodeJs } from 'react-icons/fa'
+import { FaReact, FaNodeJs, FaGitAlt } from 'react-icons/fa'
 import { SiTypescript, SiMongodb, SiNextdotjs } from 'react-icons/si'
 
 export function Hero() {
-  const techStack = [
-    { name: 'React', icon: <FaReact className="w-5 h-5" /> },
-    { name: 'Node.js', icon: <FaNodeJs className="w-5 h-5" /> },
-    { name: 'TypeScript', icon: <SiTypescript className="w-5 h-5" /> },
-    { name: 'MongoDB', icon: <SiMongodb className="w-5 h-5" /> },
-    { name: 'Next.js', icon: <SiNextdotjs className="w-5 h-5" /> },
+  const statBadges = [
+    { label: 'Projects', value: achievements.stats.totalProjects, icon: <Code className="w-5 h-5" /> },
+    { label: 'Problems', value: achievements.leetcode.problemsSolved, icon: <Target className="w-5 h-5" /> },
+    { label: 'Commits', value: achievements.stats.commits, icon: <FaGitAlt className="w-5 h-5" /> },
   ]
 
   return (
@@ -150,40 +148,56 @@ export function Hero() {
               className="relative"
             >
               {/* Profile Image Container */}
-              <div className="relative mx-auto w-80 h-80 lg:w-96 lg:h-96">
+              <div className="relative mx-auto w-96 h-96 lg:w-[28rem] lg:h-[28rem]">
                 {/* Decorative Rings */}
                 <div className="absolute inset-0 rounded-full border-2 border-dashed border-primary/30 animate-spin" style={{ animationDuration: '20s' }} />
                 <div className="absolute inset-4 rounded-full border-2 border-dashed border-accent/20 animate-spin" style={{ animationDuration: '15s', animationDirection: 'reverse' }} />
                 
                 {/* Profile Image */}
-                <div className="absolute inset-8 rounded-full overflow-hidden border-4 border-background shadow-2xl">
+                <motion.div
+                  whileHover={{ scale: 1.05 }}
+                  transition={{ duration: 0.3, ease: 'easeOut' }}
+                  className="absolute inset-8 rounded-full overflow-hidden border-4 border-background shadow-2xl cursor-pointer"
+                >
                   <img
                     src={personalInfo.profileImage}
                     alt={personalInfo.name}
                     className="w-full h-full object-cover"
                   />
-                </div>
+                </motion.div>
 
-                {/* Floating Tech Badges */}
-                {techStack.map((tech, index) => {
+                {/* Floating Stat Badges */}
+                {statBadges.map((badge, index) => {
                   const positions = [
-                    { top: '0%', left: '50%', transform: 'translate(-50%, -50%)' },
-                    { top: '25%', right: '-10%' },
-                    { bottom: '25%', right: '-10%' },
-                    { bottom: '0%', left: '50%', transform: 'translate(-50%, 50%)' },
-                    { top: '25%', left: '-10%' },
+                    { top: '10%', right: '-70px' }, // top-right
+                    { bottom: '30%', left: '-70px' }, // bottom-left
+                    { bottom: '10%', right: '-70px' }, // bottom-right
                   ]
                   return (
                     <motion.div
-                      key={tech.name}
+                      key={badge.label}
                       initial={{ opacity: 0, scale: 0 }}
-                      animate={{ opacity: 1, scale: 1 }}
-                      transition={{ delay: 1 + index * 0.1 }}
-                      className="absolute bg-background border border-border rounded-xl px-3 py-2 shadow-lg flex items-center gap-2"
+                      animate={{
+                        opacity: 1,
+                        scale: 1,
+                        y: [0, -12, 0],
+                      }}
+                      transition={{
+                        opacity: { delay: 1.2 + index * 0.1 },
+                        scale: { delay: 1.2 + index * 0.1 },
+                        y: { delay: 1.5 + index * 0.1, duration: 3, repeat: Infinity, ease: 'easeInOut' }
+                      }}
+                      whileHover={{ scale: 1.1, y: -8 }}
+                      className="absolute bg-background/80 backdrop-blur-sm border border-primary/40 rounded-lg px-3 py-2 shadow-lg hover:shadow-xl transition-shadow duration-300"
                       style={positions[index]}
                     >
-                      <span className="text-lg text-primary">{tech.icon}</span>
-                      <span className="text-sm font-medium text-foreground">{tech.name}</span>
+                      <div className="flex items-center gap-2">
+                        <span className="text-primary">{badge.icon}</span>
+                        <div className="text-right">
+                          <div className="text-sm font-bold text-foreground">{badge.value}</div>
+                          <div className="text-xs text-muted-foreground">{badge.label}</div>
+                        </div>
+                      </div>
                     </motion.div>
                   )
                 })}
