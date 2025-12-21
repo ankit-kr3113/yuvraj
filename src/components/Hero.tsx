@@ -101,9 +101,9 @@ export function Hero() {
               </p>
 
               {/* Tech Stack Scrolling */}
-              <div className="overflow-hidden py-6 -mx-4 px-4">
+              <div className="overflow-hidden py-3 -mx-4 px-4">
                 <motion.div
-                  className="flex gap-4"
+                  className="flex gap-3"
                   animate={{ x: [0, -1500] }}
                   transition={{
                     duration: 25,
@@ -115,10 +115,10 @@ export function Hero() {
                     <motion.div
                       key={i}
                       whileHover={{ scale: 1.05 }}
-                      className="flex items-center gap-2 px-4 py-2 rounded-lg bg-primary/10 border border-primary/20 whitespace-nowrap flex-shrink-0 cursor-pointer"
+                      className="flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-primary/10 border border-primary/20 whitespace-nowrap flex-shrink-0 cursor-pointer"
                     >
                       <span className="text-xs font-semibold text-primary">{tech.icon}</span>
-                      <span className="text-sm font-medium text-foreground">{tech.name}</span>
+                      <span className="text-xs font-medium text-foreground">{tech.name}</span>
                     </motion.div>
                   ))}
                 </motion.div>
