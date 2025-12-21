@@ -16,7 +16,7 @@ export function Hero() {
   ]
 
   return (
-    <div className="relative min-h-screen flex items-center overflow-hidden bg-gradient-to-br from-background via-background to-card pt-20">
+    <div className="relative h-screen flex items-center overflow-hidden bg-gradient-to-br from-background via-background to-card pt-16">
       {/* Animated Background Elements */}
       <div className="absolute inset-0 overflow-hidden">
         <div className="absolute top-20 left-10 w-72 h-72 bg-primary/10 rounded-full blur-3xl animate-pulse" />
@@ -32,7 +32,7 @@ export function Hero() {
 
       {/* Hero Content */}
       <div className="relative z-10 w-full">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
           <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
             
             {/* Left Content */}
