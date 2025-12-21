@@ -2,7 +2,7 @@ import { motion } from 'framer-motion'
 import { Menu, X, Github, Linkedin, Mail, MapPin, Download, ChevronDown } from 'lucide-react'
 import { useState, useEffect } from 'react'
 import { personalInfo, socialLinks, achievements } from '@/data/portfolioData'
-import { ThemeToggle } from './ThemeToggle'
+import ThemeSwitcher from './ThemeSwitcher'
 import { FaReact, FaNodeJs } from 'react-icons/fa'
 import { SiTypescript, SiMongodb, SiNextdotjs } from 'react-icons/si'
 
