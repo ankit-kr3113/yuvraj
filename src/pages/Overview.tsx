@@ -366,7 +366,7 @@ const Overview = () => {
                 </div>
 
                 {/* Social Links */}
-                <div className="flex justify-center lg:justify-start space-x-4 animate-fade-in-up animation-delay-1000">
+                <div className="flex justify-center lg:justify-start space-x-4 animate-fade-in-up animation-delay-1100">
                   <a
                     href={socialLinks.github.url}
                     target="_blank"
