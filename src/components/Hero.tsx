@@ -169,9 +169,9 @@ export function Hero() {
                 {/* Floating Stat Badges */}
                 {statBadges.map((badge, index) => {
                   const positions = [
-                    { top: '10%', right: '-70px' }, // top-right
-                    { bottom: '10%', left: '-70px' }, // bottom-left
-                    { bottom: '10%', right: '-70px' }, // bottom-right
+                    { top: '10%', right: '-30px' }, // top-right
+                    { bottom: '10%', left: '-30px' }, // bottom-left
+                    { bottom: '10%', right: '-30px' }, // bottom-right
                   ]
                   return (
                     <motion.div
