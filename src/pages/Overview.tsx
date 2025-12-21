@@ -209,13 +209,13 @@ const ProjectImage = ({
         >
           <motion.div
             className="flex flex-col items-center gap-2"
-            animate={{ opacity: [0.6, 1, 0.6] }}
-            transition={{ duration: 1.5, repeat: Infinity }}
+            animate={{ opacity: [0.7, 1, 0.7] }}
+            transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
           >
             <motion.div
               className="w-8 h-8 border-2 border-primary/70 border-t-transparent rounded-full"
               animate={{ rotate: 360 }}
-              transition={{ duration: 1, repeat: Infinity, linear: true }}
+              transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
             ></motion.div>
             <p className="text-xs text-foreground/60">Loading preview...</p>
           </motion.div>
