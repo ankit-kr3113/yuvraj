@@ -1,7 +1,7 @@
 import { motion } from 'framer-motion'
 import { Menu, X, Github, Linkedin, Mail, MapPin, Download, ChevronDown, Code, Target } from 'lucide-react'
 import { useState, useEffect } from 'react'
-import { personalInfo, socialLinks, achievements } from '@/data/portfolioData'
+import { personalInfo, socialLinks, achievements, techStack } from '@/data/portfolioData'
 import ThemeSwitcher from './ThemeSwitcher'
 import { FaReact, FaNodeJs, FaGitAlt } from 'react-icons/fa'
 import { SiTypescript, SiMongodb, SiNextdotjs } from 'react-icons/si'
