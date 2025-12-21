@@ -112,7 +112,7 @@ export function Hero() {
                     }
                   }
                   .tech-scroll-container {
-                    animation: infiniteScroll 30s linear infinite;
+                    animation: infiniteScroll 15s linear infinite;
                   }
                 `}</style>
                 <div className="flex gap-3 tech-scroll-container">
