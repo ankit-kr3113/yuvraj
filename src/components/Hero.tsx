@@ -100,24 +100,27 @@ export function Hero() {
                 {personalInfo.bio.intro}
               </p>
 
-              {/* Stats */}
-              <div className="flex flex-wrap gap-6">
-                <div className="text-center">
-                  <div className="text-3xl font-black text-foreground">{achievements.stats.yearsExperience}</div>
-                  <div className="text-sm text-muted-foreground">Years Exp.</div>
-                </div>
-                <div className="text-center">
-                  <div className="text-3xl font-black text-foreground">{achievements.stats.totalProjects}</div>
-                  <div className="text-sm text-muted-foreground">Projects</div>
-                </div>
-                <div className="text-center">
-                  <div className="text-3xl font-black text-foreground">{achievements.stats.totalProblemsSolved}</div>
-                  <div className="text-sm text-muted-foreground">Problems Solved</div>
-                </div>
-                <div className="text-center">
-                  <div className="text-3xl font-black text-foreground">{achievements.leetcode.rating}</div>
-                  <div className="text-sm text-muted-foreground">LeetCode Rating</div>
-                </div>
+              {/* Tech Stack Scrolling */}
+              <div className="overflow-hidden py-6">
+                <motion.div
+                  className="flex gap-6"
+                  animate={{ x: [-1000, 0] }}
+                  transition={{
+                    duration: 20,
+                    repeat: Infinity,
+                    ease: 'linear'
+                  }}
+                >
+                  {[...personalInfo.techStack, ...personalInfo.techStack].map((tech, i) => (
+                    <div
+                      key={i}
+                      className="flex items-center gap-3 px-6 py-2 rounded-lg bg-primary/10 border border-primary/20 whitespace-nowrap flex-shrink-0"
+                    >
+                      <FaReact className="w-5 h-5 text-primary" />
+                      <span className="text-sm font-medium text-foreground">{tech}</span>
+                    </div>
+                  ))}
+                </motion.div>
               </div>
 
               {/* CTA Buttons */}
